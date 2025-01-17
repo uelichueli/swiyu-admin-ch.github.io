@@ -21,10 +21,12 @@
 title: swiyu Documentation
 email: info@swiyu.admin.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "swiyu-admin-ch.github.io/docs" # the subpath of your site, e.g. /blog
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
+Documentation of the technical components, architecture and implementations for swiyu, the Swiss e-ID ecosystem
+
+baseurl: "swiyu-admin-ch.github.io" # the subpath of your site, e.g. /blog
 url: "https://swiyu-admin-ch.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  andre-kunz
@@ -33,12 +35,12 @@ domain: swiyu-admin-ch.github.io
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
 
 # Configuration for GitHub Pages
 lsi: false
 safe: true
-source: [your repo's top level directory]
+source: https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io
 incremental: false
 highlighter: rouge
 gist:
