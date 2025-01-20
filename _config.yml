@@ -29,7 +29,8 @@ url: "https://swiyu-admin-ch.github.io" # the base hostname & protocol for your 
 domain: swiyu-admin-ch.github.io
 
 # Build settings
-theme: minima
+# theme: minima
+theme: just-the-docs
 plugins:
 #  - jekyll-feed
 
