@@ -1,20 +1,10 @@
 ---
-layout: page
-title: "Tech Roadmap"
+title: Tech Roadmap
 permalink: /tech-roadmap
+toc: true
 ---
 
 # Swiss e-ID and trust infrastructure: Roadmap (work in progress)
-
-#### Table of contents
-- [Introduction](#Introduction)
-- [Supported Technical Standards](#Supported-Technical-Standards)
-- [Reasoning for proposed standards and further explanations](#Reasoning-for-proposed-standards-and-further-explanations)
-- [Device Binding Strategy and Targeted Level of Assurance](#Device-Binding-Strategy-and-Targeted-Level-of-Assurance)
-- [Privacy-Preserving Device Binding](#Privacy-Preserving-Device-Binding)
-- [The Swiss e-ID Program](#The-Swiss-e-ID-Program)
-- [Changelog](#Changelog)
-
 
 ## Introduction
 

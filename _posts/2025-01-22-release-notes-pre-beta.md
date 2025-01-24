@@ -1,5 +1,5 @@
 ---
-layout: post
+#layout: post
 title:  "Release Notes Version 0.X Beta"
 date:   2025-01-15 14:00:49 +0100
 categories: release notes

@@ -1,7 +1,7 @@
 ---
-layout: page
-title: "Swiss Profile"
-permalink: /swiss-profile
+permalink: /swiss-profile/
+title: Swiss Profile
+toc: true
 ---
 
 # Swiss e-ID and trust infrastructure: Interoperability profile

@@ -1,0 +1,15 @@
+# Header navigation - main links
+main:
+  - title: "Initial Technology"
+    url: /initial-technology
+  - title: "Swiss-Profile"
+    url: /swiss-profile
+  - title: "Tech Roadmap"
+    url: /tech-roadmap
+  - title: "Technology"
+    url: /technology
+  - title: "Cookbooks"
+    url: /cookbooks
+
+
+

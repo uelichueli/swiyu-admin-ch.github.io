@@ -1,15 +1,9 @@
 ---
-layout: page
-title: "Initial Technology"
+title: Initial Technology
 permalink: /initial-technology
+toc: true
 ---
 # Swiss e-ID and trust infrastructure: Initial implementation
-
-#### Table of contents
-- [Current Situation](#Current-Situation)
-- [Initial Technology](#Initial-Technology)
-- [What happened leading up to this decision](#What-happened-leading-up-to-this-decision)
-- [Changelog](#Changelog)
 
 ## Current Situation
 

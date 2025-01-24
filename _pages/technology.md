@@ -1,7 +1,7 @@
 ---
-layout: page
-title: "Technology"
+title: Technology
 permalink: /technology
+toc: true
 ---
 
 # Technology 
