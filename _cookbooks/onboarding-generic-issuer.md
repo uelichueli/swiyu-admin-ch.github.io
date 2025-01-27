@@ -1,6 +1,5 @@
 ---
 title: Onboarding Generic Issuer
-permalink: /onboarding-generic-issuer
 toc: true
 excerpt: Learn how to onboard as a generic issuer
 ---

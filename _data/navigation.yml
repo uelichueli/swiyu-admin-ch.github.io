@@ -11,5 +11,40 @@ main:
   - title: "Cookbooks"
     url: /cookbooks
 
+sidebarmenu:
+  - title: Welcome
+    children:
+      - title: "Ecosystem overview"
+        url: /docs/quick-start-guide/
+      - title: "Architecture"
+        url: /docs/structure/
+      - title: "Components"
+        url: /docs/installation/
+
+  - title: Technologies
+    children:
+      - title: "Standards"
+        url: /docs/configuration/
+      - title: "Swiss Profile"
+        url: /docs/navigation/
+      - title: "Implementation"
+        url: /docs/ui-text/
+      - title: "Roadmap"
+        url: /docs/authors/
+
+  - title: Cookbooks
+    children:
+      - title: "First steps"
+        url: /docs/posts/
+      - title: "Generic Verifier"
+        url: /docs/pages/
+      - title: "Generic Issuer"
+        url: /docs/collections/
+      - title: "Set up a Credential"
+        url: /docs/helpers/
+      - title: "Utility Classes"
+        url: /docs/utility-classes/
+
+  - title: Changelog
 
 

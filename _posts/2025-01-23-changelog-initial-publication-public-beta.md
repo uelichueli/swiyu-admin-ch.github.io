@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Changelog Initial Publication Public Beta"
 date:   2025-01-15 14:00:49 +0100
 categories: changelog

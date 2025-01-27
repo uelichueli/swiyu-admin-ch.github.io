@@ -1,6 +1,5 @@
 ---
 title: Onboarding Generic Verifier
-permalink: /onboarding-generic-verifier
 toc: true
 excerpt: Learn how to onboard as a generic verifier
 ---

@@ -1,12 +1,9 @@
 ---
 title: Onboarding the Base & Trust Registry
-permalink: /onboarding-base-and-trust-registry
 toc: true
 excerpt: Learn how to onboard the swiyu trust infrastructure and manage your organisation
+
 ---
-
-# WORK-IN-PROGRESS - - - DO NOT USE!
-
 
 # Getting started
 
@@ -19,7 +16,12 @@ Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registrati
 ## Open *swiyu* Trust Infrastructure
 
 Search for the _swiyu Trust Infrastructure_ service and enter it.
-![welcome to eportal](img/welcome_to_eportal.png)
+
+
+
+{% include figure popup=false image_path="../assets/images/welcome_to_eportal.png" alt="welcome to eportal" caption="This is a figure caption." %}
+
+
 
 # Onboard the Base Registry
 
@@ -34,7 +36,7 @@ Register the business partner1 by providing a name2 and primary contact email.
 1) Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as an business partner on the _**swiyu** Trust Infrastructure_ and use it.
 2) This name can not be changed. To appear with another name you will have to register a new business partner.
 
-![base registry enrollment](img/base_registry_enrollment.png)
+![base registry enrollment](../../assets/images/base_registry_enrollment.png)
 
 ## Get API keys to access swiyu APIs
 --------------------------------------
@@ -42,13 +44,13 @@ Register the business partner1 by providing a name2 and primary contact email.
 Go to the API [self service portal](http://selfservice.api.admin.ch/api-selfservice) to register for the ecosystem APIs.
 
 If you are registered with multiple business partners you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
-![api selfservice list of apis](img/api_selfservice.png)
+![api selfservice list of apis](../../assets/images/api_selfservice.png)
 
 Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
 
 Select an API and press **Subscribe.** You will be prompted to create a new Application or select an existing one.
-![create or select an application](img/create_select_application.png)
-![create application](img/create_application.png)
+![create or select an application](../../assets/images/create_select_application.png)
+![create application](../../assets/images/create_application.png)
 
 **Important:**
 
@@ -76,10 +78,9 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 | Swagger | [OpenAPI spec](api/identifier_authoring.yml) | [OpenAPI spec](api/status_authoring.yml)
 
 In the next step you will need your business partner ID. You can find it in the **swiyu Trust Infrastructure** dashboard.
-![swiyu dashboard](img/swiyu_dashboard.png)
+![swiyu dashboard](../../assets/images/swiyu_dashboard.png)
 
-2.3. Onboard business partner on the Base Registry
---------------------------------------------------
+## Onboard business partner on the Base Registry
 
 ### Create DID space
 
@@ -88,7 +89,9 @@ In order to onboard on the Base Registry you will first need to reserve some spa
 _POST: \[IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entities/{businessEntityId}/identifier-entries_
 
 **API Response 201**
+```yaml
 <pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
+```
 
 The identifier\_registry\_url is used in the next step when creating the did log.
 
@@ -162,7 +165,7 @@ For advanced usage or detailed parameter descriptions, please refer to [e-id-ad
 The generated DID log content should look similiar as shown below. After creation, it consists of a single, albeit lengthy, line.
 
 **DID log Sample**
-```
+```yaml
 ["1-Qmdc45SbY6miLmcw2EyAysLy2A99TeiQqVXkkyh6qzsLTm","2025-01-07T09:06:06Z",{"method":"did:tdw:0.3","scid":"QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow","updateKeys":["z6Mkn9mdkU9YnexYS2fqMRkTrpJMBNx344KNb4cAgWFFVWQE"],"prerotation":false,"portable":false},{"value":{"@context":["https://www.w3.org/ns/did/v1","https://w3id.org/security/multikey/v1"],"id":"did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085","authentication":["did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085#auth-key-01"],"assertionMethod":["did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085#assert-key-01"],"verificationMethod":[{"id":"did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085#auth-key-01","controller":"did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085","type":"JsonWebKey2020","publicKeyJwk":{"kty":"OKP","crv":"Ed25519","kid":"auth-key-01","x":"CyWSTgeCUzaD4lUWT07vMg-GsTWNOwnEFF7Rfu7OrWU"}},{"id":"did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085#assert-key-01","controller":"did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085","type":"JsonWebKey2020","publicKeyJwk":{"kty":"OKP","crv":"Ed25519","kid":"assert-key-01","x":"GTMNlEdWeP-AB40XXG19R57_TUOsgWY4kypRG4ZrQWQ"}}]}},{"type":"DataIntegrityProof","cryptosuite":"eddsa-jcs-2022","created":"2025-01-07T09:06:06Z","verificationMethod":"did:key:z6Mkn9mdkU9YnexYS2fqMRkTrpJMBNx344KNb4cAgWFFVWQE#z6Mkn9mdkU9YnexYS2fqMRkTrpJMBNx344KNb4cAgWFFVWQE","proofPurpose":"authentication","challenge":"1-Qmdc45SbY6miLmcw2EyAysLy2A99TeiQqVXkkyh6qzsLTm","proofValue":"z4GG3MaCgwTWH5hEi7C1DyAJzr3VFbfmT9s1PN5Pr4BxgvYSbYsgn5kYAgwxFwXrGC8Wdm45HScq72xkujvPcFhm9"}]
 ```
 
@@ -170,7 +173,7 @@ In the example above the DID is the following
 
 **DID sample**
 
-```
+```yaml
 did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085
 ```
 
@@ -212,15 +215,15 @@ To be able to interact with the swiyu eco system you need to host either a an sw
 
 
 Go to e-portal and click on _manage users:_
-![invite members](img/invite_members.png)
+![invite members](../../assets/images/invite_members.png)
 
 Generate as many invitation codes as you need and make sure to add the appropriate roles.
-![generate invitation codes](img/create_codes.png)
+![generate invitation codes](../../assets/images/create_codes.png)
 
 ## Join an existing business partner
 
 If your business partner is already registered on ePortal
 
 [T](https://eportal.admin.ch/start)o Join an already existing business parter press the _Redeem invitation code_ button on the top right.
-![redeem invitation code](img/redeem_code.png)
-![redeem invitation code - step 2](img/redeem_code_2.png)
+![redeem invitation code](../../assets/images/redeem_code.png)
+![redeem invitation code - step 2](../../assets/images/redeem_code_2.png)

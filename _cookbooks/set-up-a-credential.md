@@ -1,6 +1,5 @@
 ---
 title: Set Up A Credential
-permalink: /set-up-credential
 toc: true
 excerpt: Learn how to set up a credential
 ---
