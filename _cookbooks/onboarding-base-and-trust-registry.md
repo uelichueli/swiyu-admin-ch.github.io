@@ -2,7 +2,7 @@
 title: Onboarding the Base & Trust Registry
 toc: true
 excerpt: Learn how to onboard the swiyu trust infrastructure and manage your organisation
-
+permalink: /onboarding-base-and-trust-registry.md/
 ---
 
 # Getting started
