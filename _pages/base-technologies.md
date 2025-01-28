@@ -1,6 +1,6 @@
 ---
-title: Initial Technology
-permalink: /initial-technology
+title: Selected basse technologie
+permalink: /base-technologies
 toc: true
 ---
 # Swiss e-ID and trust infrastructure: Initial implementation
