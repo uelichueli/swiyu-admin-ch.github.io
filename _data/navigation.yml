@@ -3,11 +3,11 @@ main:
   - title: "Public-Beta"
     url: /public-beta/
   - title: "Privacy & Data Protection"
-    url: /privacy-data-protection
+    url: /privacy-data-protection/
   - title: "Roadmap"
-    url: /tech-roadmap
+    url: /tech-roadmap/
   - title: "Open Source"
-    url: /open-source
+    url: /open-source/
   
 sidebarmenu:
   - title: "Introduction"
@@ -38,21 +38,21 @@ sidebarmenu:
       - title: "swiyu Components"
         url: /swiyu-components/
       - title: "Requirements for 3rd parties"
-        url: /requirements-for-3rd-parties
+        url: /requirements-for-3rd-parties/
   
   - title: "Cookbooks"
     url: /cookbooks/
     children:
       - title: "Base- and Trust-Registry"
-        url: /cookbooks/onboarding-base-and-trust-registry.md/
+        url: /cookbooks/onboarding-base-and-trust-registry/
       - title: "Generic Verifier"
-        url: /cookbooks/onboarding-generic-verifier.md/
+        url: /cookbooks/onboarding-generic-verifier/
       - title: "Generic Issuer"
-        url: /cookbooks/onboarding-generic-issuer.md/
+        url: /cookbooks/onboarding-generic-issuer/
       - title: "Set up a Credential"
-        url: /cookbooks/set-up-a-credential.md/
+        url: /cookbooks/set-up-a-credential/
       - title: "Utility Classes"
-        url: /cookbooks/utility-classes.md/-
+        url: /cookbooks/utility-classes/
 
   - title: "Changelog"
     url: /changelog
