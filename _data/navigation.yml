@@ -1,50 +1,59 @@
 # Header navigation - main links
 main:
-  - title: "Initial Technology"
-    url: /initial-technology
-  - title: "Swiss-Profile"
-    url: /swiss-profile
-  - title: "Tech Roadmap"
+  - title: "Public-Beta"
+    url: /public-beta/
+  - title: "Privacy & Data Protection"
+    url: /privacy-data-protection
+  - title: "Roadmap"
     url: /tech-roadmap
-  - title: "Technology"
-    url: /technology
-  - title: "Cookbooks"
-    url: /cookbooks
-
+  - title: "Open Source"
+    url: /open-source
+  
 sidebarmenu:
-  - title: Welcome
+  - title: "Introduction"
+    url: /introduction
     children:
-      - title: "Ecosystem overview"
-        url: /docs/quick-start-guide/
-      - title: "Architecture"
-        url: /docs/structure/
-      - title: "Components"
-        url: /docs/installation/
+      - title: "Key Principles"
+        url: /key-principles/
+      - title: "Ambition Levels"
+        url: /ambition-levels/
+      - title: "Purpose of this page"
+        url: /about-tbd/
 
-  - title: Technologies
+  - title: "Trust Infrastructure"
     children:
-      - title: "Standards"
-        url: /docs/configuration/
-      - title: "Swiss Profile"
-        url: /docs/navigation/
-      - title: "Implementation"
-        url: /docs/ui-text/
-      - title: "Roadmap"
-        url: /docs/authors/
-
-  - title: Cookbooks
+      - title: "Roles"
+        url: /trust-infrastructure/roles/
+      - title: "Credential Lifecycle"
+        url: /trust-infrastructure/credential-lifecycle/
+      - title: "Trust"
+        url: /trust-infrastructure/trust/
+      
+  - title: "Technology Stack"
     children:
-      - title: "First steps"
-        url: /docs/posts/
+      - title: "Base Technologies"
+        url: /base-technologies/
+      - title: "Cryptography"
+        url: /cryptography-key-management/
+      - title: "swiyu Components"
+        url: /swiyu-components/
+      - title: "Requirements for 3rd parties
+        url: /requirements-for-3rd-parties
+  
+  - title: "Cookbooks"
+    children:
+      - title: "Base- and Trust-Registry"
+        url: /cookbooks/onboarding-base-and-trust-registry.md/
       - title: "Generic Verifier"
-        url: /docs/pages/
+        url: /cookbooks/onboarding-generic-verifier.md/
       - title: "Generic Issuer"
-        url: /docs/collections/
+        url: /cookbooks/onboarding-generic-issuer.md/
       - title: "Set up a Credential"
-        url: /docs/helpers/
+        url: /cookbooks/set-up-a-credential.md/
       - title: "Utility Classes"
-        url: /docs/utility-classes/
+        url: /cookbooks/utility-classes.md/-
 
-  - title: Changelog
+  - title: "Changelog"
+    url: /changelog
 
 
