@@ -11,7 +11,7 @@ main:
   
 sidebarmenu:
   - title: "Introduction"
-    url: /introduction
+    url: /introduction/
     children:
       - title: "Key Principles"
         url: /key-principles/
@@ -41,6 +41,7 @@ sidebarmenu:
         url: /requirements-for-3rd-parties
   
   - title: "Cookbooks"
+    url: /cookbooks/
     children:
       - title: "Base- and Trust-Registry"
         url: /cookbooks/onboarding-base-and-trust-registry.md/
