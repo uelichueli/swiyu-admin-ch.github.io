@@ -37,7 +37,7 @@ sidebarmenu:
         url: /cryptography-key-management/
       - title: "swiyu Components"
         url: /swiyu-components/
-      - title: "Requirements for 3rd parties
+      - title: "Requirements for 3rd parties"
         url: /requirements-for-3rd-parties
   
   - title: "Cookbooks"
