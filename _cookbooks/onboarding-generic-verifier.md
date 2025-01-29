@@ -1,13 +1,9 @@
 ---
-title: Onboarding Generic Verifier
+title: Getting started as a Generic Verifier
 toc: true
+toc_sticky: true
 excerpt: Learn how to onboard as a generic verifier
 ---
-
-# WORK-IN-PROGRESS - - - DO NOT USE!
-
-
-# Getting started as a generic verifier
 
 ## Sign-in or up to ePortal
 

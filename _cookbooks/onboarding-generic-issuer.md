@@ -1,13 +1,9 @@
 ---
-title: Onboarding Generic Issuer
+title: Getting started as a Generic Issuer
 toc: true
+toc_sticky: true
 excerpt: Learn how to onboard as a generic issuer
 ---
-
-# WORK-IN-PROGRESS - - - DO NOT USE!
-
-
-# Getting started as a generic issuer
 
 ## Sign-in or up to ePortal
 

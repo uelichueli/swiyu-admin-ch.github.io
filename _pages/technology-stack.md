@@ -1,12 +1,11 @@
 ---
-title: Tech Roadmap
-permalink: /tech-roadmap
+title: Technology Stack
+permalink: /technology-stack/
 toc: true
+toc_sticky: true
 ---
 
-# Swiss e-ID and trust infrastructure: Roadmap (work in progress)
 
-## Introduction
 
 An initial selection which technology will be utilized for the issuance of the e-ID and underlying trust infrastructure has been made. A more detailed explanation regarding this choice can be found here: [Initial Technology](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/initial-technology.md) 
 
@@ -18,7 +17,7 @@ We currently differentiate between support for [Public-Beta](https://www.eid.adm
 
 The domain of digital identities is developing at a rapid pace. While the Confederation aims to provide a degree of assurance and stability for integrators even at this early stage, evolution seems inevitable. Changes will be considered, especially if they benefit privacy-protection for users, increase the security and stability of the overall system, or if standards converge to serve the purpose of fostering interoperability.
 
-## Supported Technical Standards
+## Selected base technologies and supported technical standards
 
 | Aspect      | Current Hypothesis   | Link   | Public Beta Support   | Initial Go Live Support |  
 | ----------- | ----------- |----------- |----------- |----------- |
@@ -140,9 +139,3 @@ The GitHub discussion forum for open source and technical topics is available he
 More information about the Swiss Confederations e-ID Program can be found under: https://www.eid.admin.ch/ <br>
 Sign up to our newsletter under: https://www.eid.admin.ch/de/warum-partizipation
 
-## Changelog
-_06.12.2024_
-- Update after decision on initial technology by the Confederation
-
-_18.06.2024_
-- Initial Publication of v1.0 (Work-in-progress)

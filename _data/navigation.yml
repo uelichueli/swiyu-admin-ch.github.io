@@ -1,45 +1,17 @@
 # Header navigation - main links
 main:
-  - title: "Public-Beta"
-    url: /public-beta/
-  - title: "Privacy & Data Protection"
-    url: /privacy-data-protection/
-  - title: "Roadmap"
-    url: /tech-roadmap/
-  - title: "Open Source"
-    url: /open-source/
-  
-sidebarmenu:
   - title: "Introduction"
     url: /introduction/
-    children:
-      - title: "Key Principles"
-        url: /key-principles/
-      - title: "Ambition Levels"
-        url: /ambition-levels/
-      - title: "Purpose of this page"
-        url: /about-tbd/
-
   - title: "Trust Infrastructure"
-    children:
-      - title: "Roles"
-        url: /trust-infrastructure/roles/
-      - title: "Credential Lifecycle"
-        url: /trust-infrastructure/credential-lifecycle/
-      - title: "Trust"
-        url: /trust-infrastructure/trust/
-      
+    url: /trust-infrastructure/
   - title: "Technology Stack"
-    children:
-      - title: "Base Technologies"
-        url: /base-technologies/
-      - title: "Cryptography"
-        url: /cryptography-key-management/
-      - title: "swiyu Components"
-        url: /swiyu-components/
-      - title: "Requirements for 3rd parties"
-        url: /requirements-for-3rd-parties/
-  
+    url: /technology-stack/
+  - title: "Cookbooks"
+    url: /cookbooks/
+  - title: "Security & Privacy"
+    url: /security-privacy/ 
+
+sidebarmenu:
   - title: "Cookbooks"
     url: /cookbooks/
     children:
@@ -54,7 +26,5 @@ sidebarmenu:
       - title: "Utility Classes"
         url: /cookbooks/utility-classes/
 
-  - title: "Changelog"
-    url: /changelog
 
 

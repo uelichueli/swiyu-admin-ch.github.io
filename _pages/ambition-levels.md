@@ -1,6 +1,6 @@
 ---
 title: Ambition Levels
-permalink: /ambition-levels
+permalink: /ambition-levels/
 ---
 # Ambition Level for the Ecosystem
 

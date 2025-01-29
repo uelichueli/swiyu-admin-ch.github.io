@@ -1,6 +1,6 @@
 ---
 title: Key Principles
-permalink: /key-principles
+permalink: /key-principles/
 toc: false
 ---
 # Swiss e-ID - Key Principles defined by law

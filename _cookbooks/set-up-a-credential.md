@@ -1,13 +1,10 @@
 ---
-title: Set Up A Credential
+title: Setting Up A Verifiable Credential
 toc: true
+toc_sticky: true
 excerpt: Learn how to set up a credential
 ---
 
-# WORK-IN-PROGRESS - - - DO NOT USE!
-
-
-# Setting up a verifiable credential
 
 ## Sign-in or up to ePortal
 
