@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 excerpt: Learn how to set up a credential
 header:
- teaser: ../assets/images/e-id.png
+ teaser: ../assets/images/e-ID.png
 ---
 
 
