@@ -3,7 +3,7 @@ title: Getting started as a Generic Issuer
 toc: true
 toc_sticky: true
 excerpt: Learn how to onboard as a generic issuer
-header
+header:
   image: ../assets/images/issuer.png
 ---
 
