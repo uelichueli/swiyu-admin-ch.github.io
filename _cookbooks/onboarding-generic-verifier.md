@@ -3,6 +3,8 @@ title: Getting started as a Generic Verifier
 toc: true
 toc_sticky: true
 excerpt: Learn how to onboard as a generic verifier
+header:
+  teaser: ../assets/images/verifier.png
 ---
 
 ## Sign-in or up to ePortal
