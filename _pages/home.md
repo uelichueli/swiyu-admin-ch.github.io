@@ -4,7 +4,7 @@ permalink: /
 #hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/swiyu-docs-homepage.png
+  overlay_image: /assets/images/swiyu_overlay.png
 excerpt: >
   Home for the documentation for the Swiss e-ID ecosystem. 
 feature_row:
