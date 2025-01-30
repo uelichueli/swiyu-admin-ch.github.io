@@ -27,7 +27,7 @@ en: &DEFAULT_EN
   comments_title             : "Comments"
   more_label                 : "Learn more"
   related_label              : "You may also enjoy"
-  follow_label               : "Follow:"
+  follow_label               : 
   feed_label                 : "Feed"
   powered_by                 : "Powered by"
   website_label              : "Website"
@@ -86,7 +86,7 @@ de: &DEFAULT_DE
   comments_title             : "Kommentare"
   more_label                 : "Mehr anzeigen"
   related_label              : "Ihnen gefällt vielleicht auch"
-  follow_label               : "Folgen:"
+  follow_label               : 
   feed_label                 : "Feed"
   powered_by                 : "Möglich durch"
   website_label              : "Webseite"
@@ -149,7 +149,7 @@ fr: &DEFAULT_FR
   comments_title             : "Commentaires"
   more_label                 : "Lire plus"
   related_label              : "Vous pourriez aimer aussi"
-  follow_label               : "Contact"
+  follow_label               : 
   feed_label                 : "Flux"
   powered_by                 : "Propulsé par"
   website_label              : "Site"
@@ -206,7 +206,7 @@ it: &DEFAULT_IT
   comments_title             :
   more_label                 : "Scopri di più"
   related_label              : "Potrebbe Piacerti Anche"
-  follow_label               : "Segui:"
+  follow_label               : 
   feed_label                 : "Feed"
   powered_by                 : "Powered by"
   website_label              : "Website"
