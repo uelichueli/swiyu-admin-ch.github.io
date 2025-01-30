@@ -3,6 +3,8 @@ title: Onboarding the Base & Trust Registry
 toc: true
 toc_sticky: true
 excerpt: Learn how to onboard the swiyu trust infrastructure and manage your organisation
+header:
+  teaser: /assets/images/registry.png
 ---
 
 ## Sign-in or up to ePortal
