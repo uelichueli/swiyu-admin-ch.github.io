@@ -3,6 +3,8 @@ title: Getting started as a Generic Issuer
 toc: true
 toc_sticky: true
 excerpt: Learn how to onboard as a generic issuer
+header
+  image: ../assets/images/issuer.png
 ---
 
 ## Sign-in or up to ePortal
@@ -29,7 +31,7 @@ Register the business partner1 by providing a name2 and primary contact email.
 1) Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as an business partner on the _**swiyu** Trust Infrastructure_ and use it.
 2) This name can not be changed. To appear with another name you will have to register a new business partner.
 
-![base registry enrollment](img/base_registry_enrollment.png)
+![base registry enrollment](../assets/images/base_registry_enrollment.png)
 
 ## Get API keys to access swiyu APIs
 --------------------------------------
