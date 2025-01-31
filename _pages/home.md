@@ -6,7 +6,8 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/swiyu_overlay.png
 excerpt: >
-  Home for the documentation for the Swiss e-ID ecosystem. 
+  Under Construction!
+  Future home for the documentation for the Swiss e-ID ecosystem. 
 feature_row:
   - image_path: /assets/images/ecosystem-introduction.png
     title: "Introduction"
