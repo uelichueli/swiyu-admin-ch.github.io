@@ -19,7 +19,7 @@ The domain of digital identities is developing at a rapid pace. While the Confed
 
 ## Selected base technologies and supported technical standards
 
-![base technologies](..assets/images/base-technologies.png)
+![base-technologies](../assets/images/base-technologies.png)
 
 | Aspect      | Current Hypothesis   | Link   | Public Beta Support   | Initial Go Live Support |  
 | ----------- | ----------- |----------- |----------- |----------- |
