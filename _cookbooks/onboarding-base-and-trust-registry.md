@@ -141,7 +141,7 @@ java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg
 *   create: Command to create a new DID
 *   <identifier\_registry\_url>: URL received as a result of DID space creation from step "Create DID space"
 
-For advanced usage or detailed parameter descriptions, please refer to [e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java).
+For advanced usage or detailed parameter descriptions, please refer to [e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java#advanced-usage).
 
 ###### What Happens Upon Execution
 
