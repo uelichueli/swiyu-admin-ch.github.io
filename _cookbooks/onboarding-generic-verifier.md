@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 excerpt: Learn how to onboard as a generic verifier
 header:
-  teaser: ../assets/images/verifier.png
+  teaser: ../assets/images/cookbook_generic_verifier.jpg
 ---
 
 ## Sign-in or up to ePortal
