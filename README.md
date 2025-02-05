@@ -1,11 +1,13 @@
+![github-banner](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io/blob/main/assets/images/github-banner.jpg)
+
 # swiyu-admin-ch.github.io
 Documentation repository for swiyu - the Swiss e-ID trust infrastructure
 
 ## Overview
 
-The content in this repository will be automatically published on https://swiyu-admin-ch.github.io/. The aim is to provide a technical overview, deeper insights on standards and protocols as well as cookbooks for the onboarding to the different components of the Swiss e-ID trust infrastructure.
+The aim of this repository is to provide a technical overview, deeper insights on standards and protocols as well as cookbooks for the onboarding to the different components of the Swiss e-ID trust infrastructure. The content in this repository will be automatically published on the [swiyu documentation website](https://swiyu-admin-ch.github.io/). 
 
-The structure of the website covers the following topics: 
+The structure of the documentation website covers the following topics: 
 - Introduction, key principles and ambition levels
 - Overview of the Swiss Trust Infrastructure
 - Selected base technologies and supported technical standards
