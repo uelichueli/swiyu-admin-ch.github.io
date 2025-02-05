@@ -28,7 +28,7 @@ url                      : "https://swiyu-admin-ch.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : swiyu-admin-ch/swiyu-admin-ch.github.io"
 teaser                   : "/assets/images/swiyu_logo_name.jpeg"
-logo                     : "/assets/images/swiyu_logo.png"
+logo                     : "/assets/images/swiyu_logo_88_99.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true #, false (default)
 words_per_minute         : 200
