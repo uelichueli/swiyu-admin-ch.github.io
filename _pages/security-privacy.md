@@ -2,6 +2,7 @@
 permalink: /security-privacy/
 title: Security and Privacy
 toc: true
+toc_sticky: true
 ---
 
 ## Notes on Privacy
