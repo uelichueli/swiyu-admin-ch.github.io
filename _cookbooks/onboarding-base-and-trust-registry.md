@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 excerpt: Learn how to onboard the swiyu trust infrastructure and manage your organisation
 header:
-  teaser: ../assets/images/registry.png
+  teaser: ../assets/images/cookbook_base_trust-registry.jpg
 ---
 
 ## Sign-in or up to ePortal
