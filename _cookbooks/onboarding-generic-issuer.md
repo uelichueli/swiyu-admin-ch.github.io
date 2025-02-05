@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 excerpt: Learn how to onboard as a generic issuer
 header:
-  teaser: ../assets/images/issuer.png
+  teaser: ../assets/images/cookbook_generic_issuer.jpg
 ---
 
 ## Sign-in or up to ePortal
