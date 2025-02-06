@@ -1,6 +1,9 @@
 ---
 title: Roadmap
 permalink: /roadmap/
+toc: true
+#layout: splash
+classes: wide
 ---
 
 ## Introduction

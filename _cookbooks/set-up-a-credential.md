@@ -32,7 +32,7 @@ Register the business partner1 by providing a name2 and primary contact email.
 1) Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as an business partner on the _**swiyu** Trust Infrastructure_ and use it.
 2) This name can not be changed. To appear with another name you will have to register a new business partner.
 
-![base registry enrollment](img/base_registry_enrollment.png)
+![base registry enrollment](../assets/images/base_registry_enrollment.png)
 
 ## Get API keys to access swiyu APIs
 --------------------------------------
@@ -40,12 +40,12 @@ Register the business partner1 by providing a name2 and primary contact email.
 Go to the API [self service portal](http://selfservice.api.admin.ch/api-selfservice) to register for the ecosystem APIs.
 
 If you are registered with multiple business partners you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
-![api selfservice list of apis](img/api_selfservice.png)
+![api selfservice list of apis](../assets/images/api_selfservice.png)
 
 Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
 
 Select an API and press **Subscribe.** You will be prompted to create a new Application or select an existing one.
-![create or select an application](img/create_select_application.png)
+![create or select an application](../assets/images/create_select_application.png)
 ![create application](../assets/images/create_application.png)
 
 **Important:**
@@ -74,7 +74,7 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 | Swagger | [OpenAPI spec](api/identifier_authoring.yml) | [OpenAPI spec](api/status_authoring.yml)
 
 In the next step you will need your business partner ID. You can find it in the **swiyu Trust Infrastructure** dashboard.
-![swiyu dashboard](img/swiyu_dashboard.png)
+![swiyu dashboard](../assets/images/swiyu_dashboard.png)
 
 2.3. Onboard business partner on the Base Registry
 --------------------------------------------------

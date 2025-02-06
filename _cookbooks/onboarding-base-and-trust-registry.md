@@ -7,7 +7,6 @@ header:
   teaser: ../assets/images/cookbook_base_trust-registry.jpg
 ---
 
-Hallo Welt
 
 ## Sign-in or up to ePortal
 
@@ -200,7 +199,7 @@ Make sure the content-type is set to "application/jsonl+json"
 
 Now you are registered on the base registry and be able to configure your issuer component. 
 
-# Use / Integrate the Trust Infrastructure
+### Use/Integrate the Trust Infrastructure
 
 To be able to interact with the swiyu eco system you need to host either a an swiyu issuer and/or an swiyu verifier. Please 
 
@@ -211,9 +210,9 @@ To be able to interact with the swiyu eco system you need to host either a an sw
 5.  Manage the data of your entity
 
 
-# User management
+### User management
 
-## Invite members to your business partner
+#### Invite members to your business partner
 
 
 Go to e-portal and click on _manage users:_
@@ -222,10 +221,10 @@ Go to e-portal and click on _manage users:_
 Generate as many invitation codes as you need and make sure to add the appropriate roles.
 ![generate invitation codes](../../assets/images/create_codes.png)
 
-## Join an existing business partner
+#### Join an existing business partner
 
-If your business partner is already registered on ePortal
+If your business partner is already registered on [ePortal](https://eportal.admin.ch/start)
 
-[T](https://eportal.admin.ch/start)o Join an already existing business parter press the _Redeem invitation code_ button on the top right.
+To Join an already existing business parter press the _Redeem invitation code_ button on the top right.
 ![redeem invitation code](../../assets/images/redeem_code.png)
 ![redeem invitation code - step 2](../../assets/images/redeem_code_2.png)
