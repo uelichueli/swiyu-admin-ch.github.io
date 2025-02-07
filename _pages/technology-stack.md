@@ -5,8 +5,6 @@ toc: true
 toc_sticky: true
 ---
 
-
-
 An initial selection which technology will be utilized for the issuance of the e-ID and underlying trust infrastructure has been made. A more detailed explanation regarding this choice can be found here: [Initial Technology](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/initial-technology.md) 
 
 The e-ID Program strives to provide a transparent insight into the current working hypothesis for issuance of the e-ID and the underlying trust infrastructure. 
@@ -21,16 +19,16 @@ The domain of digital identities is developing at a rapid pace. While the Confed
 
 ![base-technologies](../assets/images/base-technologies.png)
 
-| Aspect      | Current Hypothesis   | Link   | Public Beta Support   | Initial Go Live Support |  
-| ----------- | ----------- |----------- |----------- |----------- |
-| **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to W3C <br> DID Method: **did:tdw/did:webvh**    | W3C: https://www.w3.org/TR/did-core/ <br> Method: Trust DID Web - https://identity.foundation/trustdidweb/ | **SELECTED** <br> Hosted on central base registry provided by Confederation | **CANDIDATE** Final decision for productive system pending |
-| **Status Mechanisms**       | Statuslist | Statuslist: https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/ | **SELECTED** | **HIGH** |
-| **Trust Protocol**       | Trust Protocol based on VCs |  [Trust protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md)  | **SELECTED** <br> Initial support of the "identity" trust statement by Confederation | **HIGH** <br> Additional support of issuer & verifier legitimacy (per VC schema) |
-| **Communication Protocol (Issuance/Verification)**       | OID4VC/OID4VP	  | Issuance: https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html <br> Verification: https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html  | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/admin-ch-ssi/specifications-to-publish/blob/main/swiss_profile.md) | **HIGH** |
-| **Payload Encryption**       | JWE as proposed by the communication protocol  | https://www.rfc-editor.org/rfc/rfc7516.html | **CANDIDATE** | **CANDIDATE** |
-| **VC-Format/Signature-Scheme Combination**       | SD-JWT VC & ECDSA  | SD-JWT VC: https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/ | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/swiss-profile.md) | **HIGH** |
-| **Device Binding Scheme**       | **Hardware** based device binding depending on capabilities provided by mobile devices <br> **Software** based device binding implemented by wallets  | Apple: https://developer.apple.com/documentation/cryptokit/secureenclave <br> Android: https://source.android.com/docs/security/features/keystore | Hardware  **SELECTED** <br> Software **UNSUPPORTED**  | Hardware **HIGH** <br> Software **HIGH** |
-| **VC appearance**       | Visualization of Verifiable Credential with OCA	| https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/oca/spec.md | **UNSUPPORTED** | **HIGH**|
+| Aspect      | Current Hypothesis   | Public Beta Support   | Initial Go Live Support |  
+| ----------- | ----------- |----------- |----------- |
+| **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to [W3C](https://www.w3.org/TR/did-core/) <br> DID Method: **[did:tdw/did:webvh](https://identity.foundation/trustdidweb/)**     | **SELECTED** <br> Hosted on central base registry provided by Confederation | **CANDIDATE** Final decision for productive system pending |
+| **Status Mechanisms**       | [Statuslist](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) | **SELECTED** | **HIGH** |
+| **Trust Protocol**       | [Trust protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md)  | **SELECTED** <br> Initial support of the "identity" trust statement by Confederation | **HIGH** <br> Additional support of issuer & verifier legitimacy (per VC schema) |
+| **Communication Protocol (Issuance/Verification)**       | OID4VC/OID4VP <br> [Issuance](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) <br> [Verification](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html)  | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/admin-ch-ssi/specifications-to-publish/blob/main/swiss_profile.md) | **HIGH** |
+| **Payload Encryption**       | [JWE](https://www.rfc-editor.org/rfc/rfc7516.html) as proposed by the communication protocol  | **CANDIDATE** | **CANDIDATE** |
+| **VC-Format/Signature-Scheme Combination**       | [SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) & ECDSA   | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/swiss-profile.md) | **HIGH** |
+| **Device Binding Scheme**       | **Hardware** based device binding depending on capabilities provided by [Apple](https://developer.apple.com/documentation/cryptokit/secureenclave) or [Android](https://source.android.com/docs/security/features/keystore) mobile devices <br> **Software** based device binding implemented by wallets  |  Hardware  **SELECTED** <br> Software **UNSUPPORTED**  | Hardware **HIGH** <br> Software **HIGH** |
+| **VC appearance**       | Visualization of Verifiable Credential with [OCA](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/oca/spec.md) | **UNSUPPORTED** | **HIGH**|
 
 *Versions of the referenced specs may change.*
 
@@ -224,29 +222,3 @@ Regarding unlinkability: once a verifier knows the index within a specific statu
 
 Regarding unlinkability: once a verifier knows the index within a specific status list, they gain a point to potentially correlate and monitor the status of the credential. This topic can be mitigated, for example with batch issuance of ephemeral credentials. For certain use cases the capability to monitor the status of a VC could be deemed a useful capability.
 
-## Components of the trust infrastructure provided by the confederation
-
-![trust-infrastructure-components](../assets/images/trust-infrastructure-components.png)
-
-
-
-| Component (Hosted by)      | Description   | User   | Connections   |
-| ----------- | ----------- |----------- |----------- |
-| **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to W3C <br> DID Method: **did:tdw/did:webvh**    | W3C: https://www.w3.org/TR/did-core/ <br> Method: Trust DID Web - https://identity.foundation/trustdidweb/ | **SELECTED** <br> Hosted on central base registry provided by Confederation | 
-| **Status Mechanisms**       | Statuslist | Statuslist: https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/ | **SELECTED** |
-| **Trust Protocol**       | Trust Protocol based on VCs |  [Trust protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md)  | **SELECTED** <br> Initial support of the "identity" trust statement by Confederation | 
-| **Communication Protocol (Issuance/Verification)**       | OID4VC/OID4VP	  | Issuance: https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html <br> Verification: https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html  | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/admin-ch-ssi/specifications-to-publish/blob/main/swiss_profile.md) |
-| **Payload Encryption**       | JWE as proposed by the communication protocol  | https://www.rfc-editor.org/rfc/rfc7516.html | 
-| **VC-Format/Signature-Scheme Combination**       | SD-JWT VC & ECDSA  | SD-JWT VC: https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/ | 
-| **Device Binding Scheme**       | **Hardware** based device binding depending on capabilities provided by mobile devices <br> **Software** based device binding implemented by wallets  | Apple: https://developer.apple.com/documentation/cryptokit/secureenclave <br> Android: https://source.android.com/docs/security/features/keystore |
-| **VC appearance**       | Visualization of Verifiable Credential with OCA	| https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/oca/spec.md | 
-| **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to W3C <br> DID Method: **did:tdw/did:webvh**    | W3C: https://www.w3.org/TR/did-core/ <br> Method: Trust DID Web - https://identity.foundation/trustdidweb/ | **SELECTED** <br> Hosted on central base registry provided by Confederation | 
-| **Status Mechanisms**       | Statuslist | Statuslist: https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/ | **SELECTED** |
-| **Trust Protocol**       | Trust Protocol based on VCs |  [Trust protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md)  | **SELECTED** <br> Initial support of the "identity" trust statement by Confederation | 
-| **Communication Protocol (Issuance/Verification)**       | OID4VC/OID4VP	  | Issuance: https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html <br> Verification: https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html  | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/admin-ch-ssi/specifications-to-publish/blob/main/swiss_profile.md) |
-| **Payload Encryption**       | JWE as proposed by the communication protocol  | https://www.rfc-editor.org/rfc/rfc7516.html | 
-| **VC-Format/Signature-Scheme Combination**       | SD-JWT VC & ECDSA  | SD-JWT VC: https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/ | 
-| **Device Binding Scheme**       | **Hardware** based device binding depending on capabilities provided by mobile devices <br> **Software** based device binding implemented by wallets  | Apple: https://developer.apple.com/documentation/cryptokit/secureenclave <br> Android: https://source.android.com/docs/security/features/keystore |
-| **VC appearance**       | Visualization of Verifiable Credential with OCA	| https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/oca/spec.md | 
-
-## Requirements for providing 3rd party components
