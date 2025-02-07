@@ -26,7 +26,7 @@ name                     : "Fachbereich e-ID"
 description              : "Documentation of the technical architecture, components, and implementations for swiyu - the Swiss trust infrastructure"
 url                      : "https://swiyu-admin-ch.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : swiyu-admin-ch/swiyu-admin-ch.github.io"
+repository               : "swiyu-admin-ch/swiyu-admin-ch.github.io"
 teaser                   : "/assets/images/swiyu_logo_name.jpeg"
 logo                     : "/assets/images/swiyu_logo_88_88.jpg"
 masthead_title           : swiyu docs
@@ -104,7 +104,9 @@ footer:
       url: /changelog/
     - label: "Roadmap"
       url: /roadmap/
-
+    - label: "Community"
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/swiyu-admin-ch/community
 
 # Reading Files
 include:
@@ -259,7 +261,6 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
 
 # Defaults
 defaults:
