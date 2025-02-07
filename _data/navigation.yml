@@ -1,15 +1,15 @@
 # Header navigation - main links
 main:
-  - title: "Introduction"
-    url: /introduction/
   - title: "Trust Infrastructure"
     url: /trust-infrastructure/
   - title: "Technology Stack"
     url: /technology-stack/
+  - title: "Open Source Components"
+    url: /open-source-components/
   - title: "Cookbooks"
     url: /cookbooks/
-  - title: "Security & Privacy"
-    url: /security-privacy/ 
+  #- title: "Security & Privacy"
+  #  url: /security-privacy/ 
 
 sidebarmenu:
   - title: "Cookbooks"
