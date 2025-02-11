@@ -133,9 +133,3 @@ Nonetheless, the Confederation sees multiple approaches on how unlinkability mig
 - Cloud-HSM: Usage of a centralized HSM supporting hardware-based privacy-preserving device binding. Decentralized access with hardware-based authentication using a method with higher market penetration (e.g., FIDO2 or conventional cryptographic schemes). Currently, this is not pursued with high priority due to the centralized storage aspect.
 
 The Confederation is involved in the [Open Wallet Foundation](https://openwallet.foundation/) to advance the topic at an international level. In addition a dedicated team with specific resources for research will be allocated. The e-ID Program intends to collaborate with the existing e-ID community to advance the topic.
-
-## The Swiss e-ID Program
-
-The GitHub discussion forum for open source and technical topics is available here: https://github.com/swiyu-admin-ch/community/discussions <br>
-More information about the Swiss Confederations e-ID Program can be found under: https://www.eid.admin.ch/ <br>
-Sign up to our newsletter under: https://www.eid.admin.ch/de/warum-partizipation
