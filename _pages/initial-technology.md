@@ -32,7 +32,7 @@ For the first release the following technologies will be supported:
 | Revocation mechanisms | Token Status Lists |
 | Communication protocols | OID4VCI/VP |
 
-*An updated more detailed list of supported technologies and references to more detailed specifications can be found in the [Roadmap](./tech-roadmap.md)*
+*An updated more detailed list of supported technologies and references to more detailed specifications can be found in the [Roadmap](https://swiyu-admin-ch.github.io/roadmap/)*
 
 The following subject areas were the main drivers in this choice:
 
