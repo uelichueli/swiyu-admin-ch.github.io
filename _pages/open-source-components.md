@@ -5,44 +5,66 @@ toc: true
 toc_sticky: true
 ---
 
+Following the successful milestone of the eLFA project, our next major step towards the Swiss e-ID and its trust infrastructure is the **Public Beta** phase. Public Beta will allow ecosystem participants to integrate and experiment with their business cases, including using a Beta ID credential.
 
-## Components of the trust infrastructure provided by the confederation
+The Public Beta environment is designed to test and refine the e-ID technology stack. Participants will be able to explore and experiment with various use cases, including:
 
-![trust-infrastructure-components](../assets/images/trust-infrastructure-components.png)
+- **Base Registry**: Entities can onboard, update, or offboard as issuers and verifiers within the ecosystem. The base registry will manage the public keys as part of the diddoc required for ecosystem interactions. Status lists containing information related to credential validity can be managed. 
 
-### Federal generic issuer component
+- **Trust Registry**: Entities can prove and maintain their status as verified issuers or verifiers, ensuring additional trust within the ecosystem. Users will be able to see the verification status of issuers and verifiers in their wallets and verifiers are able to validate the trust-status of the issuers.
 
-Reference implementation that bundles core issuing functionalities and can be used and tailored to specific needs by any issuer.
+- **Issuers**: Entities can issue, revoke, suspend, and reactivate Verifiable Credentials (VCs), using the generic reference issuer implementation provided by the federal government. Please ensure to follow the specifications.
 
-In our cookbooks you'll find a step-by-step instruction on [how to get started as a Generic Issuer](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/). If you're interested in more technical details and the Open Source Code, please visit the issuer agent repository
+- **Verifiers**: Entities can integrate the reference verifier implementation to verify VCs, ensuring cryptographic integrity and validity according to their specific needs.
 
-### Federal swiyu wallet
+- **Holders**: Users will be able to download the public beta wallet, request Beta-ID credentials for testing purpose, manage their VCs and interact with the ecosystem.
 
-Holder wallet solution that bundles all features for users (= natural persons) to securely manage their e-ID and other VCs. It is provied by the Swiss Confederation and compliant to the Swiss trust infrastructure. 
+![Component Overview](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io/blob/main/assets/images/trust-infrastructure.png)
 
-[Link auf Android wallet repository](https://github.com/e-id-admin/eidch-android-wallet)
-[Link auf Android Play Store]()
+## Development Process
 
-[Link auf iOS wallet repository](https://github.com/e-id-admin/eidch-ios-wallet)
-[Link auf Apple App Store]()
+- **Community Development**: Core libraries and shared components are developed openly with the community, with ongoing updates.
 
-### Federal generic verifier component
+- **Internal Development**: Specific apps, registries, and components are developed privately and released publicly after each sprint. The published code can therefore only be a snapshot of the current development and not a thoroughly tested version.
 
-Reference implementation that bundles core functionalities for web verification and can be used and tailored to specific needs by any verifier. 
-
-In our cookbooks you'll find a step-by-step instruction on [how to get started as a Generic Verifier](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/). If you're interested in more technical details and the Open Source Code, please visit the verifier agent repository
-
-### Swiss confederation base registry
-
-Registry hosted by the Swiss Confederation that holds decentralized digital identitifers and revocation status lists. 
-
--> Link auf Repos
-
-### Swiss confederation trust registry
-
-Registry hosted by the Swiss Confederation that holds trust statements about identity, issuance, and verification. 
-
--> Link auf Repos
+Public Beta is a critical milestone on the path to the final e-ID and its trust infrastructure, laying the groundwork for the productive environments that will follow. We welcome contributions from the community in a variety of forms. Please refer to contributing.md in the respective repository for further information.
 
 
-## Requirements for providing 3rd party components
+# How to use the Public Beta
+
+The onboarding process for the base- and trust-registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section.
+
+
+# Specifications
+
+We integrate various technologies in the Swiss infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/swiss-profile/)
+
+
+# Link to the repositories
+The project consists of multiple repositories for each component.
+
+- Base Registry
+  - [Authoring Service](https://github.com/e-id-admin/eidch-registry-base-authoring)
+  - [Data Service](https://github.com/e-id-admin/eidch-registry-base-data)
+
+- Status Registry
+  - [Authoring Service](https://github.com/e-id-admin/eidch-registry-status-authoring)
+  - [Data Service](https://github.com/e-id-admin/eidch-registry-status-data)
+ 
+- Trust Registry
+  - [Authoring Service](https://github.com/e-id-admin/eidch-registry-trust-authoring)
+  - [Data Service](https://github.com/e-id-admin/eidch-registry-trust-data)
+
+- [DID Toolbox](https://github.com/e-id-admin/didtoolbox-java)
+
+- [DID Resolver](https://github.com/e-id-admin/didresolver)
+
+- [iOS Wallet App](https://github.com/e-id-admin/eidch-ios-wallet)
+
+- [Android Wallet App](https://github.com/e-id-admin/eidch-android-wallet)
+
+- Issuer-agent → will be published soon
+
+- Verifier-agent → will be published soon
+
+
