@@ -40,6 +40,7 @@ The domain of digital identities is developing at a rapid pace. While the Confed
 - **SELECTED** = Chosen for system,
 
 ### Additional open points:
+
 The delivery of all open points noted here is currently undated.
 
 - The implementation of [privacy-preserving hardware device binding](#privacy-preserving-device-binding)
