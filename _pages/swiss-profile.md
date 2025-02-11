@@ -83,16 +83,16 @@ The following specification defines the requirements of the to DID Document.
 
 
 {% capture notice-text %}
-**NOTE** <br/> Issuer and Verifier have the possibility to add metatada to their dids with:
+Issuer and Verifier have the possibility to add metatada to their dids with:
 - Self-attestated metadata with OpenID4VCI Server Metadata
 - Self-attestated metadata with OpenID4VP Authorization request
 - Validated metadata with the Trust Statement in chapter Trust Protocol
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Notice Headline:</h4>
+  <h4 class="no_toc">NOTE</h4>
   {{ notice-text | markdownify }}
-</div
+</div>
 
 ## OpenID for Verifiable Credential Issuance
 Implementations of this profile:
