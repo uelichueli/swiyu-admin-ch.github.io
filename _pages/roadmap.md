@@ -1,5 +1,5 @@
 ---
-title: Swiss e-ID and trust infrastructure: Roadmap (work in progress)
+title: "Swiss e-ID and trust infrastructure: Roadmap (work in progress)"
 permalink: /roadmap/
 toc: true
 toc_sticky: true
