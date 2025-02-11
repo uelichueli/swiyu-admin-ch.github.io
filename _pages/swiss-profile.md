@@ -10,8 +10,7 @@ This document defines the technical profile of the Swiss Public Beta Trust Infra
 
 The aim is to select features, provide guidelines and to define a set of requirements for new or existing specifications to enable interoperability between Issuers, Wallets and Verifiers of Credentials in the Swiss trust infrastructure for its public beta version.
 
-> [!NOTE]
-> This profile focuses on the Public Beta release and is not complete. It reflects the current state of implementation and will evolve in the future to fullfil the requirements of the Swiss trust infrastructure.
+**NOTE** <br/> This profile focuses on the Public Beta release and is not complete. It reflects the current state of implementation and will evolve in the future to fullfil the requirements of the Swiss trust infrastructure.{: .notice--primary}
 
 ## Introduction
 This document defines a set of requirements based on new or existing technical specifications and aims to enable interoperability between Issuers, Wallets and Verifiers of Credentials in the Swiss trust infrastructure during the public beta phase. It is intended as an interoperability profile that can be used by implementers.
@@ -82,11 +81,10 @@ The following specification defines the requirements of the to DID Document.
 | service            | **MUST NOT** be used                                                                        |
 
 
-> [!NOTE]
-> Issuer and Verifier have the possibility to add metatada to their dids with:
->    - Self-attestated metadata with OpenID4VCI Server Metadata
->    - Self-attestated metadata with OpenID4VP Authorization request
->    - Validated metadata with the Trust Statement in chapter Trust Protocol
+**NOTE** <br/> Issuer and Verifier have the possibility to add metatada to their dids with:
+- Self-attestated metadata with OpenID4VCI Server Metadata
+- Self-attestated metadata with OpenID4VP Authorization request
+- Validated metadata with the Trust Statement in chapter Trust Protocol {: .notice--primary}
 
 ## OpenID for Verifiable Credential Issuance
 Implementations of this profile:
@@ -244,8 +242,7 @@ The following JWT Claims **MUST** be supported content
 
 - For Cryptographic Device Binding, a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-12.html#name-key-binding-jwt), **MUST** be present when presenting an SD-JWT VC.
 
-> [!WARNING]
-> Issuers can issue low assurance VCs without Device Binding but they can become vulnerable to replay attacks. 
+**WARNING** Issuers can issue low assurance VCs without Device Binding but they can become vulnerable to replay attacks. {: .notice--warning}
 
 #### OpenID4VC Credential Format Profile
 This section specifies how SD-JWT VCs as defined in [I-D.ietf-oauth-sd-jwt-vc](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) are used in conjunction with the OpenID4VC specifications.
@@ -287,8 +284,7 @@ Issuers, Wallets and Verifiers **MUST** support P-256 (secp256r1) as a key type 
 
 SHA256 **MUST** be supported by all the entities as the hash algorithm to generate and validate digests.
 
-> [!NOTE]
-> When using this profile with other cryptosuites, it is recommended to be explicit about which entity is required to support which curve for signing and/or signature validation
+**NOTE** <br/> When using this profile with other cryptosuites, it is recommended to be explicit about which entity is required to support which curve for signing and/or signature validation {: .notice--primary}
 
 ## Privacy Considerations
 In the current profile,  sections SD-JWT VC, Credential Status and Device binding contain no protection against user correlation.
