@@ -55,7 +55,7 @@ Where possible, foundational choices are made that enable usage of multiple form
 The utilized DID Method for public identifiers shall be agnostic to the utilized cryptographic scheme. 
 The underlying communication protocol is independent of the credential format transmitted. 
 
-To ensure easy interoperability within the initial ecosystem an interoperability profile [(Swiss Profile)](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/swiss-profile.md) is published. This currently covers the technology as initially chosen for the e-ID and underlying trust infrastructure. It currently focusses on the Public Beta and will evolve with the provided infrastructure over time.  
+To ensure easy interoperability within the initial ecosystem an [interoperability profile](https://swiyu-admin-ch.github.io/swiss-profile/) is published. This currently covers the technology as initially chosen for the e-ID and underlying trust infrastructure. It currently focusses on the Public Beta and will evolve with the provided infrastructure over time.  
 
 ## What happened leading up to this decision
 
