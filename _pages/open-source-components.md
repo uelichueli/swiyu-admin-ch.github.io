@@ -21,27 +21,16 @@ The Public Beta environment is designed to test and refine the e-ID technology s
 
 ![Component Overview](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io/blob/main/assets/images/trust-infrastructure.png)
 
-## Development Process
-
-- **Community Development**: Core libraries and shared components are developed openly with the community, with ongoing updates.
-
-- **Internal Development**: Specific apps, registries, and components are developed privately and released publicly after each sprint. The published code can therefore only be a snapshot of the current development and not a thoroughly tested version.
-
-Public Beta is a critical milestone on the path to the final e-ID and its trust infrastructure, laying the groundwork for the productive environments that will follow. We welcome contributions from the community in a variety of forms. Please refer to contributing.md in the respective repository for further information.
-
-
-# How to use the Public Beta
+# How to use the Public Beta components
 
 The onboarding process for the base- and trust-registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section.
-
 
 # Specifications
 
 We integrate various technologies in the Swiss infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/swiss-profile/)
 
-
 # Link to the repositories
-The project consists of multiple repositories for each component.
+The project consists of multiple code repositories for each component.
 
 - Base Registry
   - [Authoring Service](https://github.com/e-id-admin/eidch-registry-base-authoring)
@@ -67,4 +56,11 @@ The project consists of multiple repositories for each component.
 
 - Verifier-agent → will be published soon
 
+## Development Process
+
+- **Community Development**: Core libraries and shared components are developed openly with the community, with ongoing updates.
+
+- **Internal Development**: Specific apps, registries, and components are developed privately and released publicly after each sprint. The published code can therefore only be a snapshot of the current development and not a thoroughly tested version.
+
+Public Beta is a critical milestone on the path to the final e-ID and its trust infrastructure, laying the groundwork for the productive environments that will follow. We welcome contributions from the community in a variety of forms. Please refer to contributing.md in the respective repository for further information. For more general topics, please refer to the [Community](https://github.com/swiyu-admin-ch/community) repository.
 
