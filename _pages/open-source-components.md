@@ -19,7 +19,7 @@ The Public Beta environment is designed to test and refine the e-ID technology s
 
 - **Holders**: Users will be able to download the public beta wallet, request Beta-ID credentials for testing purpose, manage their VCs and interact with the ecosystem.
 
-![Component Overview](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io/blob/main/assets/images/trust-infrastructure.png)
+![Component Overview](../assets/images/trust-infrastructure.png)
 
 # How to use the Public Beta components
 
