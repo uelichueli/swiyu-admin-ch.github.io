@@ -1,9 +1,9 @@
 # Header navigation - main links
 main:
-  - title: "Trust Infrastructure"
-    url: /trust-infrastructure/
-  - title: "Technology Stack"
-    url: /technology-stack/
+  - title: "Initial Implementation"
+    url: /initial-technology/
+  - title: "Interoperability Profile"
+    url: /swiss-profile/
   - title: "Open Source Components"
     url: /open-source-components/
   - title: "Cookbooks"
@@ -23,8 +23,8 @@ sidebarmenu:
         url: /cookbooks/onboarding-generic-issuer/
       - title: "Set up a Credential"
         url: /cookbooks/set-up-a-credential/
-      - title: "Utility Classes"
-        url: /cookbooks/utility-classes/
+      - title: "VC visual presentation"
+        url: /cookbooks/vc-visual-presentation/
 
 
 
