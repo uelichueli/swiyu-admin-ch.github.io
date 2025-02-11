@@ -10,7 +10,8 @@ This document defines the technical profile of the Swiss Public Beta Trust Infra
 
 The aim is to select features, provide guidelines and to define a set of requirements for new or existing specifications to enable interoperability between Issuers, Wallets and Verifiers of Credentials in the Swiss trust infrastructure for its public beta version.
 
-**NOTE** <br/> This profile focuses on the Public Beta release and is not complete. It reflects the current state of implementation and will evolve in the future to fullfil the requirements of the Swiss trust infrastructure.{: .notice--primary}
+**NOTE** <br/> This profile focuses on the Public Beta release and is not complete. It reflects the current state of implementation and will evolve in the future to fullfil the requirements of the Swiss trust infrastructure.
+{: .notice--primary}
 
 ## Introduction
 This document defines a set of requirements based on new or existing technical specifications and aims to enable interoperability between Issuers, Wallets and Verifiers of Credentials in the Swiss trust infrastructure during the public beta phase. It is intended as an interoperability profile that can be used by implementers.
@@ -84,7 +85,8 @@ The following specification defines the requirements of the to DID Document.
 **NOTE** <br/> Issuer and Verifier have the possibility to add metatada to their dids with:
 - Self-attestated metadata with OpenID4VCI Server Metadata
 - Self-attestated metadata with OpenID4VP Authorization request
-- Validated metadata with the Trust Statement in chapter Trust Protocol {: .notice--primary}
+- Validated metadata with the Trust Statement in chapter Trust Protocol
+{: .notice--primary}
 
 ## OpenID for Verifiable Credential Issuance
 Implementations of this profile:
@@ -238,11 +240,12 @@ The following JWT Claims **MUST** be supported content
 
 <a id="device-binding"></a>
 
-###### Cryptographic Device Binding between Wallet and Verifier
+##### Cryptographic Device Binding between Wallet and Verifier
 
 - For Cryptographic Device Binding, a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-12.html#name-key-binding-jwt), **MUST** be present when presenting an SD-JWT VC.
 
-**WARNING** Issuers can issue low assurance VCs without Device Binding but they can become vulnerable to replay attacks. {: .notice--warning}
+**WARNING** Issuers can issue low assurance VCs without Device Binding but they can become vulnerable to replay attacks. 
+{: .notice--warning}
 
 #### OpenID4VC Credential Format Profile
 This section specifies how SD-JWT VCs as defined in [I-D.ietf-oauth-sd-jwt-vc](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) are used in conjunction with the OpenID4VC specifications.
@@ -268,6 +271,7 @@ The following additional Credential Issuer metadata are defined for this Credent
 An Issuer **MAY** at their discretion add a status entry to their verifiable credential.
 
 The credential status specification to use depends on the credential format as follow:
+
 | Credential format | Specification         |
 | ------------------| ----------------------|
 | SD-JWT VC         | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) <br/> JSON format only    |
@@ -284,7 +288,8 @@ Issuers, Wallets and Verifiers **MUST** support P-256 (secp256r1) as a key type 
 
 SHA256 **MUST** be supported by all the entities as the hash algorithm to generate and validate digests.
 
-**NOTE** <br/> When using this profile with other cryptosuites, it is recommended to be explicit about which entity is required to support which curve for signing and/or signature validation {: .notice--primary}
+**NOTE** <br/> When using this profile with other cryptosuites, it is recommended to be explicit about which entity is required to support which curve for signing and/or signature validation
+{: .notice--primary}
 
 ## Privacy Considerations
 In the current profile,  sections SD-JWT VC, Credential Status and Device binding contain no protection against user correlation.
@@ -293,23 +298,10 @@ Measures to address this challenge are envisioned for a later release, for examp
 
 ## References
 
-**DID:TDW/DID:WEBVH**<br/>
-https://identity.foundation/trustdidweb/
-
-**OpenID4VCI**<br/>
-https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
-
-**OpenID4VP**<br/>
-https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
-
-**Trust Protocol based on VCs**<br/>
-https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md
-
-**SD-JWT**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/
-
-**SD-JWT VC**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/
-
-**Token Status List**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/
+- [**DID:TDW/DID:WEBVH**](https://identity.foundation/trustdidweb/)
+- [**OpenID4VCI**](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
+- [**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
+- [**Trust Protocol based on VCs**](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md)
+- [**SD-JWT**](https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/)
+- [**SD-JWT VC**](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/)
+- [**Token Status List**](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/)
