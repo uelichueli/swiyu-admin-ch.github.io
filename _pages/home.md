@@ -6,20 +6,20 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/docs_swiyu_overlay.jpg
 excerpt: >
-  U n d e r   C o n s t r u c t i o n !    
+  P u b l i c   B e t a !    
 
-  Future home for the reference architecture and cookbooks related to the Swiss e-ID ecosystem. 
+  Reference architecture and cookbooks related to the Swiss e-ID ecosystem. 
 feature_row:
   - image_path: /assets/images/docs_trustinfrastructure.jpg
-    #title: "The Swiss Trust Infrastructure"
-    excerpt: "Roles and basic principles of the Swiss Trust Infrastructure"
-    url: "/trust-infrastructure/"
+    #title: ""
+    excerpt: "Initial implementation of the Swiss e-ID and trust infrastructure"
+    url: "/initial-technology/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/docs_technologystack.jpg
-    #title: "Technology Stack"
-    excerpt: "Explanations of the technology stack, architecture, standards, and approaches"
-    url: "/technology-stack/"
+    #title: ""
+    excerpt: "Technical profile of the Swiss Trust Infrastructure for Public Beta"
+    url: "/swiss-profile/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/docs_opensourcecomponents.jpg
