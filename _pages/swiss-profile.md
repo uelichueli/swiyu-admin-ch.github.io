@@ -283,7 +283,7 @@ The credential status specification to use depends on the credential format as f
 | SD-JWT VC         | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) <br/> JSON format only    |
 
 ## Trust Protocol
-- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the Trust Protocol based on VCs.
+- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md).
 - Trust Statements **MUST** be defined as follows:
     - `kid` from the JOSE header **MUST** be an absolute `did:tdw` with a key reference.
     - `iss` and `sub` from the JWT body **MUST** be a `did:tdw`.
