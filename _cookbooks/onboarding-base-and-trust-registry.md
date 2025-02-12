@@ -18,24 +18,21 @@ Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registrati
 
 Search for the _swiyu Trust Infrastructure_ service and enter it.
 
-
-
-{% include figure popup=false image_path="../assets/images/welcome_to_eportal.png" alt="welcome to eportal" caption="This is a figure caption." %}
-
-
+![welcome to eportal](../assets/images/welcome_to_eportal.png)
 
 # Onboard the Base Registry
 
 ## Business Partner registration
 
-
 ⚙️ The businesspartner id created here will be referenced as SWIYU\_PARTNER\_ID
 
 To join an existing business partner see: [Join an existing organsiation](#UserguideBase/TrustRegistry-join_organisation)
 
-Register the business partner1 by providing a name2 and primary contact email.
-1) Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as an business partner on the _**swiyu** Trust Infrastructure_ and use it.
-2) This name can not be changed. To appear with another name you will have to register a new business partner.
+Register the business partner [^1] by providing a name [^2] and primary contact email.
+
+[^1] Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as an business partner on the _**swiyu** Trust Infrastructure_ and use it.
+[^2] This name can not be changed. To appear with another name you will have to register a new business partner.
+
 
 ![base registry enrollment](../assets/images/base_registry_enrollment.png)
 
@@ -45,7 +42,7 @@ Register the business partner1 by providing a name2 and primary contact email.
 Go to the API [self service portal](http://selfservice.api.admin.ch/api-selfservice) to register for the ecosystem APIs.
 
 If you are registered with multiple business partners you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
-![api selfservice list of apis](../../assets/images/api_selfservice.png)
+![api selfservice list of apis](../assets/images/api_selfservice.png)
 
 Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
 
