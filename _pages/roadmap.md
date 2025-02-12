@@ -43,8 +43,8 @@ The domain of digital identities is developing at a rapid pace. While the Confed
 
 The delivery of all open points noted here is currently undated.
 
-- The implementation of [privacy-preserving hardware device binding](#privacy-preserving-device-binding)
-- The implementation of [batch-issuance](#privacy-preserving-device-binding)
+- The implementation of [privacy-preserving hardware device binding](#device-binding-strategy-and-targeted-level-of-assurance)
+- The implementation of [batch-issuance](#privacy-preserving-device-binding-and-unlinkability)
 
 ## Reasoning for proposed standards and further explanations 
 
