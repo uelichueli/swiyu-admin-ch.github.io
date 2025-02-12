@@ -18,7 +18,7 @@ Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registrati
 
 Search for the _swiyu Trust Infrastructure_ service and enter it.
 
-![welcome to eportal](../assets/images/welcome_to_eportal.png)
+![welcome to eportal](../../assets/images/welcome_to_eportal.png)
 
 # Onboard the Base Registry
 
@@ -34,7 +34,7 @@ Register the business partner [^1] by providing a name [^2] and primary contact 
 [^2]: This name can not be changed. To appear with another name you will have to register a new business partner.
 
 
-![base registry enrollment](../assets/images/base_registry_enrollment.png)
+![base registry enrollment](../../assets/images/base_registry_enrollment.png)
 
 ## Get API keys to access swiyu APIs
 --------------------------------------
