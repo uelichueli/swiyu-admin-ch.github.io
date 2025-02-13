@@ -211,6 +211,13 @@ collections:
   cookbooks:
     output: true
     permalink: /:collection/:path/
+    order:
+      - onboarding-base-and-trust-registry.md
+      - onboarding-generic-verifier.md
+      - onboarding-generic-issuer.md
+      - how-to-use-beta-id.md
+      - set-up-a-credential.md
+      - vc-visual-presentation.md
 
 # Plugins (previously gems:)
 plugins:
