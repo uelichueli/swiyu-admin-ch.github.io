@@ -17,10 +17,12 @@ sidebarmenu:
     children:
       - title: "Base- and Trust-Registry"
         url: /cookbooks/onboarding-base-and-trust-registry/
-      - title: "Generic Verifier"
-        url: /cookbooks/onboarding-generic-verifier/
       - title: "Generic Issuer"
         url: /cookbooks/onboarding-generic-issuer/
+      - title: "Generic Verifier"
+        url: /cookbooks/onboarding-generic-verifier/
+      - title: "How to use Beta-ID
+        url: /cookbooks/how-to-use-beta-id/
       - title: "Set up a Credential"
         url: /cookbooks/set-up-a-credential/
       - title: "VC visual presentation"
