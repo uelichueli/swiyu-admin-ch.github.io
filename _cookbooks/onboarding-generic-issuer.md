@@ -1,5 +1,5 @@
 ---
-title: Getting started as a Generic Issuer - under construction
+title: Getting started as a Generic Issuer
 toc: true
 toc_sticky: true
 excerpt: Learn how to onboard as a generic issuer
@@ -8,7 +8,7 @@ header:
 ---
 
 This software is a web server implementing the technical standards as specified in
-the [Swiss E-ID & Trust Infrastructure technical roadmap](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/tech-roadmap.md).
+the [Swiss e-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/).
 Together with the other generic components provided, this software forms a collection of APIs allowing issuance and
 verification of verifiable credentials without the need of reimplementing the standards.
 
@@ -42,8 +42,6 @@ flowchart TD
 > - Registered yourself on the swiyuprobeta portal
 > - Registered yourself on the api self service portal
 
-> Are you a third-party user? Then you're right here! Otherwhise go to [gov internal usage](#Gov-internal-usage)
-
 ## 1. Set the environment variables
 
 A sample compose file for an entire setup of both components and a database can be found
@@ -56,8 +54,8 @@ a wallet can communicate with them.
 
 The latest images are available here:
 
-- [issuer-agent-oid4vci](https://github.com/admin-ch-ssi/mirror-issuer-agent-oid4vci/pkgs/container/mirror-issuer-agent-oid4vci)
-- [issuer-agent-management](https://github.com/admin-ch-ssi/mirror-issuer-agent-management/pkgs/container/mirror-issuer-agent-management)
+- [issuer-agent-oid4vci](https://github.com/swiyu-admin-ch/mirror-issuer-agent-oid4vci/pkgs/container/mirror-issuer-agent-oid4vci)
+- [issuer-agent-management](https://github.com/swiyu-admin-ch/mirror-issuer-agent-management/pkgs/container/mirror-issuer-agent-management)
 
 ## 2. Create a verifiable credentials schema
 
@@ -127,5 +125,6 @@ a credential offer for a holder. Here is an example of a request body for the of
 }
 ```
 
+# Development
 
-Instructions for the development ... -> Link to issuer repo
+Instructions for the development of this component can be found in the repository.
