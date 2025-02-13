@@ -37,7 +37,7 @@ The domain of digital identities is developing at a rapid pace. While the Confed
 - **OPEN** = Options are being assessed, <br>
 - **CANDIDATE** = Standard/Spec is in selection, <br>
 - **HIGH** = Current hypothesis for implementation, <br>
-- **SELECTED** = Chosen for system,
+- **SELECTED** = Chosen for system
 
 ### Additional open points:
 
