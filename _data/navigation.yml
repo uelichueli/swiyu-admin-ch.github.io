@@ -21,7 +21,7 @@ sidebarmenu:
         url: /cookbooks/onboarding-generic-issuer/
       - title: "Generic Verifier"
         url: /cookbooks/onboarding-generic-verifier/
-      - title: "How to use Beta-ID
+      - title: "How to use Beta-ID"
         url: /cookbooks/how-to-use-beta-id/
       - title: "Set up a Credential"
         url: /cookbooks/set-up-a-credential/
