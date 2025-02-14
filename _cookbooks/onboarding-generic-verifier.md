@@ -21,18 +21,7 @@ instance of the service.
 The verification management service is linked to the verification validator services through a database, allowing to
 scale the validator service independently of the management service.
 
-```mermaid
-flowchart TD
-    issint[\Verifier Business System\]
-    isam(Verifier Management Service)
-    isdb[(Postgres)]
-    isoi(Verifier Validator Service)
-    wallet[Wallet]
-    issint ---> isam
-    isam ---> isdb
-    isoi ---> isdb
-    wallet ---> isoi
-```
+![verifier flowchart](../../assets/images/generic_verifier_model.png)
 
 # Deployment instructions
 
