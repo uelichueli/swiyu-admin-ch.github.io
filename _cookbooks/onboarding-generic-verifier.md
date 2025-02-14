@@ -21,7 +21,7 @@ instance of the service.
 The verification management service is linked to the verification validator services through a database, allowing to
 scale the validator service independently of the management service.
 
-![verifier flowchart](../../assets/images/generic_verifier_model.png)
+![verifier flowchart](../assets/images/cookbook_generic_verifier_model.png)
 
 # Deployment instructions
 
