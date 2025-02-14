@@ -21,7 +21,7 @@ instance of the service.
 The issuer management service is linked to the issuer signer services through a database, allowing to scale the signer
 service independently from the management service.
 
-![issuer flowchart](../../assets/images/generic_issuer_model.png)
+![issuer flowchart](../assets/images/cookbook_generic_issuer_model.png)
 
 # Deployment
 
