@@ -21,18 +21,7 @@ instance of the service.
 The issuer management service is linked to the issuer signer services through a database, allowing to scale the signer
 service independently from the management service.
 
-```mermaid
-flowchart TD
-    issint[\Issuer Business System\]
-    isam(Issuer Management Service)
-    isdb[(Postgres)]
-    isoi(Issuer Signer Service)
-    wallet[Wallet]
-    issint ---> isam
-    isam ---> isdb
-    isoi ---> isdb
-    wallet ---> isoi
-```
+![issuer flowchart](../../assets/images/generic_issuer_model.png)
 
 # Deployment
 
