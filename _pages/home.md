@@ -6,9 +6,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/docs_swiyu_overlay.jpg
 excerpt: >
-  P u b l i c   B e t a !    
-
-  Reference architecture and cookbooks related to the Swiss e-ID ecosystem. 
+  Reference architecture and cookbooks related to the Public Beta Swiss e-ID trust infrastructure ecosystem. 
 feature_row:
   - image_path: /assets/images/docs_trustinfrastructure.jpg
     #title: ""
