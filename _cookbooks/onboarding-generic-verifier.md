@@ -2,24 +2,18 @@
 title: Getting started as a Generic Verifier
 toc: true
 toc_sticky: true
-excerpt: Learn how to deploy the swiyu generic verifier
+excerpt: Learn how to deploy the generic verifier management service
 header:
   teaser: ../assets/images/cookbook_generic_verifier.jpg
 ---
 
-This software is a web server implementing the technical standards as specified in
-the [Swiss E-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/).
-Together with the other generic components provided, this software forms a collection of APIs allowing issuance and
-verification of verifiable credentials without the need of reimplementing the standards.
+This software is a web server implementing the technical standards as specified in the [Swiss E-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
 
-The Generic Verifier Management Service is the interface to start a verification process. The service itself is and
-should be only accessible from inside the organization.
+The Generic Verifier Management Service is the interface to start a verification process. The service itself is and should be only accessible from inside the organization.
 
-As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own
-instance of the service.
+As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own instance of the service.
 
-The verification management service is linked to the verification validator services through a database, allowing to
-scale the validator service independently of the management service.
+The verification management service is linked to the verification validator services through a database, allowing to scale the validator service independently of the management service.
 
 ![verifier flowchart](../../assets/images/cookbook_generic_verifier_model.png)
 
@@ -33,8 +27,8 @@ scale the validator service independently of the management service.
 
 
 ## 1. Set the environment variables
-A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](sample.compose.yml) file.
-**Replace all placeholder <VARIABLE_NAME>**. In addition to that you need to adapt the [verifier metadata](sample.compose.yml#L35) to your use case.
+A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml) file.
+**Replace all placeholder <VARIABLE_NAME>**. In addition to that you need to adapt the [verifier metadata](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml#L35) to your use case.
 Those information will be provided to the holder on a dedicated endpoint serving as metadata information of your verifier.
 The placeholder `${CLIENT_ID}` in your metadata file will be replaced on the fly by the value set for `VERIFIER_DID`.
 
@@ -42,8 +36,8 @@ Please be aware that both the verifier-agent-management and the verifier-agent-o
 a wallet can communicate with them.
 
 The latest images are available here:
-- [verifier-agent-oid4vci](https://github.com/swiyu-admin-ch/mirror-verifier-agent-oid4vp/pkgs/container/mirror-verifier-agent-oid4vp)
-- [verifier-agent-management](https://github.com/swiyu-admin-ch/mirror-verifier-agent-management/pkgs/container/mirror-verifier-agent-management)
+- [verifier-agent-oid4vp](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-verifier-agent-oid4vp)
+- [verifier-agent-management](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-verifier-agent-management)
 
 ## 2. Creating a verification
 > For a detailled understanding of the verfication process and the data structure of verification please consult the 
@@ -118,4 +112,4 @@ in order to submit an response to the verification request.
 ```
 # Development instructions
 
-Instructions for the development of this component can be found in the Open Source repository.
+Instructions for the development of this component can be found in the [Open Source repository](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/README.md).
