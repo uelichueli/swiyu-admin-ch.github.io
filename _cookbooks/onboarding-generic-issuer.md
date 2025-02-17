@@ -2,24 +2,18 @@
 title: Getting started as a Generic Issuer
 toc: true
 toc_sticky: true
-excerpt: Learn how to onboard as a generic issuer
+excerpt: Learn how to deploy the generic issuer management service
 header:
   teaser: ../assets/images/cookbook_generic_issuer.jpg
 ---
 
-This software is a web server implementing the technical standards as specified in
-the [Swiss e-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/).
-Together with the other generic components provided, this software forms a collection of APIs allowing issuance and
-verification of verifiable credentials without the need of reimplementing the standards.
+This software is a web server implementing the technical standards as specified in the [Swiss e-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
 
-The Generic Issuer Management Service is the interface to offer a credential. It should be only accessible from the
-issuers internal organization.
+The Generic Issuer Management Service is the interface to offer a credential. It should be only accessible from the issuers internal organization.
 
-As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own
-instance of the service.
+As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own instance of the service.
 
-The issuer management service is linked to the issuer signer services through a database, allowing to scale the signer
-service independently from the management service.
+The issuer management service is linked to the issuer signer services through a database, allowing to scale the signer service independently from the management service.
 
 ![issuer flowchart](../../assets/images/cookbook_generic_issuer_model.png)
 
@@ -33,31 +27,26 @@ service independently from the management service.
 
 ## 1. Set the environment variables
 
-A sample compose file for an entire setup of both components and a database can be found
-in [sample.compose.yml](sample.compose.yml) file.
+A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file.
+
 **Replace all placeholder <VARIABLE_NAME>**.
 
-Please be aware that both the issuer-agent-management and the issuer-agent-oid4vci need to be publicly accessible over
-an domain configured in `EXTERNAL_URL` so that
-a wallet can communicate with them.
+Please be aware that both the issuer-agent-management and the issuer-agent-oid4vci need to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
 
 The latest images are available here:
 
-- [issuer-agent-oid4vci](https://github.com/swiyu-admin-ch/mirror-issuer-agent-oid4vci/pkgs/container/mirror-issuer-agent-oid4vci)
-- [issuer-agent-management](https://github.com/swiyu-admin-ch/mirror-issuer-agent-management/pkgs/container/mirror-issuer-agent-management)
+- [issuer-agent-oid4vci](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-issuer-agent-oid4vci)
+- [issuer-agent-management](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-issuer-agent-management)
 
 ## 2. Create a verifiable credentials schema
 
-In order to support your use case you need to adapt the so-called issuer_metadata (
-see [sample.compose.yml](sample.compose.yml#L85)).
+In order to support your use case you need to adapt the so-called issuer_metadata (see [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml#L85)).
 Those metadata define the appearance of the credential in the wallet and what kind of credential formats are supported.
-For further information consult the [eidch-public-beta repo](https://github.com/e-id-admin/eidch-public-beta)
+For further information consult the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/)
 
 ## 3. Initialize the status list
 
-Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are up and running you need to initialize
-the status
-list of your issuer so that you can issue credentials.
+Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are up and running you need to initialize the status list of your issuer so that you can issue credentials.
 
 **Request to create an status list slot**  
 The url you'll receive in the response will be used in the next request as STATUS_JWT_URL
@@ -116,4 +105,4 @@ a credential offer for a holder. Here is an example of a request body for the of
 
 # Development
 
-Instructions for the development of this component can be found in the repository.
+Instructions for the development of this component can be found in the [repository](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management).
