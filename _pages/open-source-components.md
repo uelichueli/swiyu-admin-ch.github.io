@@ -52,9 +52,13 @@ The project consists of multiple code repositories for each component.
 
 - [Android Wallet App](https://github.com/e-id-admin/eidch-android-wallet)
 
-- Issuer-agent → will be published soon
+- Issuer-agent
+  - [Generic issuer management service](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management)
+  - [Generic issuer signing service OID4VCI](https://github.com/swiyu-admin-ch/eidch-issuer-agent-oid4vci)
 
-- Verifier-agent → will be published soon
+- Verifier-agent
+  - [Generic verifier management service](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
+  - [Generic verification service OID4VP](https://github.com/swiyu-admin-ch/eidch-verifier-agent-oid4vp)
 
 ## Development Process
 
