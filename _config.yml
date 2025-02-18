@@ -212,7 +212,6 @@ collections:
       - onboarding-generic-verifier.md
       - onboarding-generic-issuer.md
       - how-to-use-beta-id.md
-      - set-up-a-credential.md
       - vc-visual-presentation.md
 
 # Plugins (previously gems:)
