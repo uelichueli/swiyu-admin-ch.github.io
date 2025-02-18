@@ -26,7 +26,7 @@ Search for the _swiyu Trust Infrastructure_ service and enter it.
 
 ⚙️ The businesspartner id created here will be referenced as SWIYU\_PARTNER\_ID
 
-To join an existing business partner see: [Join an existing organsiation](#UserguideBase/TrustRegistry-join_organisation)
+To join an existing business partner see: [Join an existing business partner](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#join-an-existing-business-partner)
 
 Register the business partner [^1] by providing a name [^2] and primary contact email.
 
@@ -144,7 +144,7 @@ For advanced usage or detailed parameter descriptions, please refer to [e-id-ad
 ###### What Happens Upon Execution
 
 *   Key Pair Generation: Three key pairs are created and stored in the .didtoolbox directory (output directory, will be created automatically) in PEM format  
-    **Take good care of the generated key material. You will need it again later on (e.g. to configure it in your Issuers and/or Verifiers, see:** [Issuer-Management](https://github.com/admin-ch-ssi/mirror-issuer-agent-management) & [Verifier-Management](https://github.com/admin-ch-ssi/mirror-verifier-agent-management)
+    **Take good care of the generated key material. You will need it again later on (e.g. to configure it in your Issuers and/or Verifiers, see:** [Issuer-Management](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) & [Verifier-Management](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
     *   DID Update Key Pair:
         *   id\_ed25519: Private key (not password protected)
         *   id\_ed25519.pem: Public key
