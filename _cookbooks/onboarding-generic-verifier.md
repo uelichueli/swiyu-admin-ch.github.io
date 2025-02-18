@@ -28,7 +28,7 @@ The verification management service is linked to the verification validator serv
 
 ## 1. Set the environment variables
 
-A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml) file. **Replace all placeholder <VARIABLE_NAME>**. In addition to that you need to adapt the
+A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml) file. **Replace all placeholder `<VARIABLE_NAME>`**. In addition to that you need to adapt the
 [verifier metadata](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml#L35) to your use case.
 Those information will be provided to the holder on a dedicated endpoint serving as metadata information of your verifier.
 The placeholder `${CLIENT_ID}` in your metadata file will be replaced on the fly by the value set for `VERIFIER_DID`.
