@@ -8,8 +8,6 @@ main:
     url: /open-source-components/
   - title: "Cookbooks"
     url: /cookbooks/
-  #- title: "Security & Privacy"
-  #  url: /security-privacy/ 
 
 sidebarmenu:
   - title: "Cookbooks"
@@ -23,8 +21,6 @@ sidebarmenu:
         url: /cookbooks/onboarding-generic-verifier/
       - title: "How to use Beta-ID"
         url: /cookbooks/how-to-use-beta-id/
-      - title: "Set up a Credential"
-        url: /cookbooks/set-up-a-credential/
       - title: "VC visual presentation"
         url: /cookbooks/vc-visual-presentation/
 
