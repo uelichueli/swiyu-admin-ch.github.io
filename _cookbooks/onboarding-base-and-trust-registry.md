@@ -42,17 +42,20 @@ Register the business partner [^1] by providing a name [^2] and primary contact 
 Go to the API [self service portal](http://selfservice.api.admin.ch/api-selfservice) to register for the ecosystem APIs.
 
 If you are registered with multiple business partners you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
-![api selfservice list of apis](../assets/images/api_selfservice.png)
+
+![api selfservice list of apis](../../assets/images/api_selfservice.png)
 
 Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
 
 Select an API and press **Subscribe.** You will be prompted to create a new Application or select an existing one.
+
 ![create or select an application](../../assets/images/create_select_application.png)
+
 ![create application](../../assets/images/create_application.png)
 
 **Important:**
 
-<p> ⚙️ The output of the application creation will be refrenced as SWIYU\_STATUS\_REGISTRY\_CUSTOMER\_KEY / SWIYU\_STATUS\_REGISTRY\_CUSTOMER\_SECRET / SWIYU\_STATUS\_REGISTRY\_BOOTSTRAP\_REFRESH\_TOKEN / SWIYU\_STATUS\_REGISTRY\_ACCESS\_TOKEN </p>
+<p> ⚙️ The output of the application creation will be referenced as SWIYU_STATUS_REGISTRY_CUSTOMER_KEY / SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET / SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN / SWIYU_STATUS_REGISTRY_ACCESS_TOKEN </p>
 
 Safely store your keys this is the only time they are shown to you. It is possible to create new ones if necessary.  
 If you don't refresh your token for too long it might expire and you will need to create new tokens here.
@@ -76,6 +79,7 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 | Swagger | [OpenAPI spec](api/identifier_authoring.yml) | [OpenAPI spec](api/status_authoring.yml)
 
 In the next step you will need your business partner ID. You can find it in the **swiyu Trust Infrastructure** dashboard.
+
 ![swiyu dashboard](../../assets/images/swiyu_dashboard.png)
 
 ## Onboard business partner on the Base Registry
@@ -84,16 +88,16 @@ In the next step you will need your business partner ID. You can find it in the 
 
 In order to onboard on the Base Registry you will first need to reserve some space.
 
-_POST: \[IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entities/{businessEntityId}/identifier-entries_
+_POST: [IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entities/{businessEntityId}/identifier-entries_
 
 **API Response 201**
 ```yaml
 <pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
 ```
 
-The identifier\_registry\_url is used in the next step when creating the did log.
+The identifier_registry_url is used in the next step when creating the DID log.
 
-The id is required when uploading your did log.
+The id is required when uploading your DID log.
 
 ### create a DID (or create the DID log you need to continue)
 
@@ -137,7 +141,7 @@ java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg
 ```
 
 *   create: Command to create a new DID
-*   <identifier\_registry\_url>: URL received as a result of DID space creation from step "Create DID space"
+*   <identifier_registry_url>: URL received as a result of DID space creation from step "Create DID space"
 
 For advanced usage or detailed parameter descriptions, please refer to [e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java#advanced-usage).
 
@@ -146,8 +150,8 @@ For advanced usage or detailed parameter descriptions, please refer to [e-id-ad
 *   Key Pair Generation: Three key pairs are created and stored in the .didtoolbox directory (output directory, will be created automatically) in PEM format  
     **Take good care of the generated key material. You will need it again later on (e.g. to configure it in your Issuers and/or Verifiers, see:** [Issuer-Management](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) & [Verifier-Management](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
     *   DID Update Key Pair:
-        *   id\_ed25519: Private key (not password protected)
-        *   id\_ed25519.pem: Public key
+        *   id_ed25519: Private key (not password protected)
+        *   id_ed25519.pem: Public key
     *   DID Authentication Key Pair:
         *   auth-key-01: Private key (not password protected)
         *   auth-key-01.pem: Public key
@@ -158,7 +162,7 @@ For advanced usage or detailed parameter descriptions, please refer to [e-id-ad
 
 ###### DID Log Content
 
-⚙️ The did generated in this step will be referenced as ISSUER\_ID or VERIFIER\_DID
+⚙️ The DID generated in this step will be referenced as ISSUER_ID or VERIFIER_DID
 
 The generated DID log content should look similiar as shown below. After creation, it consists of a single, albeit lengthy, line.
 
@@ -188,7 +192,7 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 
 Use the Identifier API to upload your DIDLog.
 
-_PUT: \[IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entity/{businessEntityId}/identifier-entries/{identifierRegistryEntryId}_
+_PUT: [IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entity/{businessEntityId}/identifier-entries/{identifierRegistryEntryId}_
 
 Add the did:tdw log you created earlier as string body (not JSON).
 
@@ -213,9 +217,11 @@ To be able to interact with the swiyu eco system you need to host either a an sw
 
 
 Go to e-portal and click on _manage users:_
+
 ![invite members](../../assets/images/invite_members.png)
 
 Generate as many invitation codes as you need and make sure to add the appropriate roles.
+
 ![generate invitation codes](../../assets/images/create_codes.png)
 
 #### Join an existing business partner
@@ -223,5 +229,6 @@ Generate as many invitation codes as you need and make sure to add the appropria
 If your business partner is already registered on [ePortal](https://eportal.admin.ch/start)
 
 To Join an already existing business parter press the _Redeem invitation code_ button on the top right.
+
 ![redeem invitation code](../../assets/images/redeem_code.png)
 ![redeem invitation code - step 2](../../assets/images/redeem_code_2.png)
