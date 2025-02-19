@@ -17,6 +17,8 @@ Its goal is to enable issuers in creating clean, professional looking credential
 
 In the swiyu wallet app, Verifiable Credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer can define the following:
 
+[^1]: the OCA layer allowing more options will be deployed during Q2/2025
+
 - the background color
 - the logo / icon
 - the name
@@ -26,10 +28,8 @@ All these visible or readible features are set and configured by the issuer in t
 
 Below is an example of how various credentials are displayed in different situations in the swiyu app.
 
-![IMAGE]()
-
-
-[^1] the OCA layer allowing more options will be deployed during Q2/2025
+![credential medium](../../assets/images/vc_credential_medium.png)
+![grouped row](../../assets/images/vc_grouped_row.png)
 
 ## Background Color
 
@@ -39,9 +39,7 @@ Images are not supported.
 
 No transparency/alpha channels are supported.
 
--- Note Kasten --
-Good to know
-
+{% capture notice-text %}
 **Readability** 
 
 To ensure proper contrast and legibility of the information displayed on the card (such as the VC name, user name, and logo/icon), a gradient overlay is applied. This helps text and icons stand out clearly against the chosen background color, improving readability and overall user experience.
@@ -51,7 +49,12 @@ Furthermore, the swiyu app will automatically adjust the color of the informatio
 **Darkmode**
 
 Although the swiyu app supports dark mode, the VC’s color scheme remains unaffected by this setting. Consequently, its background color stays the same in both light and dark modes.
+{% endcapture %}
 
+<div class="notice--info">
+  <h4 class="no_toc">Good to know</h4>
+  {{ notice-text | markdownify }}
+</div>
 
 ## Logo / Icon
 
@@ -63,9 +66,7 @@ No alpha channels or transparency for solid elements. 
 
 Multi-colored logos and gradients are automatically converted to a monochrome version to foster readability and ease of use. 
 
--- Note Kasten --
-
-Good to know
+{% capture notice-text %}
 **Downscaling**  
 
 The logo/icon is automatically scaled down to a maximum size of 21×21 px. Extreme landscape or portrait logos/icons will be scaled such that the longest side is reduced to 21 px.
@@ -74,11 +75,18 @@ The logo/icon is automatically scaled down to a maximum size of 21×21 px. Extre
 
 Use a square format whenever possible so it scales evenly across various layouts. 
 Work with simplified icons/logos so they are readable even when small. 
-Plurilingualism
+
+**Plurilingualism**
 
 The VC supports multilingual settings. This means the logo can be defined per language.
+{% endcapture %}
 
-![IMAGE]
+<div class="notice--info">
+  <h4 class="no_toc">Good to know</h4>
+  {{ notice-text | markdownify }}
+</div>
+
+![logo conversion](../../assets/images/vc_logo_conversion.png)
 
 ## Name
 
@@ -86,8 +94,7 @@ Care to use a self-explanatory credential name that is of reasonable length. 
 
 Think to set the various language versions of it so that name is displayed in the app language of the user. 
 
--- Note Kasten
-Recommendation: If you issue a family of diverse credentials (like e.g. entry pass spa, entry pass fitness & spa) try to integrate the difference already in the name and/or the color so that it is easier for a user to distinguish them.
+Recommendation: If you issue a family of diverse credentials (like e.g. entry pass spa, entry pass fitness & spa) try to integrate the difference already in the name and/or the color so that it is easier for a user to distinguish them.{: .notice--info}
 
 ## Subtitle
 
@@ -97,8 +104,7 @@ They should allow the user to differentiate multiple samples of a same credentia
 
 Keep metadata concise and relevant to avoid overwhelming the user with unnecessary information.
 
--- Note Kasten
-Recommendation: Use for example first name and last name to allow users to easily distinguish their own from those of family members during a verification, making it easier to select the appropriate credential.
+Recommendation: Use for example first name and last name to allow users to easily distinguish their own from those of family members during a verification, making it easier to select the appropriate credential.{: .notice--info}
 
 ## Fallback Versions
 
@@ -114,7 +120,7 @@ If no logo/icon is provided, a fallback logo/icon will be shown, as visualised b
 
 If there is no language-specific variant available, the fallback version is automatically used (see below).
 
-![IMAGE]
+![fallback version](../../assets/images/vc_fallback_version.png)
 
 ##Useful hints
 
