@@ -1,5 +1,5 @@
 ---
-title: Getting started as a Generic Verifier
+title: Getting started with the Generic Verifier
 toc: true
 toc_sticky: true
 excerpt: Learn how to deploy the generic verifier management service
