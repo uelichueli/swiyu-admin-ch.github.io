@@ -125,15 +125,11 @@ Use for example first name and last name to allow users to easily distinguish th
 
 If no assets (neither background color nor logo) are provided for a particular language, a standard credential is used. Typically, this includes:
 
-A neutral background (standard color).
-
-No fallback logo/icon will be used, the placeholder will stay empty.
-
-If no background color is provided for a given language, a fallback (standard design) version will be used.
-
-If no logo/icon is provided, a fallback logo/icon will be shown, as visualised below.
-
-If there is no language-specific variant available, the fallback version is automatically used (see below).
+- A neutral background (standard color).
+- No fallback logo/icon will be used, the placeholder will stay empty.
+- If no background color is provided for a given language, a fallback (standard design) version will be used.
+- If no logo/icon is provided, a fallback logo/icon will be shown, as visualised below.
+- If there is no language-specific variant available, the fallback version is automatically used (see below).
 
 ![fallback version](../../assets/images/vc_fallback_version.png)
 
