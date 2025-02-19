@@ -187,7 +187,7 @@ The Beta-ID can be used to build and test use cases that will in the future rely
 That's it? With the Beta-ID yes, but the [swiyu Trust Infrastructure](https://swiyu-admin-ch.github.io/open-source-components/) is also there to be used by other issuers and verifiers!
 
 ## Useful hints
-- When target systems of verifiers use the social security number, be aware to set a number that validates the pattern starting with 756. and ending with the correct check digit (EAN-13 norm).
+- When target systems of verifiers use the social security number, be aware to set a number that validates the pattern starting with 756. and ending with the correct check digit ([EAN-13 norm](https://en.wikipedia.org/wiki/International_Article_Number)).
 - Portrait images are resized and cropped to the same output size.
 - A revocation cannot be reverted. This is a governance decision, not a technical issue.
 
