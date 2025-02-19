@@ -52,7 +52,7 @@ Although the swiyu app supports dark mode, the VC’s color scheme remains unaff
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Good to know</h4>
+  <h4 class="no_toc">Good to know:</h4>
   {{ notice-text | markdownify }}
 </div>
 
@@ -82,7 +82,7 @@ The VC supports multilingual settings. This means the logo can be defined per la
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Good to know</h4>
+  <h4 class="no_toc">Good to know:</h4>
   {{ notice-text | markdownify }}
 </div>
 
@@ -94,7 +94,15 @@ Care to use a self-explanatory credential name that is of reasonable length. 
 
 Think to set the various language versions of it so that name is displayed in the app language of the user. 
 
-Recommendation: If you issue a family of diverse credentials (like e.g. entry pass spa, entry pass fitness & spa) try to integrate the difference already in the name and/or the color so that it is easier for a user to distinguish them.{: .notice--info}
+{% capture notice-text %}
+If you issue a family of diverse credentials (like e.g. entry pass spa, entry pass fitness & spa) try to integrate the difference already in the name and/or the color so that it is easier for a user to distinguish them.
+{% endcapture %}
+
+<div class="notice--info">
+  <h4 class="no_toc">Recommendation:</h4>
+  {{ notice-text | markdownify }}
+</div>
+
 
 ## Subtitle
 
@@ -104,7 +112,14 @@ They should allow the user to differentiate multiple samples of a same credentia
 
 Keep metadata concise and relevant to avoid overwhelming the user with unnecessary information.
 
-Recommendation: Use for example first name and last name to allow users to easily distinguish their own from those of family members during a verification, making it easier to select the appropriate credential.{: .notice--info}
+{% capture notice-text %}
+Use for example first name and last name to allow users to easily distinguish their own from those of family members during a verification, making it easier to select the appropriate credential.
+{% endcapture %}
+
+<div class="notice--info">
+  <h4 class="no_toc">Recommendation:</h4>
+  {{ notice-text | markdownify }}
+</div>
 
 ## Fallback Versions
 
@@ -122,7 +137,7 @@ If there is no language-specific variant available, the fallback version is auto
 
 ![fallback version](../../assets/images/vc_fallback_version.png)
 
-##Useful hints
+## Useful hints
 
 - Currently, the data sets or attributes are displayed in the credential detail view exactly as defined at the VC schema level. The ability to customise the ordering or grouping of these data sets will be available once the OCA layer is implemented.
 - The OCA (information overlay) is planned to be deployed in Q2/2025.
