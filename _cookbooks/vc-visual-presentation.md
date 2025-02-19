@@ -81,11 +81,12 @@ The VC supports multilingual settings. This means the logo can be defined per la
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Good to know</h3>
+  <h3 class="no_toc">Good to know</h3>
   {{ notice-text | markdownify }}
 </div>
 
 ![logo conversion](../../assets/images/vc_logo_conversion.png)
+![logo scaling](../../assets/images/vc_logo_scaling.png)
 
 ## Name
 
@@ -136,11 +137,9 @@ Background color and/or icon can be set per language. This means that if a defin
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Good to know:</h3>
+  <h3 class="no_toc">Good to know:</h3>
   {{ notice-text | markdownify }}
 </div>
-
-
 
 ![fallback version](../../assets/images/vc_fallback_version.png)
 
