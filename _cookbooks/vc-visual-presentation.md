@@ -28,8 +28,7 @@ All these visible or readible features are set and configured by the issuer in t
 
 Below is an example of how various credentials are displayed in different situations in the swiyu app.
 
-![credential medium](../../assets/images/vc_credential_medium.png)
-![grouped row](../../assets/images/vc_grouped_row.png)
+![credential](../../assets/images/vc_credential.png)
 
 ## Background Color
 
