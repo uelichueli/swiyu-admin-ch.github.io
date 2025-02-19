@@ -7,6 +7,8 @@ header:
   teaser: ../assets/images/cookbook_base_trust-registry.jpg
 ---
 
+![Onboarding flow](../assets/images/onboarding-steps3.jpg)
+Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata like a name and logo on the trust registry. Here you can find a step by step guide to get onboarded.
 
 ## Sign-in or up to ePortal
 
@@ -19,6 +21,7 @@ Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registrati
 Search for the _swiyu Trust Infrastructure_ service and enter it.
 
 ![welcome to eportal](../../assets/images/welcome_to_eportal.png)
+![welcome to eportal](../assets/images/welcome_to_eportal.png)
 
 # Onboard the Base Registry
 
