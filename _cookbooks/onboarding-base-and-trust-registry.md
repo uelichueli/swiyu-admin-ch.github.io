@@ -210,14 +210,11 @@ Now you are registered on the base registry and be able to configure your issuer
 
 ### Use/Integrate the Trust Infrastructure
 
-To be able to interact with the swiyu eco system you need to host either a an swiyu issuer and/or an swiyu verifier. Please 
+To be able to interact with the swiyu eco system you need to host either a swiyu issuer and/or an swiyu verifier. Instructions on how to setup the components can be found in the [swiyu issuer](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) and [swiyu verifier](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management) repostory documentation.
 
-1.  Integrate the swiyu issuer and swiyu verifier beta according to the documentation 
-2.  Create a verifiable credential schema with the help of the Design Guidelines
-3.  Create verifications schemas (link to document on github), for example building upon the Beta-ID (demo credential with dummy data)
-4.  Issue and verify demo verifiable credentials on your own systems
-5.  Manage the data of your entity
+To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu trust infrastrcuture service](#open-swiyu-trust-infrastructure)
 
+![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)
 
 ### User management
 
