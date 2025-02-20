@@ -7,7 +7,7 @@ header:
   teaser: ../assets/images/cookbook_base_trust-registry.jpg
 ---
 
-![Onboarding flow](../assets/images/onboarding-steps3.jpg)
+![Onboarding flow](../../assets/images/onboarding-steps3.jpg)
 Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata like a name and logo on the trust registry. Here you can find a step by step guide to get onboarded.
 
 ## Sign-in or up to ePortal
@@ -21,7 +21,6 @@ Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registrati
 Search for the _swiyu Trust Infrastructure_ service and enter it.
 
 ![welcome to eportal](../../assets/images/welcome_to_eportal.png)
-![welcome to eportal](../assets/images/welcome_to_eportal.png)
 
 # Onboard the Base Registry
 
@@ -76,8 +75,7 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 
 | Environment | Identifier Authoring | Status Authoring | Key manager |
 | --- | --- | --- | --- |
-| Ref | [identifier-reg-api-r.trust-infra.swiyu.admin.ch](http://identifier-reg-api-r.trust-infra.swiyu.admin.ch/) | [status-reg-api-r.trust-infra.swiyu.admin.ch](http://status-reg-api-r.trust-infra.swiyu.admin.ch/) | [keymanager-nprd.api.admin.ch](https://keymanager-nprd-intra.api.admin.ch) |
-| Int-Prod | [identifier-reg-api.trust-infra.swiyu-int.admin.ch](https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/) | [status-reg-api.trust-infra.swiyu-int.admin.ch](https://status-reg-api.trust-infra.swiyu-int.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd-intra.api.admin.ch) |
+| Open Beta | [identifier-reg-api.trust-infra.swiyu-int.admin.ch](https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/) | [status-reg-api.trust-infra.swiyu-int.admin.ch](https://status-reg-api.trust-infra.swiyu-int.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd-intra.api.admin.ch) |
 | Prod | [identifier-reg-api.trust-infra.swiyu.admin.ch](https://identifier-reg-api.trust-infra.swiyu.admin.ch/) | [status-reg-api.trust-infra.swiyu.admin.ch](https://status-reg-api.trust-infra.swiyu.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd-intra.api.admin.ch) |
 | Swagger | [OpenAPI spec](api/identifier_authoring.yml) | [OpenAPI spec](api/status_authoring.yml)
 
@@ -91,12 +89,15 @@ In the next step you will need your business partner ID. You can find it in the 
 
 In order to onboard on the Base Registry you will first need to reserve some space.
 
-_POST: [IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entities/{businessEntityId}/identifier-entries_
+```bash
+curl \
+  -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
+  -X POST "https://identifier-reg-api.trust-infra.swiyu.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries"
+```
 
 **API Response 201**
-```yaml
-<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
-```
+<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
+
 
 The identifier_registry_url is used in the next step when creating the DID log.
 
@@ -182,8 +183,6 @@ In the example above the DID is the following
 did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:18fa7c77-9dd1-4e20-a147-fb1bec146085
 ```
 
-
-
 #### Additional Information
 
 *   Output Directory: The .didtoolbox directory is automatically created in the current working directory. Ensure you have the necessary permissions to create and write to this directory.
@@ -195,7 +194,13 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 
 Use the Identifier API to upload your DIDLog.
 
-_PUT: [IDENTIFIER-AUTHORING\]/api/v1/identifier/business-entity/{businessEntityId}/identifier-entries/{identifierRegistryEntryId}_
+```bash
+curl \
+  -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
+  -H "Content-Type: application/jsonl+json" \
+  -d "$YOUR_GENERATED_DIDLOG" \
+  -X PUT "https://identifier-reg-api.trust-infra.swiyu.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
+```
 
 Add the did:tdw log you created earlier as string body (not JSON).
 
