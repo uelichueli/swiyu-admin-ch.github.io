@@ -1,21 +1,21 @@
 ---
-title: VC visual presentation
+title: Designing the Visual Presentation of a Credential
 toc: true
 toc_sticky: true
-excerpt: Learn how to adjust the verifiable credentials presentation upon your needs
+excerpt: Learn how to define the visual layout of a credential as an issuer
 header:
   teaser: ../assets/images/cookbook_verifiablecredential.jpg
 ---
 
 ## Introduction
 
-This manual describes how to define the visual presentation of a Verifiable Credential (VC) displayed in the swiyu App, the digital wallet of the Swiss Confederation.
+This manual describes how to define the visual presentation of a verifiable credential (VC) displayed in the swiyu app, the digital wallet of the Swiss Confederation.
 
 Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and deterimine the suitable settings. 
 
 ## Purpose and Overview 
 
-In the swiyu wallet app, Verifiable Credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer can define the following:
+In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer can define the following:
 
 [^1]: the OCA layer allowing more options will be deployed during Q2/2025
 
@@ -72,8 +72,8 @@ The logo/icon is automatically scaled down to a maximum size of 21×21 px. Extre
 
 **Recommendation**
 
-Use a square format whenever possible so it scales evenly across various layouts. 
-Work with simplified icons/logos so they are readable even when small. 
+- Use a square format whenever possible so it scales evenly across various layouts.
+- Work with simplified icons/logos so they are readable even when small. 
 
 **Plurilingualism**
 
@@ -81,11 +81,12 @@ The VC supports multilingual settings. This means the logo can be defined per la
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Good to know:</h4>
+  <h3 class="no_toc">Good to know</h3>
   {{ notice-text | markdownify }}
 </div>
 
 ![logo conversion](../../assets/images/vc_logo_conversion.png)
+![logo scaling](../../assets/images/vc_logo_scaling.png)
 
 ## Name
 
@@ -122,13 +123,23 @@ Use for example first name and last name to allow users to easily distinguish th
 
 ## Fallback Versions
 
-If no assets (neither background color nor logo) are provided for a particular language, a standard credential is used. Typically, this includes:
+If no assets (neither background color nor logo) are provided, a standard visual presentation is used.
 
-- A neutral background (standard color).
-- No fallback logo/icon will be used, the placeholder will stay empty.
-- If no background color is provided for a given language, a fallback (standard design) version will be used.
-- If no logo/icon is provided, a fallback logo/icon will be shown, as visualised below.
-- If there is no language-specific variant available, the fallback version is automatically used (see below).
+Typically, this includes:
+
+- A neutral pre-defined background
+- A fallback logo/icon
+
+{% capture notice-text %}
+**Definition per language (localisation)**
+
+Background color and/or icon can be set per language. This means that if a definition for a particular language is missing, the fallback will primary be the English version (if available) or another one provided. 
+{% endcapture %}
+
+<div class="notice--info">
+  <h3 class="no_toc">Good to know:</h3>
+  {{ notice-text | markdownify }}
+</div>
 
 ![fallback version](../../assets/images/vc_fallback_version.png)
 
@@ -144,7 +155,7 @@ If no assets (neither background color nor logo) are provided for a particular l
 The logo is automatically converted to a single-color (monochrome) version. It is not possible to preserve color nuances.
 
 **Can I use an SVG for the logo?**
-Only PNG or WebP files are currently supported. SVG or other vector formats are not accepted.
+Only PNG files are currently supported. SVG or other vector formats are not accepted.
 
 **Can I submit a logo larger than 512×512 pixels?**
 For the swiyu app, no. The maximum supported size for logos/icons is 512×512 pixels. If the logo exceeds this size, it will be automatically rejected.
@@ -157,6 +168,6 @@ No. To ensure contrast and legibility, images are not supported.
 
 ## Further assistance
 
-Thank you for following these guidelines. By doing so, you help ensure that your credentials are displayed correctly in the swiyu app and are easily recognisable to users. If you have any questions or require further assistance, please feel free to open an issue in this [GitHub repository](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io).
+Thank you for following these guidelines. By doing so, you help to ensure that your credentials are displaied correctly in the swiyu app and are easily recognisable to users. If you have any questions or require further assistance, please feel free to open an issue in this [GitHub repository](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io).
 
 

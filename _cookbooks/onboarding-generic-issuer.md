@@ -1,5 +1,5 @@
 ---
-title: Getting started as an Issuer
+title: Getting started with the Generic Issuer
 toc: true
 toc_sticky: true
 excerpt: Learn how to deploy the generic issuer management service
