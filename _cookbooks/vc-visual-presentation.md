@@ -17,7 +17,7 @@ Its goal is to enable issuers in creating clean, professional looking credential
 
 In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer can define the following:
 
-[^1]: the OCA layer allowing more options will be deployed during Q2/2025
+[^1]: the OCA layer allowing more options will be deployed at a later date
 
 - the background color
 - the logo / icon
@@ -146,7 +146,7 @@ Background color and/or icon can be set per language. This means that if a defin
 ## Useful hints
 
 - Currently, the data sets or attributes are displayed in the credential detail view exactly as defined at the VC schema level. The ability to customise the ordering or grouping of these data sets will be available once the OCA layer is implemented.
-- The OCA (information overlay) is planned to be deployed in Q2/2025.
+- The OCA (information overlay) is planned to be deployed at a later date.
 - Multilingualism: swiyu app currently supports 5 languages (German, French, Italian, Rumantsch, English)
 
 ## General questions
