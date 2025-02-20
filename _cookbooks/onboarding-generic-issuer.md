@@ -1,19 +1,19 @@
 ---
-title: Getting started with the Generic Issuer
+title: Getting started with the swiyu Generic Issuer
 toc: true
 toc_sticky: true
-excerpt: Learn how to deploy the generic issuer management service
+excerpt: Learn how to deploy the swiyu Generic Issuer Management Service
 header:
   teaser: ../assets/images/cookbook_generic_issuer.jpg
 ---
 
 This software is a web server implementing the technical standards as specified in the [Swiss e-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
 
-The Generic Issuer Management Service is the interface to offer a credential. It should be only accessible from the issuers internal organization.
+The swiyu Generic Issuer Management Service is the interface to offer a credential. It should be only accessible from the issuers internal organization.
 
 As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own instance of the service.
 
-The issuer management service is linked to the issuer signer services through a database, allowing to scale the signer service independently from the management service.
+The swiyu Generic Issuer Management Service is linked to the issuer signer services through a database, allowing to scale the signer service independently from the management service.
 
 ![issuer flowchart](../../assets/images/cookbook_generic_issuer_model.png)
 
