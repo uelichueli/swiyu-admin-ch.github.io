@@ -2,7 +2,7 @@
 title: How to use Beta-ID for my business
 toc: true
 toc_sticky: true
-excerpt: Learn how to use the Public Beta e-ID
+excerpt: Learn how to use the Beta-ID and about the credential details
 header:
   teaser: ../assets/images/cookbook_beta_eid.jpg
 ---
