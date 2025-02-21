@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 excerpt: Learn how to onboard the swiyu Trust Infrastructure and manage your organisation
 header:
-  teaser: ../assets/images/cookbook_base_trust-registry.jpg
+  teaser: ../assets/images/cookbook_base_trust_registry.jpg
 ---
 
 ![Onboarding flow](../../assets/images/onboarding-steps3.jpg)
@@ -66,11 +66,12 @@ If you don't refresh your token for too long it might expire and you will have t
 
 Use the access token as bearer token ([RFC 6750](https://datatracker.ietf.org/doc/html/rfc6750)) when connecting to the subscribed authoring API.
 
-If you want to create a new access token without manual UI interaction you can use the OAuth refresh token flow for the issuer [https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW](https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW) to get valid access tokens for API access.
+If you want to create a new access token without manual UI interaction you can use the [OAuth refresh token flow for the issuer](https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW) to get valid access tokens for API access.
 
 ### Base URLs
 
-⚙️ The status authoring url will be referenced as SWIYU\_STATUS\_REGISTRY\_API\_URL, the key manager as KEY\_MANAGER 
+⚙️ The status authoring url will be referenced as SWIYU_STATUS_REGISTRY_API_URL, the key manager as KEY_MANAGER.
+
 Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 
 | Environment | Identifier Authoring | Status Authoring | Key Manager |
@@ -122,7 +123,7 @@ Before using the DID Toolbox, ensure your system meets the following requirement
 
 #### Downloading the DID Toolbox
 
-The current release can be downloaded from [Releases · e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java/releases)
+The current release can be downloaded from the [repository](https://github.com/e-id-admin/didtoolbox-java/releases)
 
 #### Quickstart – Create Your First DID
 
