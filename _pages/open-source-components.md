@@ -21,7 +21,7 @@ The source code of the Swiss e-ID Trust Infrastructure is publicly available und
 
 The following components are available for Public Beta:
 
-### Base Registry
+### swiyu Base Registry
 
 Entities can onboard, update, or offboard as issuers and verifiers within the ecosystem. The base registry will manage the public keys as part of the DIDDOC required for ecosystem interactions. Status lists containing information related to credential validity can be managed.
 
@@ -33,7 +33,7 @@ The source code is divided in different services:
 - [Status Registry Data Service](https://github.com/e-id-admin/eidch-registry-status-data)
  
 
-### Trust Registry
+### swiyu Trust Registry
 
 Entities can prove and maintain their status as verified issuers or verifiers, ensuring additional trust within the ecosystem. Users will be able to see the verification status of issuers and verifiers in their wallets and verifiers are able to validate the trust-status of the issuers.
 
@@ -42,7 +42,7 @@ The source code is divided in an authoring and a data service:
 - [Authoring Service](https://github.com/e-id-admin/eidch-registry-trust-authoring)
 - [Data Service](https://github.com/e-id-admin/eidch-registry-trust-data)
 
-### Issuers 
+### swiyu Generic Issuer 
 Entities can issue, revoke, suspend, and reactivate Verifiable Credentials (VCs), using the generic reference issuer implementation provided by the federal government. 
 
 The source code is available as management and signing service:
@@ -50,7 +50,7 @@ The source code is available as management and signing service:
 - [Generic issuer management service](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management)
 - [Generic issuer signing service OID4VCI](https://github.com/swiyu-admin-ch/eidch-issuer-agent-oid4vci)
 
-### Verifiers
+### swiyu Generic Verifier
 Entities can integrate the reference verifier implementation to verify VCs, ensuring cryptographic integrity and validity according to their specific needs.
 
 The source code is available as management and verification service:
@@ -58,7 +58,7 @@ The source code is available as management and verification service:
 - [Generic verifier management service](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
 - [Generic verification service OID4VP](https://github.com/swiyu-admin-ch/eidch-verifier-agent-oid4vp)
 
-### Holders
+### Holder wallet
 
 Users will be able to download the public beta wallet, request Beta-ID credentials for testing purpose, manage their VCs and interact with the ecosystem.
 
