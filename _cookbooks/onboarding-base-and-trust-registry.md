@@ -8,32 +8,32 @@ header:
 ---
 
 ![Onboarding flow](../../assets/images/onboarding-steps3.jpg)
-Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata like a name and logo on the trust registry. Here you can find a step by step guide to get onboarded.
+Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata like a name and logo on the trust registry. Here you can find a step-by-step guide to get onboarded.
 
 ## Sign-in or up to ePortal
 
 Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registration?agovAq=100&source=idp) or CH-Login accounts in order to register to the Trust and Base Registries
 
- [All services · ePortal](https://eportal.admin.ch/start)
+ [All services · ePortal](https://eportal.admin.ch/start)
 
 ## Open *swiyu* Trust Infrastructure
 
-Search for the _swiyu Trust Infrastructure_ service and enter it.
+Search for the _swiyu Trust Infrastructure_ service and enter it.
 
-![welcome to eportal](../../assets/images/welcome_to_eportal.png)
+![welcome to ePortal](../../assets/images/welcome_to_eportal.png)
 
 # Onboard the swiyu Base Registry
 
 ## Business Partner registration
 
-⚙️ The businesspartner id created here will be referenced as SWIYU\_PARTNER\_ID
+⚙️ The business partner id created here will be referenced as SWIYU\_PARTNER\_ID
 
-To join an existing business partner see: [Join an existing business partner](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#join-an-existing-business-partner)
+To join an existing business partner, see: [Join an existing business partner](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#join-an-existing-business-partner)
 
 Register the business partner [^1] by providing a name [^2] and primary contact email.
 
-[^1]: Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as an business partner on the _**swiyu** Trust Infrastructure_ and use it.
-[^2]: This name can not be changed. To appear with another name you will have to register a new business partner.
+[^1]: Under "business partner" is understood any type of company, private or public institution, but also individuals (natural persons) can register themselves as a business partner on the _**swiyu** Trust Infrastructure_ and use it.
+[^2]: This name cannot be changed. To appear with another name, you will have to register a new business partner.
 
 
 ![base registry enrollment](../../assets/images/base_registry_enrollment.png)
@@ -41,15 +41,15 @@ Register the business partner [^1] by providing a name [^2] and primary contact 
 ## Get API keys to access swiyu APIs
 --------------------------------------
 
-Go to the API [self service portal](http://selfservice.api.admin.ch/api-selfservice) to register for the ecosystem APIs.
+Go to the API [self-service portal](http://selfservice.api.admin.ch/api-selfservice) to register for the ecosystem APIs.
 
-If you are registered with multiple business partners you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
+If you are registered with multiple business partners, you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
 
-![api selfservice list of apis](../../assets/images/api_selfservice.png)
+![API self-service list of APIs](../../assets/images/api_selfservice.png)
 
-Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
+Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
 
-Select an API and press **Subscribe.** You will be prompted to create a new application or select an existing one.
+Select an API and press **Subscribe.** You will be prompted to create a new application or select an existing one.
 
 ![create or select an application](../../assets/images/create_select_application.png)
 
@@ -59,8 +59,8 @@ Select an API and press **Subscribe.** You will be prompted to create a new ap
 
 <p> ⚙️ The output of the application creation will be referenced as SWIYU_STATUS_REGISTRY_CUSTOMER_KEY / SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET / SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN / SWIYU_STATUS_REGISTRY_ACCESS_TOKEN </p>
 
-Safely store your keys - this is the only time they are shown to you. It is possible to create new ones if necessary.  
-If you don't refresh your token for too long it might expire and you will have to create new tokens here.
+Safely store your keys - this is the only time they are shown to you. It is possible to create new ones if necessary.  
+If you don't refresh your token for too long, it might expire and you will have to create new tokens here.
 
 ### Authenticate with OAuth2
 
@@ -70,7 +70,7 @@ If you want to create a new access token without manual UI interaction you can u
 
 ### Base URLs
 
-⚙️ The status authoring url will be referenced as SWIYU_STATUS_REGISTRY_API_URL, the key manager as KEY_MANAGER.
+⚙️ The status authoring URL will be referenced as SWIYU_STATUS_REGISTRY_API_URL, the key manager as KEY_MANAGER.
 
 Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 
@@ -127,7 +127,7 @@ The current release can be downloaded from the [repository](https://github.com/e
 
 #### Quickstart – Create Your First DID
 
-The Quickstart option is designed for users who want to rapidly set up one or mutliple DIDs without getting too much into the DID method internals. This automates the generation of necessary asymmetric key pairs and generates the initial DID log content, which must be uploaded to the swiyu Base Registry later in the process (see Upload DID log).
+The Quickstart option is designed for users who want to rapidly set up one or multiple DIDs without getting too much into the DID method internals. This automates the generation of necessary asymmetric key pairs and generates the initial DID log content, which must be uploaded to the swiyu Base Registry later in the process (see Upload DID log).
 
 ###### Command Syntax
 
@@ -148,7 +148,7 @@ java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg
 *   create: Command to create a new DID
 *   <identifier_registry_url>: URL received as a result of DID space creation from step "Create DID space"
 
-For advanced usage or detailed parameter descriptions, please refer to [e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java#advanced-usage).
+For advanced usage or detailed parameter descriptions, please refer to [e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java#advanced-usage).
 
 ###### What Happens Upon Execution
 
@@ -169,7 +169,7 @@ For advanced usage or detailed parameter descriptions, please refer to [e-id-ad
 
 ⚙️ The DID generated in this step will be referenced as ISSUER_ID or VERIFIER_DID
 
-The generated DID log content should look similiar as shown below. After creation, it consists of a single, albeit lengthy, line.
+The generated DID log content should look similar as shown below. After creation, it consists of a single, albeit lengthy, line.
 
 **DID log Sample**
 ```yaml
@@ -187,9 +187,9 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 #### Additional Information
 
 *   Output Directory: The .didtoolbox directory is automatically created in the current working directory. Ensure you have the necessary permissions to create and write to this directory.
-*   Multiple DIDs: If you create multiple DIDs, please make sure to rename the .didtoolbox directory (or move/rename the files) after each creation run, since the key material will re-generated on each run and therefore overwritten.
+*   Multiple DIDs: If you create multiple DIDs, please make sure to rename the .didtoolbox directory (or move/rename the files) after each creation run, since the key material will be re-generated on each run and therefore overwritten.
 *   Security: Keep your private keys secure. Do not share them or expose them in unsecured environments.
-*   Using Existing DIDs: While the Quickstart option generates new DIDs and key material, future versions of the DID-Toolbox may support importing and managing existing DIDs. 
+*   Using Existing DIDs: While the Quickstart option generates new DIDs and key material, future versions of the DID-Toolbox may support importing and managing existing DIDs. 
 
 ### Upload DID log
 
@@ -207,13 +207,13 @@ Add the did:tdw log you created earlier as string body (not JSON).
 
 Make sure the content-type is set to "application/jsonl+json"
 
-Now you are registered on the swiyu Base Registry and be able to configure your issuer component. 
+Now you are registered on the swiyu Base Registry and be able to configure your issuer component.
 
 ### Use/Integrate the Trust Infrastructure
 
 To be able to interact with the swiyu ecosystem you need to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
 
-To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastrcuture service](#open-swiyu-trust-infrastructure)
+To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
 ![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)
 
@@ -234,7 +234,7 @@ Generate as many invitation codes as you need and make sure to add the appropria
 
 If your business partner is already registered on [ePortal](https://eportal.admin.ch/start)
 
-To Join an already existing business parter press the _Redeem invitation code_ button on the top right.
+To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
 
 ![redeem invitation code](../../assets/images/redeem_code.png)
 ![redeem invitation code - step 2](../../assets/images/redeem_code_2.png)
