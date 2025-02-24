@@ -17,7 +17,7 @@ The swiyu Generic Issuer Management Service is linked to the issuer signer servi
 
 [![issuer flowchart](../../assets/images/cookbook_generic_issuer_model.png)](../../assets/images/cookbook_generic_issuer_model.png)
 
-# Deployment
+# Deployment instructions
 
 > Please make sure that you did the following before starting the deployment:
 > - Generated the signing keys file with the didtoolbox.jar
@@ -25,7 +25,7 @@ The swiyu Generic Issuer Management Service is linked to the issuer signer servi
 > - Registered yourself on the swiyuprobeta portal
 > - Registered yourself on the api self service portal
 
-## 1. Set the environment variables
+## Set the environment variables
 
 A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file.
 
@@ -38,13 +38,13 @@ The latest images are available here:
 - [issuer-agent-oid4vci](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-issuer-agent-oid4vci)
 - [issuer-agent-management](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-issuer-agent-management)
 
-## 2. Create a verifiable credentials schema
+## Create a verifiable credential schema
 
 In order to support your use case you need to adapt the so-called issuer_metadata (see [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml#L85)).
 Those metadata define the appearance of the credential in the wallet and what kind of credential formats are supported.
 For further information consult the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/)
 
-## 3. Initialize the status list
+## Initialize the status list
 
 Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are up and running you need to initialize the status list of your issuer so that you can issue credentials.
 
@@ -76,7 +76,7 @@ curl -X POST https://<EXTERNAL_URL of issuer-agent-management>/status-list \
 
 ```
 
-## 4. Issue credential
+## Issue credential
 
 You're now ready to issue credentials by using the issuer-agent-management API which is accessible under
 https://<EXTERNAL_URL of issuer-agent-management>**/swagger-ui/index.html#/Credential%20API/createCredential** to create
@@ -103,6 +103,6 @@ a credential offer for a holder. Here is an example of a request body for the of
 }
 ```
 
-# Development
+# Development instructions
 
-Instructions for the development of this component can be found in the [repository](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management).
+Instructions for the development of the swiyu Generic Issuer can be found in the [GitHub repository](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management).

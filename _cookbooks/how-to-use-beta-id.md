@@ -10,22 +10,28 @@ header:
 ## In brief
 
 **What is the Beta-ID?**
+
 The Beta-ID is a pseudo-identity credential that was created for test purposes within the Public Beta environment, having the same caracteristics as the coming e-ID. 
 
 **Is the Beta-ID an official proof of identification?**
+
 No, the Beta-ID is not a proof of identification.
 
 **Who can obtain a Beta-ID?**
+
 The service for obtaining a Beta-ID is open to anyone who is interested.
 
 **How to obtain a Beta-ID?**
+
 Anyone can create a Beta-ID on the [Beta Credential Service](https://www.bcs.admin.ch/bcs-web).
 It can also get verified and revocated directly from the platform. 
 
 **What information can be stored in the Beta-ID?**
+
 You can choose the values in the Beta-ID request form yourself. Avoid entering your real personal data if possible.
 
 **What happens to the data after the Beta-ID has been issued?**
+
 After it has been issued, all data on the Beta Credential Service server except for the Beta-ID number will be deleted. The number is needed for the revocation.
 The rest of the Beta-ID data will solely be found in the wallet on which it has been issued to. 
 

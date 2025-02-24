@@ -26,7 +26,7 @@ The verification management service is linked to the verification validator serv
 > - Registered yourself on the api self service portal
 
 
-## 1. Set the environment variables
+## Set the environment variables
 
 A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml) file. **Replace all placeholder `<VARIABLE_NAME>`**. In addition to that you need to adapt the
 [verifier metadata](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml#L35) to your use case.
@@ -39,9 +39,9 @@ The latest images are available here:
 - [verifier-agent-oid4vp](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-verifier-agent-oid4vp)
 - [verifier-agent-management](https://github.com/orgs/swiyu-admin-ch/packages/container/package/eidch-verifier-agent-management)
 
-## 2. Creating a verification
+## Creating a verification
 
-> For a detailled understanding of the verfication process and the data structure of verification please consult the 
+> For a detailed understanding of the verfication process and the data structure of verification please consult the 
 > [DIF presentation exchange specification](https://identity.foundation/presentation-exchange/#presentation-definition).
 > For more information on the general verification flow consult the [OpenID4VP specification](https://openid.net/specs/openid-4-verifiable-presentations-1_0-20.html)
 
@@ -113,4 +113,4 @@ The response contains a verification_url which points to verification request ju
 ```
 # Development instructions
 
-Instructions for the development of this component can be found in the [Open Source repository](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/README.md).
+Instructions for the development of the swiyu Generic Verifier can be found in the [GitHub repository](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/README.md).
