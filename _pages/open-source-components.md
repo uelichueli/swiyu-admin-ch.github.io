@@ -62,7 +62,7 @@ The source code is divided in a management and a verification service:
 - [Generic verifier management service](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
 - [Generic verification service OID4VP](https://github.com/swiyu-admin-ch/eidch-verifier-agent-oid4vp)
 
-### Holder wallet
+### swiyu Android & iOS App
 
 Users will be able to download the swiyu Public Beta Wallet, request Beta-ID credentials for testing purpose, manage their VCs and interact with the ecosystem.
 
