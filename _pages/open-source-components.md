@@ -74,7 +74,7 @@ We developed different helpers to create and resolve DIDs. Creating DIDs involve
 - [DID Toolbox](https://github.com/e-id-admin/didtoolbox-java)
 - [DID Resolver](https://github.com/e-id-admin/didresolver)
 
-# How to use the Public Beta components
+## How to use the Public Beta components
 
 The onboarding process for the base- and trust-registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section. Advanced users will find more technical details in the different repositories. We integrate various technologies in the Swiss Trust Infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/swiss-profile/).
 
