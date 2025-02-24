@@ -13,7 +13,7 @@ This manual describes how to define the visual presentation of a verifiable cred
 
 Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and deterimine the suitable settings.
 
-The instruction is based on the OID metadata, which are defined in the [swiss profile](https://swiyu-admin-ch.github.io/swiss-profile/)
+The instruction is based on the OID metadata, which are defined in the [swiss profile](https://swiyu-admin-ch.github.io/swiss-profile/).
 
 ## Purpose and Overview 
 
@@ -89,6 +89,11 @@ Furthermore, the swiyu app will automatically adjust the color of the informatio
 **Darkmode**
 
 Although the swiyu app supports dark mode, the VC’s color scheme remains unaffected by this setting. Consequently, its background color stays the same in both light and dark modes.
+
+**Demo-Watermark**
+
+All the credentials which are issued within the swiyu Public Beta environment are applied with a DEMO watermark to differentiate those credentials to the productive ones.
+
 {% endcapture %}
 
 <div class="notice--info">
@@ -97,6 +102,12 @@ Although the swiyu app supports dark mode, the VC’s color scheme remains unaff
 </div>
 
 ## Logo / Icon
+
+```
+"logo": {
+           "uri": "data:image/png;base64,<...base64code....>"
+        }
+```
 
 The logo or icon dimensions must not exceed 512×512 pixels and will be displayed at 21×21 pixels at any zoom level.
 
@@ -131,6 +142,10 @@ The VC supports multilingual settings. This means the logo can be defined per la
 
 ## Name
 
+```
+"name": "Title of credential"
+```
+
 Care to use a self-explanatory credential name that is of reasonable length. 
 
 Think to set the various language versions of it so that name is displayed in the app language of the user. 
@@ -147,20 +162,15 @@ If you issue a family of diverse credentials (like e.g. entry pass spa, entry pa
 
 ## Subtitle
 
+```
+"description": "Demo purpose"
+```
+
 Carefully chose which metadata should come as complementary information on the overview right under the VC's name.
 
 They should allow the user to differentiate multiple samples of a same credential.
 
 Keep metadata concise and relevant to avoid overwhelming the user with unnecessary information.
-
-{% capture notice-text %}
-Use for example first name and last name to allow users to easily distinguish their own from those of family members during a verification, making it easier to select the appropriate credential.
-{% endcapture %}
-
-<div class="notice--info">
-  <h4 class="no_toc">Recommendation:</h4>
-  {{ notice-text | markdownify }}
-</div>
 
 ## Fallback Versions
 
@@ -181,8 +191,6 @@ Background color and/or icon can be set per language. This means that if a defin
   <h3 class="no_toc">Good to know:</h3>
   {{ notice-text | markdownify }}
 </div>
-
-![fallback version](../../assets/images/vc_fallback_version.png)
 
 ## Order of claims
 
@@ -210,6 +218,7 @@ Background color and/or icon can be set per language. This means that if a defin
             ]
 }
 ```
+
 To manage the display-order in the credential, use the order array in the metadata.
 
 ## Useful hints
