@@ -7,7 +7,7 @@ header:
   teaser: ../assets/images/cookbook_base_trust_registry.jpg
 ---
 
-![Onboarding flow](../../assets/images/onboarding-steps3.jpg)
+[![Onboarding flow](../../assets/images/onboarding-steps3.jpg)](../../assets/images/onboarding-steps3.jpg)
 Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata like a name and logo on the trust registry. Here you can find a step-by-step guide to get onboarded.
 
 ## Sign-in or up to ePortal
@@ -20,7 +20,7 @@ Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registrati
 
 Search for the _swiyu Trust Infrastructure_ service and enter it.
 
-![welcome to ePortal](../../assets/images/welcome_to_eportal.png)
+[![welcome to ePortal](../../assets/images/welcome_to_eportal.png)](../../assets/images/welcome_to_eportal.png)
 
 # Onboard the swiyu Base Registry
 
@@ -36,7 +36,7 @@ Register the business partner [^1] by providing a name [^2] and primary contact 
 [^2]: This name cannot be changed. To appear with another name, you will have to register a new business partner.
 
 
-![base registry enrollment](../../assets/images/base_registry_enrollment.png)
+[![base registry enrollment](../../assets/images/base_registry_enrollment.png)](../../assets/images/base_registry_enrollment.png)
 
 ## Get API keys to access swiyu APIs
 --------------------------------------
@@ -45,15 +45,15 @@ Go to the API [self-service portal](http://selfservice.api.admin.ch/api-selfserv
 
 If you are registered with multiple business partners, you can click the business partner ID on the top right in order to select with which one you want to subscribe. 
 
-![API self-service list of APIs](../../assets/images/api_selfservice.png)
+[![API self-service list of APIs](../../assets/images/api_selfservice.png)](../../assets/images/api_selfservice.png)
 
 Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
 
 Select an API and press **Subscribe.** You will be prompted to create a new application or select an existing one.
 
-![create or select an application](../../assets/images/create_select_application.png)
+[![create or select an application](../../assets/images/create_select_application.png)](../../assets/images/create_select_application.png)
 
-![create application](../../assets/images/create_application.png)
+[![create application](../../assets/images/create_application.png)](../../assets/images/create_application.png)
 
 **Important:**
 
@@ -82,7 +82,7 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 
 In the next step you will need your business partner ID. You can find it in the **swiyu Trust Infrastructure** dashboard.
 
-![swiyu dashboard](../../assets/images/swiyu_dashboard.png)
+[![swiyu dashboard](../../assets/images/swiyu_dashboard.png)](../../assets/images/swiyu_dashboard.png)
 
 ## Onboard business partner on the swiyu Base Registry
 
@@ -215,7 +215,7 @@ To be able to interact with the swiyu ecosystem you need to host either a swiyu 
 
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
-![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)
+]![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
 
 ### User management
 
@@ -224,11 +224,11 @@ To be acclaimed as a trusted issuer or verifier you need to additionally contact
 
 Go to e-portal and click on _manage users:_
 
-![invite members](../../assets/images/invite_members.png)
+[![invite members](../../assets/images/invite_members.png)](../../assets/images/invite_members.png)
 
 Generate as many invitation codes as you need and make sure to add the appropriate roles.
 
-![generate invitation codes](../../assets/images/create_codes.png)
+[![generate invitation codes](../../assets/images/create_codes.png)](../../assets/images/create_codes.png)
 
 #### Join an existing business partner
 
@@ -236,5 +236,5 @@ If your business partner is already registered on [ePortal](https://eportal.admi
 
 To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
 
-![redeem invitation code](../../assets/images/redeem_code.png)
-![redeem invitation code - step 2](../../assets/images/redeem_code_2.png)
+[![redeem invitation code](../../assets/images/redeem_code.png)](../../assets/images/redeem_code.png)
+[![redeem invitation code - step 2](../../assets/images/redeem_code_2.png)](../../assets/images/redeem_code_2.png)

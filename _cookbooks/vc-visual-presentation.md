@@ -30,7 +30,8 @@ All these visible or readible features are set and configured by the issuer in t
 
 Below is an example of how various credentials are displayed in different situations in the swiyu app.
 
-![credential](../../assets/images/vc_credential.png)
+[![credential](../../assets/images/vc_credential.png)](../../assets/images/vc_credential.png)
+
 
 As an example we take this metadata and focus only on the relevant fields (technical fields are hidden):
 
@@ -137,8 +138,8 @@ The VC supports multilingual settings. This means the logo can be defined per la
   {{ notice-text | markdownify }}
 </div>
 
-![logo conversion](../../assets/images/vc_logo_conversion.png)
-![logo scaling](../../assets/images/vc_logo_scaling.png)
+[![logo conversion](../../assets/images/vc_logo_conversion.png)](../../assets/images/vc_logo_conversion.png)
+[![logo scaling](../../assets/images/vc_logo_scaling.png)](../../assets/images/vc_logo_scaling.png)
 
 ## Name
 

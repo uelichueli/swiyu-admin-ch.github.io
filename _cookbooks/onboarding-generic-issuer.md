@@ -15,7 +15,7 @@ As with all the generic issuance & verification services it is expected that eve
 
 The swiyu Generic Issuer Management Service is linked to the issuer signer services through a database, allowing to scale the signer service independently from the management service.
 
-![issuer flowchart](../../assets/images/cookbook_generic_issuer_model.png)
+[![issuer flowchart](../../assets/images/cookbook_generic_issuer_model.png)](../../assets/images/cookbook_generic_issuer_model.png)
 
 # Deployment
 

@@ -11,7 +11,7 @@ The Public Beta environment is designed to test and refine the e-ID technology s
 
 ## Open Source Repositories
 
-![Component Overview](../assets/images/trust-infrastructure.png)
+[![Component Overview](../assets/images/trust-infrastructure.png)](../assets/images/trust-infrastructure.png)
 
 The source code of the Swiss e-ID Trust Infrastructure is publicly available under the **MIT-License**. This allows the [Open Source community](https://github.com/swiyu-admin-ch/community) to integrate our components under permissive conditions. We welcome contributions and feedback in various forms. The options are described in the respective repositories and depend on the current development process:
 
@@ -67,9 +67,9 @@ The source code is available for iOS and Android:
 - [iOS Wallet App](https://github.com/e-id-admin/eidch-ios-wallet)
 - [Android Wallet App](https://github.com/e-id-admin/eidch-android-wallet)
 
-### DID Toolbox
+### DID Toolbox and DID Resolver
 
-We created different helpers to create and resolve DIDs:
+We developed different helpers to create and resolve DIDs. Creating DIDs involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs. The DID Toolbox supports you with various options for a quick start or advanced usage. 
 
 - [DID Toolbox](https://github.com/e-id-admin/didtoolbox-java)
 - [DID Resolver](https://github.com/e-id-admin/didresolver)
