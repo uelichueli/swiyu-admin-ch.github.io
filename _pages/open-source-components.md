@@ -5,15 +5,19 @@ toc: true
 toc_sticky: true
 ---
 
-Following the successful milestone of the eLFA project, our next major step towards the Swiss e-ID and its trust infrastructure is the **Public Beta** phase. Public Beta will allow ecosystem participants to integrate and experiment with their business cases, including using a Beta ID credential.
+## Public Beta
 
-The Public Beta environment is designed to test and refine the e-ID technology stack. Participants will be able to explore and experiment with various use cases.
+Following the preliminary implementation roadmap (dependent on the legal process), the swiyu Trust Infrastructure is planned to go live with a full production roll out in 2026. To allowing future participants from the public and private sector to prepare themselves for the final go live, a Public Beta environment has been published. 
+
+The Public Beta environment aims to function as a basis for integration and experimentation efforts conducted by the ecosystem participants from both the public sector and the private sector. It provides the same technology that will be used by the productive environment in 2026. It's operation and support are run on a best effort basis and is planned to be available beyond the full production roll-out in 2026 as an integration environment. 
+
+This participatory process is also helpful for testing and refining the infrastructure components, technological choices, and operation procedures under real world conditions. 
 
 ## Open Source Repositories
 
 [![Component Overview](../assets/images/trust-infrastructure.png)](../assets/images/trust-infrastructure.png)
 
-The source code of the Swiss e-ID Trust Infrastructure is publicly available under the **MIT-License**. This allows the [Open Source community](https://github.com/swiyu-admin-ch/community) to integrate our components under permissive conditions. We welcome contributions and feedback in various forms. The options are described in the respective repositories and depend on the current development process:
+The source code of the swiyu Trust Infrastructure is publicly available under the **MIT-License**. This allows the [Open Source community](https://github.com/swiyu-admin-ch/community) to integrate our components under permissive conditions. We welcome contributions and feedback in various forms. The options are described in the respective repositories and depend on the current development process:
 
 - **Community Development**: Core libraries and shared components are developed openly with the community, with ongoing updates.
 
@@ -45,7 +49,7 @@ The source code is divided in an authoring and a data service:
 ### swiyu Generic Issuer 
 Entities can issue, revoke, suspend, and reactivate Verifiable Credentials (VCs), using the generic reference issuer implementation provided by the federal government. 
 
-The source code is available as management and signing service:
+The source code is divided in a management and a signing service:
 
 - [Generic issuer management service](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management)
 - [Generic issuer signing service OID4VCI](https://github.com/swiyu-admin-ch/eidch-issuer-agent-oid4vci)
@@ -53,14 +57,14 @@ The source code is available as management and signing service:
 ### swiyu Generic Verifier
 Entities can integrate the reference verifier implementation to verify VCs, ensuring cryptographic integrity and validity according to their specific needs.
 
-The source code is available as management and verification service:
+The source code is divided in a management and a verification service:
 
 - [Generic verifier management service](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
 - [Generic verification service OID4VP](https://github.com/swiyu-admin-ch/eidch-verifier-agent-oid4vp)
 
 ### Holder wallet
 
-Users will be able to download the public beta wallet, request Beta-ID credentials for testing purpose, manage their VCs and interact with the ecosystem.
+Users will be able to download the swiyu Public Beta Wallet, request Beta-ID credentials for testing purpose, manage their VCs and interact with the ecosystem.
 
 The source code is available for iOS and Android:
 
@@ -74,8 +78,8 @@ We developed different helpers to create and resolve DIDs. Creating DIDs involve
 - [DID Toolbox](https://github.com/e-id-admin/didtoolbox-java)
 - [DID Resolver](https://github.com/e-id-admin/didresolver)
 
-## How to use the Public Beta components
+## How to use the swiyu Public Beta Trust Infrastructure
 
-The onboarding process for the base- and trust-registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section. Advanced users will find more technical details in the different repositories. We integrate various technologies in the Swiss Trust Infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/swiss-profile/).
+The onboarding process for the swiyu Base- and Trust Registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section. Advanced users will find more technical details in the different repositories. We integrate various technologies in the Swiss Trust Infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/swiss-profile/).
 
 
