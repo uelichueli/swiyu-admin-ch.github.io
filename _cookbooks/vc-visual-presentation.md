@@ -11,18 +11,20 @@ header:
 
 This manual describes how to define the visual presentation of a verifiable credential (VC) displayed in the swiyu app, the digital wallet of the Swiss Confederation.
 
-Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and deterimine the suitable settings. 
+Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and deterimine the suitable settings.
+
+The instruction is based on the OID metadata, which are defined in the [swiss profile](https://swiyu-admin-ch.github.io/swiss-profile/)
 
 ## Purpose and Overview 
 
 In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer can define the following:
 
-[^1]: the OCA layer allowing more options will be deployed at a later date
+[^1]: the OCA layer allowing more options will be deployed at a later date in 2025
 
 - the background color
-- the logo / icon
+- the logo / icon of the credential
 - the name
-- the displayed complementary info
+- the displayed complementary info (dsecription)
 
 All these visible or readible features are set and configured by the issuer in the metadata of its credential when creating a VC schema. 
 
@@ -30,7 +32,46 @@ Below is an example of how various credentials are displayed in different situat
 
 ![credential](../../assets/images/vc_credential.png)
 
+As an example we take this metadata and focus only on the relevant fields (technical fields are hidden):
+
+```
+"credential_configurations_supported": {
+          "test-sdjwt": {
+
+
+           ....
+
+
+
+            "display": [
+              {
+                "name": "Title of credential",
+                "locale": "de-CH",
+                "logo": {
+                  "uri": "data:image/png;base64,<...base64code....>"
+                },
+                "description": "Demo purpose",
+                "background_color": "#FF5733"
+              }
+
+```
+
+## Multilanguage
+
+```
+"locale": "de-CH"
+```
+
+All following definitions can be localed. The swiyu app supports the following languages: DE, FR, IT, EN, RM.
+
+If none of these languages are given in the credential, the first definition of metadata is taken.
+
+
 ## Background Color
+
+```
+"background_color": "#FF5733"
+```
 
 The background color is a solid HEX color value (e.g., #FFFFFF, #000000, #FF5733, etc.)
 
@@ -142,6 +183,34 @@ Background color and/or icon can be set per language. This means that if a defin
 </div>
 
 ![fallback version](../../assets/images/vc_fallback_version.png)
+
+## Order of claims
+
+```
+"credential_configurations_supported": {
+			"order": [
+              "photoImage",
+              "id",
+              "lastName",
+              "firstName",
+              "dateOfBirth",
+              "hometown",
+              "issuerEntity",
+              "issuerEntityDate",
+              "dateOfExpiration",
+              "categoryCode",
+              "categoryRestrictions",
+              "restrictionsA",
+              "restrictionsB",
+              "registrationNumber",
+              "faberPin",
+              "credentialNumber",
+              "policeQRImage",
+              "signatureImage"
+            ]
+}
+```
+To manage the display-order in the credential, use the order array in the metadata.
 
 ## Useful hints
 
