@@ -161,15 +161,13 @@ If you issue a family of diverse credentials (like e.g. entry pass spa, entry pa
 </div>
 
 
-## Subtitle
+## Description
 
 ```
 "description": "Demo purpose"
 ```
 
 Carefully chose which metadata should come as complementary information on the overview right under the VC's name.
-
-They should allow the user to differentiate multiple samples of a same credential.
 
 Keep metadata concise and relevant to avoid overwhelming the user with unnecessary information.
 
@@ -198,24 +196,9 @@ Background color and/or icon can be set per language. This means that if a defin
 ```
 "credential_configurations_supported": {
 			"order": [
-              "photoImage",
-              "id",
-              "lastName",
               "firstName",
-              "dateOfBirth",
-              "hometown",
-              "issuerEntity",
-              "issuerEntityDate",
-              "dateOfExpiration",
-              "categoryCode",
-              "categoryRestrictions",
-              "restrictionsA",
-              "restrictionsB",
-              "registrationNumber",
-              "faberPin",
-              "credentialNumber",
-              "policeQRImage",
-              "signatureImage"
+              "lastName",
+              "..."
             ]
 }
 ```
@@ -225,7 +208,7 @@ To manage the display-order in the credential, use the order array in the metada
 ## Useful hints
 
 - Currently, the data sets or attributes are displayed in the credential detail view exactly as defined at the VC schema level. The ability to customise the ordering or grouping of these data sets will be available once the OCA layer is implemented.
-- The OCA (information overlay) is planned to be deployed at a later date.
+- The OCA (information overlay) is planned to be deployed at a later date in 2025.
 - Multilingualism: swiyu app currently supports 5 languages (German, French, Italian, Rumantsch, English)
 
 ## General questions
