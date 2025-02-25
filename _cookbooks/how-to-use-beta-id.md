@@ -195,6 +195,7 @@ That's it? With the Beta-ID yes, but the [swiyu Trust Infrastructure](https://sw
 ## Useful hints
 - When target systems of verifiers use the social security number, be aware to set a number that validates the pattern starting with 756. and ending with the correct check digit ([EAN-13 norm](https://en.wikipedia.org/wiki/International_Article_Number)).
 - Portrait images are resized and cropped to the same output size.
+- The image "blob" may be a good place for hiding malicious code. But also the firstname or lastname are. The beta credential service does not care about the integrity of the data. So for every holder and verifier application: the data has to be considered as "untrusted user input". Thanks to this it is possible to check also the robustness of your holder or verifier solution!
 - A revocation cannot be reverted. This is a governance decision, not a technical issue.
 
 ## What should not be done?
