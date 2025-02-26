@@ -10,8 +10,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes@4.26.2"
+
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -23,7 +22,7 @@ title                    : "swiyu technical documentation"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Fachbereich e-ID"
-description              : "Documentation of the technical architecture, components, and implementations for swiyu - the Swiss trust infrastructure"
+description              : "Documentation of the technical architecture, components, and implementations for swiyu - the Swiss e-ID Trust Infrastructure"
 url                      : "https://swiyu-admin-ch.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "swiyu-admin-ch/swiyu-admin-ch.github.io"
@@ -136,10 +135,8 @@ exclude:
   - package.json
   - package-lock.json
   - Rakefile
-  - README
+  - README.md
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
