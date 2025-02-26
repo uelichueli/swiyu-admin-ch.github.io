@@ -11,7 +11,7 @@ header:
 
 **What is the Beta-ID?**
 
-The Beta-ID is a pseudo-identity credential that was created for test purposes within the Public Beta environment, having the same caracteristics as the coming e-ID. 
+The Beta-ID is a pseudo-identity credential that was created for test purposes within the Public Beta environment, holding the same identity attributes as the coming e-ID. 
 
 **Is the Beta-ID an official proof of identification?**
 
@@ -191,6 +191,10 @@ The Beta-ID can be used to build and test use cases that will in the future rely
 - There may be plenty of other use cases to cover.
 
 That's it? With the Beta-ID yes, but the [swiyu Trust Infrastructure](https://swiyu-admin-ch.github.io/open-source-components/) is also there to be used by other issuers and verifiers!
+
+## Left outs
+- Beta-ID does not have a holder binding yet, so currently no secure elements on the side of the holder are involved nor needed.
+- OCA metadata for VC styling and value localization is not provided yet.
 
 ## Useful hints
 - When target systems of verifiers use the social security number, be aware to set a number that validates the pattern starting with 756. and ending with the correct check digit ([EAN-13 norm](https://en.wikipedia.org/wiki/International_Article_Number)).
