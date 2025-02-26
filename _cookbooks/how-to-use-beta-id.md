@@ -193,7 +193,6 @@ The Beta-ID can be used to build and test use cases that will in the future rely
 That's it? With the Beta-ID yes, but the [swiyu Trust Infrastructure](https://swiyu-admin-ch.github.io/open-source-components/) is also there to be used by other issuers and verifiers!
 
 ## Left outs
-- Beta-ID does not have a holder binding yet, so currently no secure elements on the side of the holder are involved nor needed.
 - OCA metadata for VC styling and value localization is not provided yet.
 
 ## Useful hints
