@@ -12,7 +12,7 @@ Before being able to act as an issuer or verifier in the swiyu ecosystem you wil
 
 ## Sign-in or up to ePortal
 
-Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registration?agovAq=100&source=idp) or CH-Login accounts in order to register to the Trust and Base Registries
+Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registration?agovAq=100&source=idp) or CH-Login accounts in order to register to the Trust and Base regisrty
 
  [All services · ePortal](https://eportal.admin.ch/start)
 
@@ -22,7 +22,7 @@ Search for the _swiyu Trust Infrastructure_ service and enter it.
 
 [![welcome to ePortal](../../assets/images/welcome_to_eportal.png)](../../assets/images/welcome_to_eportal.png)
 
-# Onboard the swiyu Base Registry
+# Onboard on the swiyu Base Registry
 
 ## Business Partner registration
 
@@ -47,7 +47,11 @@ If you are registered with multiple business partners, you can click the busines
 
 [![API self-service list of APIs](../../assets/images/api_selfservice.png)](../../assets/images/api_selfservice.png)
 
-Subscribe with your business partner to both _swiyu Core Business Service_ APIs (status & identifier)
+**swiyucorebusiness_identifier:** Use this API to update your public key material on the Base Registry.
+
+**swiyucorebusiness_status:** Use this API to manage your [status list](https://swiyu-admin-ch.github.io/swiss-profile/#credential-status).
+
+Subscribe with your business partner to both _swiyu Core Business Service_ APIs.
 
 Select an API and press **Subscribe.** You will be prompted to create a new application or select an existing one.
 
@@ -60,7 +64,7 @@ Select an API and press **Subscribe.** You will be prompted to create a new appl
 <p> ⚙️ The output of the application creation will be referenced as SWIYU_STATUS_REGISTRY_CUSTOMER_KEY / SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET / SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN / SWIYU_STATUS_REGISTRY_ACCESS_TOKEN </p>
 
 Safely store your keys - this is the only time they are shown to you. It is possible to create new ones if necessary.  
-If you don't refresh your token for too long, it might expire and you will have to create new tokens here.
+The ACCESS_TOKEN expires after 24 hours and can be refreshed using the REFRESH_TOKEN. The REFRESH_TOKEN is valid for 168 hours. You can always create new tokens if you lose them or both expire.
 
 ### Authenticate with OAuth2
 
@@ -76,9 +80,7 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 
 | Environment | Identifier Authoring | Status Authoring | Key Manager |
 | --- | --- | --- | --- |
-| Open Beta | [identifier-reg-api.trust-infra.swiyu-int.admin.ch](https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/) | [status-reg-api.trust-infra.swiyu-int.admin.ch](https://status-reg-api.trust-infra.swiyu-int.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd-intra.api.admin.ch) |
-| Prod | [identifier-reg-api.trust-infra.swiyu.admin.ch](https://identifier-reg-api.trust-infra.swiyu.admin.ch/) | [status-reg-api.trust-infra.swiyu.admin.ch](https://status-reg-api.trust-infra.swiyu.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd-intra.api.admin.ch) |
-| Swagger | [OpenAPI spec](api/identifier_authoring.yml) | [OpenAPI spec](api/status_authoring.yml)
+| swiyu Public Beta | [identifier-reg-api.trust-infra.swiyu-int.admin.ch](https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/) | [status-reg-api.trust-infra.swiyu-int.admin.ch](https://status-reg-api.trust-infra.swiyu-int.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd-intra.api.admin.ch) |
 
 In the next step you will need your business partner ID. You can find it in the **swiyu Trust Infrastructure** dashboard.
 
@@ -93,11 +95,11 @@ In order to onboard on the swiyu Base Registry you will first need to reserve so
 ```bash
 curl \
   -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
-  -X POST "https://identifier-reg-api.trust-infra.swiyu.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries"
+  -X POST "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries"
 ```
 
 **API Response 201**
-<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
+<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
 
 
 The identifier_registry_url is used in the next step when creating the DID log.
@@ -110,7 +112,7 @@ A Decentralized Identifier (DID) is a globally unique identifier that allows ind
 
 We recommend creating separate DIDs for each role (e.g., separate DIDs for issuers and verifiers).
 
-**Currently, the swiyu ecosystem supports the following DID method: did:tdw, version 0.3.**
+**Currently, the swiyu ecosystem supports the following DID method: did:webvh, version 0.3.**
 
 #### Prerequisites (using the JAR file)
 
@@ -167,7 +169,7 @@ For advanced usage or detailed parameter descriptions, please refer to [e-id-adm
 
 ###### DID Log Content
 
-⚙️ The DID generated in this step will be referenced as ISSUER_ID or VERIFIER_DID
+⚙️ The DID generated in this step will be referenced as ISSUER_DID or VERIFIER_DID
 
 The generated DID log content should look similar as shown below. After creation, it consists of a single, albeit lengthy, line.
 
@@ -193,26 +195,27 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 
 ### Upload DID log
 
-Use the Identifier API to upload your DIDLog.
+Use the Identifier API to upload your DID log.
 
 ```bash
 curl \
   -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
   -H "Content-Type: application/jsonl+json" \
   -d "$YOUR_GENERATED_DIDLOG" \
-  -X PUT "https://identifier-reg-api.trust-infra.swiyu.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
+  -X PUT "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
 ```
 
-Add the did:tdw log you created earlier as string body (not JSON).
+Add the DID log you created earlier as string body (not JSON).
 
 Make sure the content-type is set to "application/jsonl+json"
 
-Now you are registered on the swiyu Base Registry and be able to configure your issuer component.
+Now you are registered on the swiyu Base Registry and be able to configure your issuer and verifier component.
 
-### Use/Integrate the Trust Infrastructure
+### Use/Integrate the swiyu Trust Infrastructure
 
-To be able to interact with the swiyu ecosystem you need to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
+One way to interact with the swiyu ecosystem is to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier or bring your own implementation. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
 
+### Become a trusted participant
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
 ]![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
@@ -222,7 +225,7 @@ To be acclaimed as a trusted issuer or verifier you need to additionally contact
 #### Invite members to your business partner
 
 
-Go to e-portal and click on _manage users:_
+Go to [e-portal](https://eportal.admin.ch/) and click on _manage users:_
 
 [![invite members](../../assets/images/invite_members.png)](../../assets/images/invite_members.png)
 
@@ -231,8 +234,6 @@ Generate as many invitation codes as you need and make sure to add the appropria
 [![generate invitation codes](../../assets/images/create_codes.png)](../../assets/images/create_codes.png)
 
 #### Join an existing business partner
-
-If your business partner is already registered on [ePortal](https://eportal.admin.ch/start)
 
 To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
 
