@@ -11,9 +11,9 @@ header:
 
 This manual describes how to define the visual presentation of a verifiable credential (VC) displayed in the swiyu app, the digital wallet of the Swiss Confederation.
 
-Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and deterimine the suitable settings.
+Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and determine the suitable settings.
 
-The instruction is based on the OID metadata, which are defined in the [swiss profile](https://swiyu-admin-ch.github.io/swiss-profile/).
+The instruction is based on the OID metadata (OpenID4VCI Credential Issuer Metadata), which are defined in the [swiss profile](https://swiyu-admin-ch.github.io/swiss-profile/).
 
 ## Purpose and Overview 
 
@@ -21,46 +21,70 @@ In the swiyu wallet app, verifiable credentials (VC) are visually represented as
 
 [^1]: the OCA layer allowing more options will be deployed at a later date in 2025
 
+- the issuer name and logo
 - the background color
 - the logo / icon of the credential
 - the name
-- the displayed complementary info (dsecription)
+- the displayed complementary info (description)
+- attributes
 
-All these visible or readible features are set and configured by the issuer in the metadata of its credential when creating a VC schema. 
+All these visible or readible features are set and configured by the issuer in the metadata of its credential. 
 
 Below is an example of how various credentials are displayed in different situations in the swiyu app.
 
 [![credential](../../assets/images/vc_credential.png)](../../assets/images/vc_credential.png)
+[![credential attributes](../../assets/images/vc_credential_attributes.png)](../../assets/images/vc_credential_attributes.png)
 
 
-As an example we take this metadata and focus only on the relevant fields (technical fields are hidden):
+As an example we take this metadata, and focus only on the relevant fields (technical fields are hidden):
 
 ```
+"display": [
+          {
+            "name": "Issuer title",
+            "locale": "de",
+            "logo": {
+              "uri": "data:image/png;base64,<...base64code....>
+            }
+          }
+        ]
+ 
 "credential_configurations_supported": {
-          "test-sdjwt": {
+          "test-sdjwt": {
+ 
+ 
+           ....
+ 
+ 
+ 
+            "display": [
+              {
+                "name": "Title of credential",
+                "locale": "de-CH",
+                "logo": {
+                  "uri": "data:image/png;base64,<...base64code....>"
+                },
+                "description": "Demo purpose",
+                "background_color": "#FF5733"
+              }
+        }
+}
 
+```
 
-           ....
+## Issuer title and logo
 
-
-
-            "display": [
-              {
-                "name": "Title of credential",
-                "locale": "de-CH",
-                "logo": {
-                  "uri": "data:image/png;base64,<...base64code....>"
-                },
-                "description": "Demo purpose",
-                "background_color": "#FF5733"
-              }
-
+```
+"name": "Issuer title",
+"logo": {
+    "uri": "data:image/png;base64,<...base64code....>
+}
 ```
 
 ## Multilanguage
 
 ```
-"locale": "de-CH"
+"locale": "de"
 ```
 
 All following definitions can be localed. The swiyu app supports the following languages: DE, FR, IT, EN, RM.
@@ -123,7 +147,7 @@ Multi-colored logos and gradients are automatically converted to a monochrome ve
 
 The logo/icon is automatically scaled down to a maximum size of 21×21 px. Extreme landscape or portrait logos/icons will be scaled such that the longest side is reduced to 21 px.
 
-**Recommendation**
+Recommendation:
 
 - Use a square format whenever possible so it scales evenly across various layouts.
 - Work with simplified icons/logos so they are readable even when small. 
@@ -220,7 +244,7 @@ The logo is automatically converted to a single-color (monochrome) version. It i
 Only PNG files are currently supported. SVG or other vector formats are not accepted.
 
 **Can I submit a logo larger than 512×512 pixels?**
-For the swiyu app, no. The maximum supported size for logos/icons is 512×512 pixels. If the logo exceeds this size, it will be automatically rejected.
+For the swiyu app, no. The maximum supported size for logos/icons is 512×512 pixels. If the logo exceeds this size, it will be automatically resized.
 
 **Can I use different background and logo colors for different languages?**
 Yes. The system supports localization. You can define a background color and a logo/icon for each language.
