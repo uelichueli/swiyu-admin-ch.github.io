@@ -75,8 +75,8 @@ The source code is available for iOS and Android:
 
 We developed different helpers to create and resolve DIDs. Creating DIDs involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs. The DID Toolbox supports you with various options for a quick start or advanced usage. 
 
-- [DID Toolbox](https://github.com/e-id-admin/didtoolbox-java)
-- [DID Resolver](https://github.com/e-id-admin/didresolver)
+- [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java)
+- [DID Resolver](https://github.com/swiyu-admin-ch/didresolver)
 
 ## How to use the swiyu Public Beta Trust Infrastructure
 
