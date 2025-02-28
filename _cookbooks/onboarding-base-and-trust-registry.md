@@ -215,10 +215,27 @@ Now you are registered on the swiyu Base Registry and be able to configure your 
 
 One way to interact with the swiyu ecosystem is to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier or bring your own implementation. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
 
+### Initialize a status list (verifier only)
+If you don't use the generic verifier you can use the status list API directly:
+
+**Initialize a status list**
+```bash
+curl -X POST 'https://status-reg-api.trust-infra.swiyu.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer your token' \
+  -d ''
+```
+**Update status list**
+```bash
+curl -X PUT 'https://status-reg-api.trust-infra.swiyu.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/{statusRegistryEntryId}' \
+  -H 'Content-Type: application/statuslist+jwt' \
+  -d 'Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request'
+```
+
 ### Become a trusted participant
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
-]![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
+[![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
 
 ### User management
 

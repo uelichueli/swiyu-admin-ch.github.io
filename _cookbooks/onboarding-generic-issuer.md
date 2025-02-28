@@ -13,7 +13,7 @@ This software is a web server implementing the technical standards as specified 
 
 The **swiyu Generic Issuer Management Service** is the interface to trigger a credential offering. It should be only accessible from the issuers internal organization.
 
-The **swiyu Generic Issuer OID4VCI Service** interacts with the wallet directly and must be publicly available.
+The **swiyu Generic Issuer OID4VCI Service** interacts with the wallets directly and must be publicly available.
 
 As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own instance of the service.
 
@@ -56,7 +56,7 @@ A sample compose file for an entire setup of both components and a database can 
 |SDJWT_KEY|EC Private key used to sign credentials||
 
 
-Please be aware that both the the issuer-agent-oid4vci needs to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
+Please be aware that the the issuer-agent-oid4vci needs to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
 
 The latest images are available here:
 
