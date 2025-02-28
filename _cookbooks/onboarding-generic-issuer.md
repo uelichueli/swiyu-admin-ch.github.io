@@ -9,29 +9,54 @@ header:
 
 This software is a web server implementing the technical standards as specified in the [Swiss e-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
 
-The swiyu Generic Issuer Management Service is the interface to offer a credential. It should be only accessible from the issuers internal organization.
+[![ecosystem components](../../assets/images/components.png)](../../assets/images/components.png)
+
+The **swiyu Generic Issuer Management Service** is the interface to trigger a credential offering. It should be only accessible from the issuers internal organization.
+
+The **swiyu Generic Issuer OID4VCI Service** interacts with the wallet directly and must be publicly available.
 
 As with all the generic issuance & verification services it is expected that every issuer and verifier hosts their own instance of the service.
 
-The swiyu Generic Issuer Management Service is linked to the issuer signer services through a database, allowing to scale the signer service independently from the management service.
+The swiyu Generic Issuer Management Service is linked to the issuer oid4vci services through a database, allowing to scale the oid4vci service independently from the management service.
 
 [![issuer flowchart](../../assets/images/cookbook_generic_issuer_model.png)](../../assets/images/cookbook_generic_issuer_model.png)
 
 # Deployment instructions
 
 > Please make sure that you did the following before starting the deployment:
+> - Registered yourself on the swiyu Trust Infrastructure portal
+> - Registered yourself on the api self service portal
 > - Generated the signing keys file with the didtoolbox.jar
 > - Generated a DID which is registered on the identifier registry
-> - Registered yourself on the swiyuprobeta portal
-> - Registered yourself on the api self service portal
 
 ## Set the environment variables
 
-A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file.
+A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file. You will need to configure a list of environment variables.
 
-**Replace all placeholder <VARIABLE_NAME>**.
+**Issuer Agent Management**
+| Name | Description | Example |
+| --- | --- |---|
+|SPRING_APPLICATION_NAME|Name of your application|
+|ISSUER_ID|The did you got in the [onboarding](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)| did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124 |
+|DID_STATUS_LIST_VERIFICATION_METHOD|DID + Verification Method|did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#assert-key-01|
+|STATUS_LIST_KEY|EC Private key used to update the status list||
+|SWIYU_PARTNER_ID|[swiyu Trust Infrastructure business partner ID](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#business-partner-registration)|d33fab52-1657-4240-9189-97c33b949739|
+|SWIYU_STATUS_REGISTRY_CUSTOMER_KEY|[Status Registry API Key](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)||
+|SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET|[Status Registry API Secret](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
+|SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN|[Status Registry API Refresh Token](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
+|SWIYU_STATUS_REGISTRY_TOKEN_URL|[OAuth Refresh URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#authenticate-with-oauth2)|https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW|
+|SWIYU_STATUS_REGISTRY_API_URL|[Status Registry Base URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#base-urls)|status-reg-api.trust-infra.swiyu-int.admin.ch|
 
-Please be aware that both the issuer-agent-management and the issuer-agent-oid4vci need to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
+**Issuer Agent OID4VCI**
+|Name|Description|Example|
+|---|---|---|
+|EXTERNAL_URL|Publicly available URL of this Service||
+|ISSUER_ID|Issuer DID|did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124|
+|DID_SDJWT_VERIFICATION_METHOD|DID+Verification Method|did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#assert-key-02|
+|SDJWT_KEY|EC Private key used to sign credentials||
+
+
+Please be aware that both the the issuer-agent-oid4vci needs to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
 
 The latest images are available here:
 
@@ -82,25 +107,40 @@ You're now ready to issue credentials by using the issuer-agent-management API w
 https://<EXTERNAL_URL of issuer-agent-management>**/swagger-ui/index.html#/Credential%20API/createCredential** to create
 a credential offer for a holder. Here is an example of a request body for the offer creation
 
-```json
-{
+```bash
+curl -X 'POST' \
+  'https://{issuer-agent-management-url}/api/v1/credentials' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
   "metadata_credential_supported_id": [
-    #Identifier as configured in the credential_configurations_supported section of the issuer_metadata
-    "myIssuerMetadataCredentialSupportedId"
+    "university_example_sd_jwt"
   ],
   "credential_subject_data": {
-    # Actual content of the credential aka offer data
-    "lastName": "Example",
-    "firstName": "Edward"
+    "degree": "Test",
+    "name": "Test", "average_grade": 10
   },
   "offer_validity_seconds": 86400,
   "credential_valid_until": "2010-01-01T19:23:24Z",
   "credential_valid_from": "2010-01-01T18:23:24Z",
   "status_lists": [
-    # Url of the status list created in previous step
-    "https://example-status-registry-uri/api/v1/statuslist/05d2e09f-21dc-4699-878f-89a8a2222c67.jwt"
+    "https://status-list-uri"
   ]
-}
+}'
+```
+
+## Update status
+A credential can have one of the following status: `OFFERED`, `CANCELLED`, `IN_PROGRESS`, `ISSUED`, `SUSPENDED`, `REVOKED`, `EXPIRED`.
+Using the Issuer Management service the status can be updated
+```bash
+curl -X 'PATCH' \
+  'https://{issuer-agent-management-url}/api/v1/credentials/{credentialID}/status' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "credentialID": $CREDENTIAL_ID
+    "credentialStatus": "ISSUED"
+  }'
 ```
 
 # Development instructions
