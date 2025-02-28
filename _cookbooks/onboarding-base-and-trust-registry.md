@@ -59,12 +59,19 @@ Select an API and press **Subscribe.** You will be prompted to create a new appl
 
 [![create application](../../assets/images/create_application.png)](../../assets/images/create_application.png)
 
-**Important:**
+{% capture notice-text %}
 
 <p> ⚙️ The output of the application creation will be referenced as SWIYU_STATUS_REGISTRY_CUSTOMER_KEY / SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET / SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN / SWIYU_STATUS_REGISTRY_ACCESS_TOKEN </p>
 
 Safely store your keys - this is the only time they are shown to you. It is possible to create new ones if necessary.  
 The ACCESS_TOKEN expires after 24 hours and can be refreshed using the REFRESH_TOKEN. The REFRESH_TOKEN is valid for 168 hours. You can always create new tokens if you lose them or both expire.
+
+{% endcapture %}
+
+<div class="notice--warning">
+  <h4 class="no_toc">Important:</h4>
+  {{ notice-text | markdownify }}
+</div>
 
 ### Authenticate with OAuth2
 
