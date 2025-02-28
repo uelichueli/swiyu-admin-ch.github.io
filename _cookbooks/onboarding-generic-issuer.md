@@ -29,7 +29,7 @@ The swiyu Generic Issuer Management Service is linked to the issuer signer servi
 
 A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file.
 
-**Replace all placeholder <VARIABLE_NAME>**.
+**Replace all placeholder in angle brackets '<VARIABLE_NAME>'**.
 
 Please be aware that both the issuer-agent-management and the issuer-agent-oid4vci need to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
 
@@ -42,7 +42,7 @@ The latest images are available here:
 
 In order to support your use case you need to adapt the so-called issuer_metadata (see [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml#L85)).
 Those metadata define the appearance of the credential in the wallet and what kind of credential formats are supported.
-For further information consult the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/)
+For further information consult the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/).
 
 ## Initialize the status list
 
@@ -56,8 +56,6 @@ curl -X POST https://<SWIYU_STATUS_REGISTRY_API_URL>/api/v1/status/business-enti
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <SWIYU_STATUS_REGISTRY_ACCESS_TOKEN>" \
   -d '{}'
-
-
 ```
 
 The following request needs to be run on your issuer-agent-management instance.
@@ -73,13 +71,12 @@ curl -X POST https://<EXTERNAL_URL of issuer-agent-management>/status-list \
     "bits": 2
     }
   }'
-
 ```
 
 ## Issue credential
 
 You're now ready to issue credentials by using the issuer-agent-management API which is accessible under
-https://<EXTERNAL_URL of issuer-agent-management>**/swagger-ui/index.html#/Credential%20API/createCredential** to create
+https://<"EXTERNAL_URL of issuer-agent-management">/swagger-ui/index.html#/Credential%20API/createCredential to create
 a credential offer for a holder. Here is an example of a request body for the offer creation
 
 ```json
