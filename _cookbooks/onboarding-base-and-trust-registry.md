@@ -59,12 +59,19 @@ Select an API and press **Subscribe.** You will be prompted to create a new appl
 
 [![create application](../../assets/images/create_application.png)](../../assets/images/create_application.png)
 
-**Important:**
+{% capture notice-text %}
 
 <p> ⚙️ The output of the application creation will be referenced as SWIYU_STATUS_REGISTRY_CUSTOMER_KEY / SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET / SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN / SWIYU_STATUS_REGISTRY_ACCESS_TOKEN </p>
 
 Safely store your keys - this is the only time they are shown to you. It is possible to create new ones if necessary.  
 The ACCESS_TOKEN expires after 24 hours and can be refreshed using the REFRESH_TOKEN. The REFRESH_TOKEN is valid for 168 hours. You can always create new tokens if you lose them or both expire.
+
+{% endcapture %}
+
+<div class="notice--warning">
+  <h4 class="no_toc">Important:</h4>
+  {{ notice-text | markdownify }}
+</div>
 
 ### Authenticate with OAuth2
 
@@ -108,7 +115,7 @@ The id is required when uploading your DID log.
 
 ### create a DID (or create the DID log you need to continue)
 
-A Decentralized Identifier (DID) is a globally unique identifier that allows individuals and entities to create and manage their own digital identities independently of centralized authorities. To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
+A Decentralized Identifier (DID) is a globally unique identifier that allows individuals and entities to create and manage their own digital identities independently of centralized authorities. To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
 
 We recommend creating separate DIDs for each role (e.g., separate DIDs for issuers and verifiers).
 
@@ -125,7 +132,7 @@ Before using the DID Toolbox, ensure your system meets the following requirement
 
 #### Downloading the DID Toolbox
 
-The current release can be downloaded from the [repository](https://github.com/e-id-admin/didtoolbox-java/releases)
+The current release can be downloaded from the [repository](https://github.com/swiyu-admin-ch/didtoolbox-java/releases)
 
 #### Quickstart – Create Your First DID
 
@@ -150,7 +157,7 @@ java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg
 *   create: Command to create a new DID
 *   <identifier_registry_url>: URL received as a result of DID space creation from step "Create DID space"
 
-For advanced usage or detailed parameter descriptions, please refer to [e-id-admin/didtoolbox-java](https://github.com/e-id-admin/didtoolbox-java#advanced-usage).
+For advanced usage or detailed parameter descriptions, please refer to the [DID Toolbox repository](https://github.com/swiyu-admin-ch/didtoolbox-java#advanced-usage).
 
 ###### What Happens Upon Execution
 
@@ -191,7 +198,7 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 *   Output Directory: The .didtoolbox directory is automatically created in the current working directory. Ensure you have the necessary permissions to create and write to this directory.
 *   Multiple DIDs: If you create multiple DIDs, please make sure to rename the .didtoolbox directory (or move/rename the files) after each creation run, since the key material will be re-generated on each run and therefore overwritten.
 *   Security: Keep your private keys secure. Do not share them or expose them in unsecured environments.
-*   Using Existing DIDs: While the Quickstart option generates new DIDs and key material, future versions of the DID-Toolbox may support importing and managing existing DIDs. 
+*   Using Existing DIDs: While the Quickstart option generates new DIDs and key material, future versions of the DID Toolbox may support importing and managing existing DIDs. 
 
 ### Upload DID log
 
