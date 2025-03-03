@@ -7,6 +7,17 @@ header:
   teaser: ../assets/images/cookbook_beta_eid.jpg
 ---
 
+{% capture notice-text %}
+
+The cookbooks are currently only for internal testing and not yet intended for the public. Some links are therefore not yet accessible. We ask for your patience.
+
+{% endcapture %}
+
+<div class="notice--danger">
+  <h4 class="no_toc">Only for internal testing!</h4>
+  {{ notice-text | markdownify }}
+</div>
+
 ## In brief
 
 **What is the Beta-ID?**
