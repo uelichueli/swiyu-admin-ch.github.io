@@ -7,6 +7,17 @@ header:
   teaser: ../assets/images/cookbook_generic_verifier.jpg
 ---
 
+{% capture notice-text %}
+
+The cookbooks are currently only for internal testing and not yet intended for the public. Some links are therefore not yet accessible. We ask for your patience.
+
+{% endcapture %}
+
+<div class="notice--danger">
+  <h4 class="no_toc">Only for internal testing!</h4>
+  {{ notice-text | markdownify }}
+</div>
+
 This software is a web server implementing the technical standards as specified in the [Swiss E-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
 
 [![ecosystem components](../../assets/images/components.png)](../../assets/images/components.png)
