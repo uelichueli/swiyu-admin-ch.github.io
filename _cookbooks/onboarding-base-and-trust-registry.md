@@ -7,6 +7,17 @@ header:
   teaser: ../assets/images/cookbook_base_trust_registry.jpg
 ---
 
+{% capture notice-text %}
+
+The cookbooks are currently only for internal testing and not yet intended for the public. Some links are therefore not yet accessible. We ask for your patience.
+
+{% endcapture %}
+
+<div class="notice--danger">
+  <h4 class="no_toc">Only for internal testing!</h4>
+  {{ notice-text | markdownify }}
+</div>
+
 [![Onboarding flow](../../assets/images/onboarding-steps3.jpg)](../../assets/images/onboarding-steps3.jpg)
 Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata like a name and logo on the trust registry. Here you can find a step-by-step guide to get onboarded.
 
