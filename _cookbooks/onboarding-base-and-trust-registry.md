@@ -253,6 +253,17 @@ curl -X PUT 'https://status-reg-api.trust-infra.swiyu.admin.ch/api/v1/status/bus
 ### Become a trusted participant
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
+During the mail registration you should provide us the following information
+
+| Attribute                     | Required | Description                                                                                                                                       |
+|-------------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Email contact                 | Yes      | Email address of the technical contact for the onboarding                                                                                         |
+| DID of the beta Base Registry | Yes      | Decentralized identifier created during the beta Base Regsitry onboarding                                                                         |
+| Organisation name             | Yes      | Name of your organization in at least the preferred language. Additional values can be provided in english, german, french, italian and rumantsch |
+| Preferred language            | Yes      | english, german, french, italian or rumantsch                                                                                                     |
+| LogoDataUri                   | No       | Logo as base64 data uri in the following format `data:image/png;base64,{base64DataString}`. Allowed mime-types are : ["image/png", "image/jpeg"]  |
+
+
 [![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
 
 ### User management
