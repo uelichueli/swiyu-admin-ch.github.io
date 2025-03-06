@@ -126,7 +126,7 @@ The id is required when uploading your DID log.
 
 ### create a DID (or create the DID log you need to continue)
 
-A Decentralized Identifier (DID) is a globally unique identifier that allows individuals and entities to create and manage their own digital identities independently of centralized authorities. To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
+To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
 
 We recommend creating separate DIDs for each role (e.g., separate DIDs for issuers and verifiers).
 
@@ -213,13 +213,13 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 
 ### Upload DID log
 
-Use the Identifier API to upload your DID log.
+Use the Identifier API to upload your DID log. Make sure to properly escape the double quotes in the DID log e.g. by using single quotes. Using the sample DID log from above: `'["1-Qmdc45SbY6miLmcw2EyAysLy2A99TeiQqVXkkyh6qzsLTm","2025-01-07T09:06:06Z",{"method": ... "proofValue":"z4GG3MaCgwTWH5hEi7C1DyAJzr3VFbfmT9s1PN5Pr4BxgvYSbYsgn5kYAgwxFwXrGC8Wdm45HScq72xkujvPcFhm9"}]'`
 
 ```bash
 curl \
   -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
   -H "Content-Type: application/jsonl+json" \
-  -d "$YOUR_GENERATED_DIDLOG" \
+  -d '$YOUR_GENERATED_DIDLOG' \
   -X PUT "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
 ```
 
@@ -229,23 +229,19 @@ Make sure the content-type is set to "application/jsonl+json"
 
 Now you are registered on the swiyu Base Registry and be able to configure your issuer and verifier component.
 
-### Use/Integrate the swiyu Trust Infrastructure
-
-One way to interact with the swiyu ecosystem is to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier or bring your own implementation. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
-
-### Initialize a status list (verifier only)
-If you don't use the generic verifier you can use the status list API directly:
+### Initialize a status list (issuer only)
+If you don't use the generic issuer you can use the status list API directly:
 
 **Initialize a status list**
 ```bash
-curl -X POST 'https://status-reg-api.trust-infra.swiyu.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/' \
+curl -X POST 'https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/' \
   -H 'accept: application/json' \
   -H 'Authorization: Bearer your token' \
   -d ''
 ```
 **Update status list**
 ```bash
-curl -X PUT 'https://status-reg-api.trust-infra.swiyu.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/{statusRegistryEntryId}' \
+curl -X PUT 'https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/{statusRegistryEntryId}' \
   -H 'Content-Type: application/statuslist+jwt' \
   -d 'Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request'
 ```
@@ -284,3 +280,7 @@ Generate as many invitation codes as you need and make sure to add the appropria
 To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
 
 [![redeem invitation code](../../assets/images/redeem_code.png)](../../assets/images/redeem_code.png)
+
+### Use/Integrate the swiyu Trust Infrastructure
+
+One way to interact with the swiyu ecosystem is to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier or bring your own implementation. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
