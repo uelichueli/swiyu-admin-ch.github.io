@@ -39,6 +39,8 @@ The verification management service is linked to the verification validator serv
 > - Registered yourself on the api self service portal
 > - Generated the signing keys file with the didtoolbox.jar
 > - Generated a DID which is registered on the identifier registry
+>
+> The required steps are explained in the [Base- and Trust Registry Cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/)
 
 
 ## Set the environment variables
@@ -48,12 +50,14 @@ A sample compose file for an entire setup of both components and a database can 
 Those information will be provided to the holder on a dedicated endpoint (`/api/v1/openid-client-metadata.json`) serving as metadata information of your verifier.
 The placeholder `${CLIENT_ID}` in your metadata file will be replaced on the fly by the value set for `VERIFIER_DID`.
 
-**Verifier Agent Management**
+### Verifier Agent Management
+
 |Name|Description|Example|
 |---|---|---|
 |OID4VP_URL|URL of your OID4VP service|
 
-**Verifier Agent OID4VP**
+### Verifier Agent OID4VP
+
 |Name|Description|Example|
 |---|---|---|
 |EXTERNAL_URL|publicly available URL of this service||
