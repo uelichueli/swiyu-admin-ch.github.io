@@ -47,7 +47,7 @@ Below is an example of how various credentials are displayed in different situat
 [![credential attributes](../../assets/images/vc_credential_attributes.png)](../../assets/images/vc_credential_attributes.png)
 
 
-As an example we take this metadata, and focus only on the relevant fields (technical fields are hidden):
+As an example we take this metadata (OID4VCI and OID4VP), and focus only on the relevant fields (technical fields are hidden):
 
 ```
 "display": [
@@ -82,14 +82,19 @@ As an example we take this metadata, and focus only on the relevant fields (tech
 }
 
 ```
-
-## Issuer title and logo
-
 ```
-"name": "Issuer title",
-"logo": {
-    "uri": "data:image/png;base64,<...base64code....>
-}
+verifier_client_metadata.json: |
+      {
+        "client_id": "${CLIENT_ID}",
+        "client_name#en": "Reference Demo Verifier",
+        "client_name#fr": "Vérificateur de démonstration de référence",
+        "client_name#de-DE": "Referenz-Demo-Verifizier",
+        "client_name#de-CH": "Referänz-Demo-Verifizier",
+        "client_name#de": "Referenz-Demo-Verifizierer (Fallback DE)",
+        "client_name": "REF Demo Verifier (Base)",
+        "logo_uri": "www.example.com/logo.png",
+        "logo_uri#fr": "www.example.com/logo_fr.png"
+      }
 ```
 
 ## Multilanguage
@@ -133,19 +138,13 @@ All the credentials which are issued within the swiyu Public Beta environment ar
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">Good to know:</h4>
+  <h3 class="no_toc">Good to know:</h3>
   {{ notice-text | markdownify }}
 </div>
 
-## Logo / Icon
+## Logo/Icon for Issuer & Verifier (Credential)
 
-```
-"logo": {
-           "uri": "data:image/png;base64,<...base64code....>"
-        }
-```
-
-The logo or icon dimensions must not exceed 512×512 pixels and will be displayed at 21×21 pixels at any zoom level.
+The logo or icon dimensions must not exceed 512×512 pixels and will be displayed at 24×24 pixels at any zoom level.
 
 The logo or icon must be a transparent PNG (excluding the background). 
 
@@ -156,7 +155,7 @@ Multi-colored logos and gradients are automatically converted to a monochrome ve
 {% capture notice-text %}
 **Downscaling**  
 
-The logo/icon is automatically scaled down to a maximum size of 21×21 px. Extreme landscape or portrait logos/icons will be scaled such that the longest side is reduced to 21 px.
+The logo/icon is automatically scaled down to a maximum size of 24×24 px. Extreme landscape or portrait logos/icons will be scaled such that the longest side is reduced to 24 px.
 
 Recommendation:
 
@@ -169,9 +168,49 @@ The VC supports multilingual settings. This means the logo can be defined per la
 {% endcapture %}
 
 <div class="notice--info">
-  <h3 class="no_toc">Good to know</h3>
+  <h3 class="no_toc">Good to know:</h3>
   {{ notice-text | markdownify }}
 </div>
+
+### Credential Icons
+
+```
+"logo": {
+           "uri": "data:image/png;base64,<...base64code....>"
+        }
+```
+
+### Issuer Logo
+
+The issuer's logo is part of the OID-Metadata and will be used for the credential offer screen and in the detailview of the credential.
+
+```
+"name": "Issuer title",
+"logo": {
+    "uri": "data:image/png;base64,<...base64code....>
+}
+```
+
+### Verifier Logo
+
+The verifier's logo will be use in the presentation request screen.
+
+The logo is part of the O£ID4VP request:
+
+```
+verifier_client_metadata.json: |
+      {
+        "client_id": "${CLIENT_ID}",
+        "client_name#en": "Reference Demo Verifier",
+        "client_name#fr": "Vérificateur de démonstration de référence",
+        "client_name#de-DE": "Referenz-Demo-Verifizier",
+        "client_name#de-CH": "Referänz-Demo-Verifizier",
+        "client_name#de": "Referenz-Demo-Verifizierer (Fallback DE)",
+        "client_name": "REF Demo Verifier (Base)",
+        "logo_uri": "www.example.com/logo.png",
+        "logo_uri#fr": "www.example.com/logo_fr.png"
+      }
+```
 
 [![logo conversion](../../assets/images/vc_logo_conversion.png)](../../assets/images/vc_logo_conversion.png)
 [![logo scaling](../../assets/images/vc_logo_scaling.png)](../../assets/images/vc_logo_scaling.png)
