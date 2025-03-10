@@ -39,12 +39,15 @@ The swiyu Generic Issuer Management Service is linked to the issuer oid4vci serv
 > - Registered yourself on the api self service portal
 > - Generated the signing keys file with the didtoolbox.jar
 > - Generated a DID which is registered on the identifier registry
+>   
+> The required steps are explained in the [Base- and Trust Registry Cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/)
 
 ## Set the environment variables
 
 A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file. You will need to configure a list of environment variables.
 
-**Issuer Agent Management**
+### Issuer Agent Management
+
 | Name | Description | Example |
 | --- | --- |---|
 |SPRING_APPLICATION_NAME|Name of your application|
@@ -58,7 +61,8 @@ A sample compose file for an entire setup of both components and a database can 
 |SWIYU_STATUS_REGISTRY_TOKEN_URL|[OAuth Refresh URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#authenticate-with-oauth2)|https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW|
 |SWIYU_STATUS_REGISTRY_API_URL|[Status Registry Base URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#base-urls)|status-reg-api.trust-infra.swiyu-int.admin.ch|
 
-**Issuer Agent OID4VCI**
+### Issuer Agent OID4VCI
+
 |Name|Description|Example|
 |---|---|---|
 |EXTERNAL_URL|Publicly available URL of this Service||
