@@ -72,12 +72,22 @@ Select an API and press **Subscribe.** You will be prompted to create a new appl
 
 {% capture notice-text %}
 
-<p> ⚙️ The output of the application creation will be referenced as SWIYU_STATUS_REGISTRY_CUSTOMER_KEY / SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET / SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN / SWIYU_STATUS_REGISTRY_ACCESS_TOKEN </p>
-
-Safely store your keys - this is the only time they are shown to you. It is possible to create new ones if necessary.  
+<p> ⚙️ The output of the application creation will be referenced as: <br>
+SWIYU_STATUS_REGISTRY_CUSTOMER_KEY <br> 
+SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET <br> 
+SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN <br> 
+SWIYU_STATUS_REGISTRY_ACCESS_TOKEN <br>
+SWIYU_IDENTIFIER_REGISTRY_CUSTOMER_KEY <br> 
+SWIYU_IDENTIFIER_REGISTRY_CUSTOMER_SECRET <br> 
+SWIYU_IDENTIFIER_REGISTRY_BOOTSTRAP_REFRESH_TOKEN <br> 
+SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN <br>
+</p>
+Safely store your keys, secrets and tokens - this is the only time they are shown to you. It is possible to create new ones if necessary.  
 The ACCESS_TOKEN expires after 24 hours and can be refreshed using the REFRESH_TOKEN. The REFRESH_TOKEN is valid for 168 hours. You can always create new tokens if you lose them or both expire.
 
 {% endcapture %}
+
+During the onboarding process you will only need the access tokens, when setting up the [generic components](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) you will also need the refresh tokens, keys and secrets.
 
 <div class="notice--warning">
   <h4 class="no_toc">Important:</h4>
@@ -112,8 +122,8 @@ In order to onboard on the swiyu Base Registry you will first need to reserve so
 
 ```bash
 curl \
-  -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
-  -X POST "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries"
+  -H "Authorization: Bearer $SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN" \
+  -X POST "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries"
 ```
 
 **API Response 201**
@@ -162,7 +172,7 @@ To run the DID Toolbox using the Quickstart option, use the following command st
 java -jar didtoolbox.jar create --identifier-registry-url <identifier_registry_url>
  
 # Example
-java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl
+java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl
 ```
 
 *   create: Command to create a new DID
@@ -217,10 +227,10 @@ Use the Identifier API to upload your DID log. Make sure to properly escape the 
 
 ```bash
 curl \
-  -H "Authorization: Bearer $YOUR_AUTH_TOKEN" \
+  -H "Authorization: Bearer $SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN" \
   -H "Content-Type: application/jsonl+json" \
   -d '$YOUR_GENERATED_DIDLOG' \
-  -X PUT "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$YOUR_BUSINESS_ENTITY_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
+  -X PUT "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
 ```
 
 Add the DID log you created earlier as string body (not JSON).
@@ -234,16 +244,16 @@ If you don't use the generic issuer you can use the status list API directly:
 
 **Initialize a status list**
 ```bash
-curl -X POST 'https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Bearer your token' \
-  -d ''
+curl -X POST "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/$SWIYU_PARTNER_ID/status-list-entries/" \
+  -H "accept: application/json" \
+  -H "Authorization: Bearer $SWIYU_STATUS_REGISTRY_ACCESS_TOKEN" \
+  -d ""
 ```
 **Update status list**
 ```bash
-curl -X PUT 'https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/{businessEntityId}/status-list-entries/{statusRegistryEntryId}' \
-  -H 'Content-Type: application/statuslist+jwt' \
-  -d 'Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request'
+curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/$SWIYU_PARTNER_ID/status-list-entries/{statusRegistryEntryId}" \
+  -H "Content-Type: application/statuslist+jwt" \
+  -d "Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request"
 ```
 
 ### Become a trusted participant
