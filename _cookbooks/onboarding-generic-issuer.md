@@ -11,6 +11,8 @@ header:
 
 The cookbooks are currently only for internal testing and not yet intended for the public. Some links are therefore not yet accessible. We ask for your patience.
 
+Additionly the cookbook describes the minimal set-up to create a verifiable credential in the swiyu-wallet.
+
 {% endcapture %}
 
 <div class="notice--danger">
@@ -35,11 +37,12 @@ The swiyu Generic Issuer Management Service is linked to the issuer oid4vci serv
 # Deployment instructions
 
 > Please make sure that you did the following before starting the deployment:
+>
 > - Registered yourself on the swiyu Trust Infrastructure portal
 > - Registered yourself on the api self service portal
 > - Generated the signing keys file with the didtoolbox.jar
 > - Generated a DID which is registered on the identifier registry
->   
+>
 > The required steps are explained in the [Base- and Trust Registry Cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/)
 
 ## Set the environment variables
@@ -48,8 +51,9 @@ A sample compose file for an entire setup of both components and a database can 
 
 ### Issuer Agent Management
 
-| Name | Description | Example |
-| --- | --- |---|
+|---
+| Name | Description | Example
+| --- | --- |---
 |SPRING_APPLICATION_NAME|Name of your application|
 |ISSUER_ID|The did you got in the [onboarding](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)| did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124 |
 |DID_STATUS_LIST_VERIFICATION_METHOD|DID + Verification Method|did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#assert-key-01|
@@ -70,8 +74,9 @@ A sample compose file for an entire setup of both components and a database can 
 |DID_SDJWT_VERIFICATION_METHOD|DID+Verification Method|did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#assert-key-02|
 |SDJWT_KEY|EC Private key used to sign credentials||
 
-
 Please be aware that the the issuer-agent-oid4vci needs to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
+
+At the moment the provided images cannot be used with arm based processors. For futher information, please consult the [Development instructions section](#deployment-instructions).
 
 The latest images are available here:
 
@@ -88,42 +93,48 @@ For further information consult the [VC visual presentation cookbook](https://sw
 
 Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are up and running you need to initialize the status list of your issuer so that you can issue credentials.
 
-**Request to create an status list slot**  
-The url you'll receive in the response will be used in the next request as STATUS_JWT_URL
-
-```bash
-curl -X POST https://<SWIYU_STATUS_REGISTRY_API_URL>/api/v1/status/business-entities/<SWIYU_PARTNER_ID>/status-list-entries/ \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <SWIYU_STATUS_REGISTRY_ACCESS_TOKEN>" \
-  -d '{}'
-```
+**Request to create and initialize an status list slot**
 
 The following request needs to be run on your issuer-agent-management instance.
 
 ```bash
-curl -X POST https://<EXTERNAL_URL of issuer-agent-management>/status-list \
--H "Content-Type: application/json" \
--d '{
-    "uri": "<STATUS_JWT_URL>",
-    "type": "TOKEN_STATUS_LIST",
-    "maxLength": 800000,
-    "config": {
+curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/status-list \
+  -H "accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "type": "TOKEN_STATUS_LIST",
+  "maxLength": 800000,
+  "config": {
     "bits": 2
     }
-  }'
+}'
+```
+
+This results in a response like: Please store the `statusRegistryUrl` as it is required in the [Issue Credential call](#issue-credential).
+
+```json
+{
+  "id": "EXAMPLE_ENTRY_UUID",
+  "statusRegistryUrl": "https://status-reg.trust-infra.swiyu-int.admin.ch/api/v1/statuslist/EXAMPLE_STATUS_LIST_ID.jwt",
+  "type": "TOKEN_STATUS_LIST",
+  "maxListEntries": 800000,
+  "remainingListEntries": 800000,
+  "nextFreeIndex": 0,
+  "version": "1.0",
+  "config": {
+    "bits": 2
+  }
+}
 ```
 
 ## Issue credential
 
-You're now ready to issue credentials by using the issuer-agent-management API which is accessible under
-https://<"EXTERNAL_URL of issuer-agent-management">/swagger-ui/index.html#/Credential%20API/createCredential to create
-a credential offer for a holder. Here is an example of a request body for the offer creation
+You're now ready to issue credentials by using the issuer-agent-management API to create a credential offer for a holder. Here is an example of a request body for the offer creation:
 
 ```bash
-curl -X 'POST' \
-  'https://{issuer-agent-management-url}/api/v1/credentials' \
-  -H 'accept: */*' \
-  -H 'Content-Type: application/json' \
+curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/credentials \
+  -H "accept: */*" \
+  -H "Content-Type: application/json" \
   -d '{
   "metadata_credential_supported_id": [
     "university_example_sd_jwt"
@@ -141,14 +152,17 @@ curl -X 'POST' \
 }'
 ```
 
+To check the result create a qr code from the resulting offer_deeplink, which then can be scanned with the swiyu wallet.
+
 ## Update status
+
 A credential can have one of the following status: `OFFERED`, `CANCELLED`, `IN_PROGRESS`, `ISSUED`, `SUSPENDED`, `REVOKED`, `EXPIRED`.
 Using the Issuer Management service the status can be updated
+
 ```bash
-curl -X 'PATCH' \
-  'https://{issuer-agent-management-url}/api/v1/credentials/{credentialID}/status' \
-  -H 'accept: */*' \
-  -H 'Content-Type: application/json' \
+curl -X PATCH $ISSUER_AGENT_MANAGEMENT_URL/api/v1/credentials/{credentialID}/status \
+  -H "accept: application/json" \
+  -H "Content-Type: application/json" \
   -d '{
     "credentialID": $CREDENTIAL_ID
     "credentialStatus": "ISSUED"
@@ -158,3 +172,13 @@ curl -X 'PATCH' \
 # Development instructions
 
 Instructions for the development of the swiyu Generic Issuer can be found in the [GitHub repository](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management).
+
+## Create Images for ARM based processors
+
+In order to get the sample compose running on an arm based env you first have to check out the [issuer-agent-management](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) and [issuer-agent-oid4vci](https://github.com/swiyu-admin-ch/eidch-issuer-agent-oid4vci) repositories.
+
+To create an image you to run the following command in both repositories to create local images of the services:
+
+```bash
+./mvnw spring-boot:build image
+```
