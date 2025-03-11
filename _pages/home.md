@@ -6,7 +6,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/docs_swiyu_overlay.jpg
 excerpt: >
-  Reference architecture and cookbooks related to the swiyu Public Beta Trust Infrastructure. 
+  Technical documentation, specifications, and cookbooks related to the swiyu Public Beta Trust Infrastructure. 
 feature_row:
   - image_path: /assets/images/docs_trustinfrastructure.jpg
     #title: ""
@@ -30,6 +30,18 @@ feature_row:
     #title: "Cookbooks"
     excerpt: "Learn how to onboard to the swiyu Trust Infrastructure and to manage your use case"
     url: "/cookbooks/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/docs_specifications.jpg
+    #title: "Specifications"
+    excerpt: "Technical specifications and solution approaches for the swiyu Trust Infrastructure"
+    url: "/specifications/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/docs_roadmap.jpg
+    #title: "Roadmap"
+    excerpt: "Get an overview of the most important steps of swiyu Public Beta"
+    url: "/roadmap/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 ---
