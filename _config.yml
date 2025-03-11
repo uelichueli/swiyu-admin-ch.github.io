@@ -28,7 +28,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "swiyu-admin-ch/swiyu-admin-ch.github.io"
 teaser                   : "/assets/images/swiyu_logo_name.jpeg"
 logo                     : "/assets/images/swiyu_logo_88_88.jpg"
-masthead_title           : swiyu docs
+masthead_title           : swiyu
 breadcrumbs              : true #, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : true #, false (default)
