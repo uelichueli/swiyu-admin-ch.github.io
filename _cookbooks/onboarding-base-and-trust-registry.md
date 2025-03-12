@@ -18,10 +18,14 @@ The cookbooks are currently only for internal testing and not yet intended for t
   {{ notice-text | markdownify }}
 </div>
 
-[![Onboarding flow](../../assets/images/onboarding-steps3.jpg)](../../assets/images/onboarding-steps3.jpg)
 Before being able to act as an issuer or verifier in the swiyu ecosystem you will need to publish your public key material on the base registry and optionally metadata, like a name, on the trust registry. Here you can find a step-by-step guide to get onboarded.
 
-## Sign-in or up to ePortal
+[![Onboarding flow](../../assets/images/onboarding-steps3.jpg)](../../assets/images/onboarding-steps3.jpg)
+
+The process consists of four steps. Technical knowledge is required for the third step. Please take into account the [prerequisites](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#prerequisites-using-the-jar-file) if you intend to create DIDs with our DID Toolbox.
+
+
+# 1. Sign-in or up to ePortal
 
 Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registration?agovAq=100&source=idp) or CH-Login accounts in order to register to the Trust and Base regisrty
 
@@ -33,7 +37,7 @@ Search for the _swiyu Trust Infrastructure_ service and enter it.
 
 [![welcome to ePortal](../../assets/images/welcome_to_eportal.png)](../../assets/images/welcome_to_eportal.png)
 
-# Onboard on the swiyu Base Registry
+# 2. Register Organisation
 
 ## Business Partner registration
 
@@ -114,7 +118,7 @@ In the next step you will need your business partner ID. You can find it in the 
 
 [![swiyu dashboard](../../assets/images/swiyu_dashboard.png)](../../assets/images/swiyu_dashboard.png)
 
-## Onboard business partner on the swiyu Base Registry
+# 3. Onboard on the swiyu Base Registry
 
 ### Create DID space
 
@@ -256,7 +260,7 @@ curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status
   -d "Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request"
 ```
 
-### Become a trusted participant
+# 4. Become a trusted participant
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
 During the mail registration you should provide us the following information
@@ -272,9 +276,9 @@ During the mail registration you should provide us the following information
 
 [![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
 
-### User management
+## User management
 
-#### Invite members to your business partner
+### Invite members to your business partner
 
 
 Go to [e-portal](https://eportal.admin.ch/) and click on _manage users:_
@@ -285,12 +289,12 @@ Generate as many invitation codes as you need and make sure to add the appropria
 
 [![generate invitation codes](../../assets/images/create_codes.png)](../../assets/images/create_codes.png)
 
-#### Join an existing business partner
+### Join an existing business partner
 
 To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
 
 [![redeem invitation code](../../assets/images/redeem_code.png)](../../assets/images/redeem_code.png)
 
-### Use/Integrate the swiyu Trust Infrastructure
+# Use/Integrate the swiyu Trust Infrastructure
 
 One way to interact with the swiyu ecosystem is to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier or bring your own implementation. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
