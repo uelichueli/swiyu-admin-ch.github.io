@@ -163,7 +163,7 @@ The current release can be downloaded from the [repository](https://github.com/s
 
 The Quickstart option is designed for users who want to rapidly set up one or multiple DIDs without getting too much into the DID method internals. This automates the generation of necessary asymmetric key pairs and generates the initial DID log content, which must be uploaded to the swiyu Base Registry later in the process (see Upload DID log).
 
-###### Command Syntax
+##### Command Syntax
 
 ⚙️ The generated pem .didtoolbox/assert-key-01 fille will be referenced as "assert-key-01"
 
@@ -184,7 +184,7 @@ java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg
 
 For advanced usage or detailed parameter descriptions, please refer to the [DID Toolbox repository](https://github.com/swiyu-admin-ch/didtoolbox-java#advanced-usage).
 
-###### What Happens Upon Execution
+##### What Happens Upon Execution
 
 *   Key Pair Generation: Three key pairs are created and stored in the .didtoolbox directory (output directory, will be created automatically) in PEM format  
     **Take good care of the generated key material. You will need it again later on (e.g. to configure it in your Issuers and/or Verifiers, see:** [Issuer-Management](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) & [Verifier-Management](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
@@ -199,7 +199,7 @@ For advanced usage or detailed parameter descriptions, please refer to the [DID 
         *   assert-key-01.pem: Public key
 *   DID Log Generation: A DID log line is generated and output to the standard console (stdout). You can redirect this output to a file if necessary. **This is the output you need to continue with the step "Upload DID log".**
 
-###### DID Log Content
+##### DID Log Content
 
 ⚙️ The DID generated in this step will be referenced as ISSUER_DID or VERIFIER_DID
 
