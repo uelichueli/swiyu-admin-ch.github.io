@@ -212,9 +212,9 @@ collections:
       - onboarding-generic-issuer.md
       - how-to-use-beta-id.md
       - vc-visual-presentation.md
-  specifications:
+specifications:
     output: true
-    permalink: /:specifications/:path/
+    permalink: /:collection/:path/
     order:
       - trust-protocol.md
       - oca.md
