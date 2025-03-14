@@ -212,7 +212,7 @@ collections:
       - onboarding-generic-issuer.md
       - how-to-use-beta-id.md
       - vc-visual-presentation.md
-specifications:
+  specifications:
     output: true
     permalink: /:collection/:path/
     order:
