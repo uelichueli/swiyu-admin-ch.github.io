@@ -8,8 +8,10 @@ main:
     url: /open-source-components/
   - title: "Cookbooks"
     url: /cookbooks/
+  - title: "Specifications"
+    url: /specifications/
 
-sidebarmenu:
+cookbooks_sidebarmenu:
   - title: "Cookbooks"
     url: /cookbooks/
     children:
@@ -24,5 +26,15 @@ sidebarmenu:
       - title: "VC Visual Presentation"
         url: /cookbooks/vc-visual-presentation/
 
-
+specifications_sidebarmenu:
+  - title: "Specifications"
+    url: /specifications/
+    children:
+      - title: "Trust Protocol based on VCs"
+        url: /specifications/trust-protocol/
+      - title: "Overlays Capture Architecture"
+        url: /specifications/oca/
+      - title: "Wallet Backup Container"
+        url: /specifications/wallet-backup-container/
+      
 
