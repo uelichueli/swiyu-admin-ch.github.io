@@ -113,6 +113,7 @@ include:
   - .htaccess
   - _pages
   - _cookbooks
+  - _specifications
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -200,7 +201,7 @@ pagination:
     before: 2
     after: 2
 
-# Collection as an overview for the Cookbooks
+# Collection as an overview for the Cookbooks and Specifications
 collections:
   cookbooks:
     output: true
@@ -211,7 +212,14 @@ collections:
       - onboarding-generic-issuer.md
       - how-to-use-beta-id.md
       - vc-visual-presentation.md
-
+  specifications:
+    output: true
+    permalink: /:specifications/:path/
+    order:
+      - trust-protocol.md
+      - oca.md
+      - wallet-backup-container.md
+      
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
@@ -295,5 +303,16 @@ defaults:
       author_profile: false
       share: false  
       sidebar:
-        nav: "sidebarmenu"
+        nav: "cookbooks_sidebarmenu"
+
+    #  _specifications
+  - scope:
+      path: ""
+      type: specifications
+    values:
+      layout: single
+      author_profile: false
+      share: false  
+      sidebar:
+        nav: "specifications_sidebarmenu"
       
