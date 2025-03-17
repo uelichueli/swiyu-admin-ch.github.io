@@ -96,6 +96,7 @@ Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are
 **Request to create and initialize an status list slot**
 
 The following request needs to be run on your issuer-agent-management instance.
+> **&#9432;** The maximum file size of the status list is currently 250kB. (Subject to evaluation and might change after public beta).
 
 ```bash
 curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/status-list \
@@ -103,7 +104,7 @@ curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/status-list \
   -H "Content-Type: application/json" \
   -d '{
   "type": "TOKEN_STATUS_LIST",
-  "maxLength": 800000,
+  "maxLength": 125000,
   "config": {
     "bits": 2
     }
@@ -117,8 +118,8 @@ This results in a response like: Please store the `statusRegistryUrl` as it is r
   "id": "EXAMPLE_ENTRY_UUID",
   "statusRegistryUrl": "https://status-reg.trust-infra.swiyu-int.admin.ch/api/v1/statuslist/EXAMPLE_STATUS_LIST_ID.jwt",
   "type": "TOKEN_STATUS_LIST",
-  "maxListEntries": 800000,
-  "remainingListEntries": 800000,
+  "maxListEntries": 125000,
+  "remainingListEntries": 125000,
   "nextFreeIndex": 0,
   "version": "1.0",
   "config": {

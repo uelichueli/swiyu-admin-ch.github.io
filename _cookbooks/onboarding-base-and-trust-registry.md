@@ -264,6 +264,9 @@ curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status
   -d "Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request"
 ```
 
+> **&#9432;** The maximum file size of the status list is currently 250kB. (Subject to evaluation and might change after public beta). <br>
+> This means one status list can hold 125.000 entries for revocation & suspension or 250.000 entries for revocation only.
+
 # <a name="become-a-trusted-particiapant"></a> 4. Become a trusted participant
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
