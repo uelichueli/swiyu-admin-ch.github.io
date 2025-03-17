@@ -43,6 +43,7 @@ Trust statements **MUST NOT** use any form of device binding, as all data are de
 Trust statements must encode Type Metadata directly (see section-6.3.5 at [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-04.html#section-6.3.5)).
 
 The SD-JWT VC JOSE Header **MUST** have the following parameters:
+
 | Parameter  | Description                                                                   |
 | -----------| ------------------------------------------------------------------------------|
 | `typ`      | **MUST** be `vc+sd-jwt`                                                       |
@@ -51,6 +52,7 @@ The SD-JWT VC JOSE Header **MUST** have the following parameters:
 
 
 The SD-JWT VC claims **MUST** have the following properties:
+
 | Claim Name | Claim Value Description                   |
 | -----------| ------------------------------------------|
 | `vct`      | Type id of trust statement                |
@@ -60,6 +62,7 @@ The SD-JWT VC claims **MUST** have the following properties:
 | `status`   | Status list revocation entry              |
 
 The SD-JWT VC claims **MAY** have the following properties:
+
 | Claim Name | Claim Value Description                   |
 | -----------| ------------------------------------------|
 | `nbf`      | Start of validity time                    |
@@ -75,6 +78,7 @@ A trust statement **MUST** be considered inactive when:
 Trust statements **MUST NOT** use any form of device binding, as all data are designed to be public.
 
 The W3C VCDM 2.0 representation **MUST** have the following properties:
+
 | Properties            | Description                                                           |
 | ----------------------| ----------------------------------------------------------------------|
 | `type`                | Type id of trust statement and **MUST** include `VerifiableCredential`|
@@ -84,6 +88,7 @@ The W3C VCDM 2.0 representation **MUST** have the following properties:
 | `credentialStatus`    | Status list revocation entry                                          |
 
 The W3C VCDM 2.0 representation **MAY** have the following properties:
+
 | Properties            | Description                                                           |
 | ----------------------| ----------------------------------------------------------------------|
 | `validFrom`           | Start of validity time                                                |
@@ -119,6 +124,7 @@ Additional trust statements **MAY** be specified.
 The `TrustStatementMetadataV1` type defines a set of rules and values which are validated by the trust statement issuer and **MUST** confirm the trust statement subject is who they claim to be.
 
 The metadata trust statement **MUST** extend the basic trust statement claims described above with the following specific claims:
+
 | Claim Name | Claim Value Description                       |
 | -----------| ----------------------------------------------|
 | `vct` for SD&minus;JWT&nbsp;VC<br/>`type` for W3C&nbsp;VCDM&nbsp;2.0 | **MUST** be `TrustStatementMetadataV1`        |
@@ -213,6 +219,7 @@ SCHEME://DOMAIN/api/v1/truststatements/{identifier_URI}?path_param=param_value
 ``` 
 
 The endpoint has the following parameters:
+
 | Type   | Name           | Data Type |Default | Description |
 | -------|----------------|-----------|--------|-------------|
 | path   | Identifier_URI | string    | -      | The URL encoded URI of the entity for which trust statements should be returned. |
@@ -259,20 +266,20 @@ Result
 ## References
 
 **OpenID4VCI credential format profiles**<br/>
-https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html
+[https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html)
 
 **RFC2397**<br/>
-https://datatracker.ietf.org/doc/html/rfc2397
+[https://datatracker.ietf.org/doc/html/rfc2397](https://datatracker.ietf.org/doc/html/rfc2397)
 
 **RFC5646**<br/>
-https://datatracker.ietf.org/doc/rfc5646/
+[https://datatracker.ietf.org/doc/rfc5646/](https://datatracker.ietf.org/doc/rfc5646/)
 
 **SD-JWT VC**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/
+[https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/)
 
 **W3C VCDM 2.0**<br/>
-https://www.w3.org/TR/vc-data-model-2.0/
+[https://www.w3.org/TR/vc-data-model-2.0/](https://www.w3.org/TR/vc-data-model-2.0/)
 
 **XMLSCHEMA11-2**<br/>
-https://www.w3.org/TR/xmlschema11-2/#dateTime
+[https://www.w3.org/TR/xmlschema11-2/#dateTime](https://www.w3.org/TR/xmlschema11-2/#dateTime)
 

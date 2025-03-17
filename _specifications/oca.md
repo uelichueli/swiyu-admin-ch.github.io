@@ -667,7 +667,6 @@ A CESR SHA-256 JavaScript implementation can be found in the appendix.
             }
         ]
     }
-
     ```
 4. The core OCA specification computes a CESR encoded digest for each Overlay in the same way as in steps 1 and 2. This documentation skips the generation of the Overlay digests, as the additional digests add no value to a single file OCA bundle. 
 

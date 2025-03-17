@@ -223,16 +223,16 @@ Example of a `OCAContainerV1` container
 ## References
 
 **ISO8601**<br/>
-https://www.iso.org/iso-8601-date-and-time-format.html
+[https://www.iso.org/iso-8601-date-and-time-format.html](https://www.iso.org/iso-8601-date-and-time-format.html)
 
 **OpenID4VCI credential format profiles**<br/>
-https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-format-profiles
+[https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-format-profiles](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-format-profiles)
 
 **RFC4648**<br/>
-https://datatracker.ietf.org/doc/html/rfc4648
+[https://datatracker.ietf.org/doc/html/rfc4648](https://datatracker.ietf.org/doc/html/rfc4648)
 
 **RFC7516**<br/>
-https://datatracker.ietf.org/doc/html/rfc7516
+[https://datatracker.ietf.org/doc/html/rfc7516](https://datatracker.ietf.org/doc/html/rfc7516)
 
 **RFC7517**<br/>
-https://datatracker.ietf.org/doc/html/rfc7517
+[https://datatracker.ietf.org/doc/html/rfc7517](https://datatracker.ietf.org/doc/html/rfc7517)

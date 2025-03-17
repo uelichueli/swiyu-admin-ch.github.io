@@ -120,7 +120,7 @@ In the next step you will need your business partner ID. You can find it in the 
 
 # 3. Onboard on the swiyu Base Registry
 
-### Create DID space
+## Create DID space
 
 In order to onboard on the swiyu Base Registry you will first need to reserve some space.
 
@@ -138,7 +138,7 @@ The identifier_registry_url is used in the next step when creating the DID log.
 
 The id is required when uploading your DID log.
 
-### create a DID (or create the DID log you need to continue)
+## create a DID (or create the DID log you need to continue)
 
 To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
 
@@ -146,7 +146,7 @@ We recommend creating separate DIDs for each role (e.g., separate DIDs for issue
 
 **Currently, the swiyu ecosystem supports the following DID method: did:webvh, version 0.3.**
 
-#### Prerequisites (using the JAR file)
+### Prerequisites (using the JAR file)
 
 Before using the DID Toolbox, ensure your system meets the following requirements:
 
@@ -155,15 +155,15 @@ Before using the DID Toolbox, ensure your system meets the following requirement
 *   Operating System: Compatible with major operating systems, including Windows, macOS, and Linux. Ensure your OS is up to date to avoid compatibility issues.
 *   Sufficient Disk Space: Allocate enough disk space for the tool and the generated key materials. 100 MB should suffice, depending on the number of DIDs you intend to generate.
 
-#### Downloading the DID Toolbox
+### Downloading the DID Toolbox
 
 The current release can be downloaded from the [repository](https://github.com/swiyu-admin-ch/didtoolbox-java/releases)
 
-#### Quickstart – Create Your First DID
+### Quickstart – Create Your First DID
 
 The Quickstart option is designed for users who want to rapidly set up one or multiple DIDs without getting too much into the DID method internals. This automates the generation of necessary asymmetric key pairs and generates the initial DID log content, which must be uploaded to the swiyu Base Registry later in the process (see Upload DID log).
 
-##### Command Syntax
+#### Command Syntax
 
 ⚙️ The generated pem .didtoolbox/assert-key-01 fille will be referenced as "assert-key-01"
 
@@ -184,7 +184,7 @@ java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg
 
 For advanced usage or detailed parameter descriptions, please refer to the [DID Toolbox repository](https://github.com/swiyu-admin-ch/didtoolbox-java#advanced-usage).
 
-##### What Happens Upon Execution
+#### What Happens Upon Execution
 
 *   Key Pair Generation: Three key pairs are created and stored in the .didtoolbox directory (output directory, will be created automatically) in PEM format  
     **Take good care of the generated key material. You will need it again later on (e.g. to configure it in your Issuers and/or Verifiers, see:** [Issuer-Management](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) & [Verifier-Management](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management)
@@ -199,7 +199,7 @@ For advanced usage or detailed parameter descriptions, please refer to the [DID 
         *   assert-key-01.pem: Public key
 *   DID Log Generation: A DID log line is generated and output to the standard console (stdout). You can redirect this output to a file if necessary. **This is the output you need to continue with the step "Upload DID log".**
 
-##### DID Log Content
+#### DID Log Content
 
 ⚙️ The DID generated in this step will be referenced as ISSUER_DID or VERIFIER_DID
 
