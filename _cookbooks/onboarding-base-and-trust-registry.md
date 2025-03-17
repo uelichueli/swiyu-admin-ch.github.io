@@ -263,7 +263,7 @@ curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status
   -d "Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request"
 ```
 
-# 4. Become a trusted participant
+# <a name="become-a-trusted-particiapant"></a> 4. Become a trusted participant
 To be acclaimed as a trusted issuer or verifier you need to additionally contact us by using the form found on the [swiyu Trust Infrastructure service](#open-swiyu-trust-infrastructure)
 
 During the mail registration you should provide us the following information
