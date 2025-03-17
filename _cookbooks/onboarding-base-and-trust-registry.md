@@ -260,6 +260,7 @@ curl -X POST "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/statu
 ```bash
 curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/$SWIYU_PARTNER_ID/status-list-entries/{statusRegistryEntryId}" \
   -H "Content-Type: application/statuslist+jwt" \
+  -H "Authorization: Bearer $SWIYU_STATUS_REGISTRY_ACCESS_TOKEN" \
   -d "Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request"
 ```
 
@@ -274,8 +275,6 @@ During the mail registration you should provide us the following information
 | DID of the beta Base Registry | Yes      | Decentralized identifier created during the beta Base Regsitry onboarding                                                                                                                                                                                      |
 | Organisation name             | Yes      | Name of your organization in at least the preferred language. Additional values can be provided in english, german, french, italian and rumantsch                                                                                                              |
 | Preferred language            | Yes      | english, german, french, italian or rumantsch                                                                                                                                                                                                                  |
-| LogoDataUri                   | No       | Logo in the preferred language as base64 data uri in the following format `data:image/png;base64,{base64DataString}`. Allowed mime-types are : ["image/png", "image/jpeg"]. Additional values can be provided in english, german, french, italian or rumantsch |
-
 
 [![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
 
