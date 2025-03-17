@@ -31,10 +31,10 @@ Entities can onboard, update, or offboard as issuers and verifiers within the ec
 
 The source code is divided in different services:
 
-- [Base Registry Authoring Service](https://github.com/e-id-admin/eidch-registry-base-authoring)
-- [Base Registry Data Service](https://github.com/e-id-admin/eidch-registry-base-data)
-- [Status Registry Authoring Service](https://github.com/e-id-admin/eidch-registry-status-authoring)
-- [Status Registry Data Service](https://github.com/e-id-admin/eidch-registry-status-data)
+- [Base Registry Authoring Service](https://github.com/swiyu-admin-ch/eidch-registry-base-authoring)
+- [Base Registry Data Service](https://github.com/swiyu-admin-ch/eidch-registry-base-data)
+- [Status Registry Authoring Service](https://github.com/swiyu-admin-ch/eidch-registry-status-authoring)
+- [Status Registry Data Service](https://github.com/swiyu-admin-ch/eidch-registry-status-data)
  
 
 ### swiyu Trust Registry
@@ -43,8 +43,8 @@ Entities can prove and maintain their status as verified issuers or verifiers, e
 
 The source code is divided in an authoring and a data service:
 
-- [Authoring Service](https://github.com/e-id-admin/eidch-registry-trust-authoring)
-- [Data Service](https://github.com/e-id-admin/eidch-registry-trust-data)
+- [Authoring Service](https://github.com/swiyu-admin-ch/eidch-registry-trust-authoring)
+- [Data Service](https://github.com/swiyu-admin-ch/eidch-registry-trust-data)
 
 ### swiyu Generic Issuer 
 Entities can issue, revoke, suspend, and reactivate Verifiable Credentials (VCs), using the generic reference issuer implementation provided by the federal government. 

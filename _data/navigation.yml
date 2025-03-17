@@ -30,6 +30,8 @@ specifications_sidebarmenu:
   - title: "Specifications"
     url: /specifications/
     children:
+      - title: "Interoperability Profile"
+        url: /specifications/interoperability-profile/
       - title: "Trust Protocol based on VCs"
         url: /specifications/trust-protocol/
       - title: "Overlays Capture Architecture"

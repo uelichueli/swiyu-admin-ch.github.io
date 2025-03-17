@@ -216,6 +216,7 @@ collections:
     output: true
     permalink: /:collection/:path/
     order:
+      - interoperability-profile.md
       - trust-protocol.md
       - oca.md
       - wallet-backup-container.md

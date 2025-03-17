@@ -742,34 +742,34 @@ console.log(
 ## References
 
 **Aries Branding Overlay**<br/>
-https://github.com/hyperledger/aries-rfcs/blob/main/features/0755-oca-for-aries/README.md#aries-specific-branding-overlay
+[https://github.com/hyperledger/aries-rfcs/blob/main/features/0755-oca-for-aries/README.md#aries-specific-branding-overlay](https://github.com/hyperledger/aries-rfcs/blob/main/features/0755-oca-for-aries/README.md#aries-specific-branding-overlay)
 
 **CESR**<br/>
-https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html
+[https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html)
 
 **ISO8601**<br/>
-https://www.iso.org/iso-8601-date-and-time-format.html
+[https://www.iso.org/iso-8601-date-and-time-format.html](https://www.iso.org/iso-8601-date-and-time-format.html)
 
 **OpenID4VCI credential format profiles**<br/>
-https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html
+[https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html)
 
 **Overlays Capture Architecture**<br/>
-https://oca.colossi.network/specification/
+[https://oca.colossi.network/specification/](https://oca.colossi.network/specification/)
 
 **RFC2397**<br/>
-https://datatracker.ietf.org/doc/html/rfc2397
+[https://datatracker.ietf.org/doc/html/rfc2397](https://datatracker.ietf.org/doc/html/rfc2397)
 
 **RFC8785**<br/>
-https://datatracker.ietf.org/doc/html/rfc8785
+[https://datatracker.ietf.org/doc/html/rfc8785](https://datatracker.ietf.org/doc/html/rfc8785)
 
 **RFC9535**<br/>
-https://www.rfc-editor.org/rfc/rfc9535.html
+[https://www.rfc-editor.org/rfc/rfc9535.html](https://www.rfc-editor.org/rfc/rfc9535.html)
 
 **SD-JWT VC**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/
+[https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/)
 
 **W3C.SRI**<br/>
-https://www.w3.org/TR/SRI/
+[https://www.w3.org/TR/SRI/](https://www.w3.org/TR/SRI/)
 
 **W3C VCDM 2.0**<br/>
-https://www.w3.org/TR/vc-data-model-2.0/
+[https://www.w3.org/TR/vc-data-model-2.0/](https://www.w3.org/TR/vc-data-model-2.0/)
