@@ -157,7 +157,7 @@ Before using the DID Toolbox, ensure your system meets the following requirement
 
 ### Downloading the DID Toolbox
 
-The current release can be downloaded from the [repository](https://github.com/swiyu-admin-ch/didtoolbox-java/releases)
+The current release can be downloaded from the [repository](https://github.com/swiyu-admin-ch/didtoolbox-java/)
 
 ### Quickstart – Create Your First DID
 
@@ -227,7 +227,10 @@ did:tdw:QmU49w8drdPUk4g8NXsLqVRqLRz588N99tBSRRBLoxXHow:identifier-reg.trust-infr
 
 ### Upload DID log
 
-Use the Identifier API to upload your DID log. Make sure to properly escape the double quotes in the DID log e.g. by using single quotes. Using the sample DID log from above: `'["1-Qmdc45SbY6miLmcw2EyAysLy2A99TeiQqVXkkyh6qzsLTm","2025-01-07T09:06:06Z",{"method": ... "proofValue":"z4GG3MaCgwTWH5hEi7C1DyAJzr3VFbfmT9s1PN5Pr4BxgvYSbYsgn5kYAgwxFwXrGC8Wdm45HScq72xkujvPcFhm9"}]'`
+Use the Identifier API to upload your DID log. Make sure to properly escape the double quotes in the DID log e.g. by using single quotes. Using the sample DID log from above: 
+```
+'["1-Qmdc45SbY6miLmcw2EyAysLy2A99TeiQqVXkkyh6qzsLTm","2025-01-07T09:06:06Z",{"method": ... "proofValue":"z4GG3MaCgwTWH5hEi7C1DyAJzr3VFbfmT9s1PN5Pr4BxgvYSbYsgn5kYAgwxFwXrGC8Wdm45HScq72xkujvPcFhm9"}]'
+```
 
 ```bash
 curl \
