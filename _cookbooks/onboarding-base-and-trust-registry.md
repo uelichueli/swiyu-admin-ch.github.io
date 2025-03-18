@@ -252,7 +252,7 @@ If you don't use the generic issuer you can use the status list API directly:
 **Initialize a status list**
 ```bash
 curl -X POST "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/$SWIYU_PARTNER_ID/status-list-entries/" \
-  -H "accept: application/json" \
+  -H "Accept: application/json" \
   -H "Authorization: Bearer $SWIYU_STATUS_REGISTRY_ACCESS_TOKEN" \
   -d ""
 ```
