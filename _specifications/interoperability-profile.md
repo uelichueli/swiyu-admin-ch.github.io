@@ -7,27 +7,22 @@ header:
   teaser: ../assets/images/specifications_interoperability-profile.jpg
 ---
 
-## Abstract
-This document defines the technical profile of the swiyu Public Beta Trust Infrastructure. As such it shows how the referenced specifications can, and sometimes have to be, implemented in the context of the swiyu Public Beta Trust Infrastructure.
-
-The aim is to select features, provide guidelines and to define a set of requirements for new or existing specifications to enable interoperability between Issuers, Wallets and Verifiers of Credentials in the swiyu Public Beta Trust Infrastructure.
-
-**NOTE** <br/> This profile focuses on the Public Beta release and is not complete. It reflects the current state of implementation and will evolve in the future to fullfil the requirements of the swiyu trust infrastructure.
+**NOTE** <br/> This profile focuses on the Public Beta release and is not complete. It reflects the current state of implementation and will evolve in the future to fullfil the requirements of the swiyu Trust Infrastructure.
 {: .notice--info}
 
 ## Introduction
-This document defines a set of requirements based on new or existing technical specifications and aims to enable interoperability between Issuers, Wallets and Verifiers of Credentials in the swiyu Trust Infrastructure during the public beta phase. It is intended as an interoperability profile that can be used by implementers.
+This document defines a set of requirements based on new or existing technical specifications and aims to enable interoperability between issuers, wallets and verifiers of credentials in the swiyu Public Beta Trust Infrastructure. It is intended as an interoperability profile that can be used by implementers. As such it shows how the referenced specifications can, and sometimes have to be, implemented.
 
 ### Target Audience/Usage
-The target audience of the document are early adopters who want to use the Public Beta of the swiyu Trust Infrastructure in 2025 to:
+The target audience of the document are early adopters who want to use the swiyu Public Beta Trust Infrastructure to:
 - experience the Confederations infrastructure and assess how it works
 - experiment with their use cases 
 - test the integration of their products and systems 
-- conduct experiences with regard to interoperability across sectors aswell as regarding international interoperability 
+- conduct experiences with regard to interoperability across sectors as well as international interoperability 
 - get ready for the productive environment in 2026 
 
 ## Scope
-The following specifications are in scope of this Swiss Profile for the Public Beta Infrastructure:
+The following specifications are in scope of this "Swiss Profile":
 
 - Issuer & Verifier identification (DID:TDW, respectively the renamed method DID:WEBVH) 
 - Protocol for issuance of the Verifiable Credentials (OID4VCI)
@@ -40,9 +35,9 @@ The following specifications are in scope of this Swiss Profile for the Public B
 
 The following assumptions apply:
 
-- Issuers and Verifiers cannot pre-discover the capabilities of Wallets.
-- Mechanisms that enables Wallets to discover the capabilities of Issuers and Verifiers.
-- Mechanisms that enables Issuers and Verifiers to discover the capabilities of each other exist.
+- Issuers and verifiers cannot pre-discover the capabilities of wallets.
+- Mechanisms that enables wallets to discover the capabilities of issuers and verifiers.
+- Mechanisms that enables issuers and verifiers to discover the capabilities of each other exist.
 
 ### Out of Scope
 The following items are currently out of scope but might be added in future versions:
@@ -50,7 +45,7 @@ The following items are currently out of scope but might be added in future vers
 - Protocol for presentation of Verifiable Credentials for offline use-cases, e.g. using BLE
 
 ### Standard Requirements
-The following table defines which specification must be supported by an actor (Issuer, Verifier, Wallet) in order to comply with this profile.
+The following table defines which specification must be supported by an actor (issuer, verifier, wallet) in order to comply with this profile.
 
 | Specification     | Issuer   | Wallet   | Verifier |
 |-------------------|----------|----------|----------|
@@ -62,7 +57,7 @@ The following table defines which specification must be supported by an actor (I
 | Trust Protocol    | **MAY**  | **MUST** | **MUST** |
 
 ## Issuer & Verifier Identification
-Issuers and Verifiers use [DID:TDW](https://identity.foundation/trustdidweb/) version 0.3 as identifiers.
+Issuers and verifiers use [DID:TDW](https://identity.foundation/trustdidweb/) version 0.3 as identifiers.
 
 ### DID:TDW/DID:WEBVH
 Implementations of this profile:
@@ -85,7 +80,7 @@ The following specification defines the requirements of the to DID Document.
 
 
 {% capture notice-text %}
-Issuer and Verifier have the possibility to add metatada to their dids with:
+Issuer and Verifier have the possibility to add metatada to their DIDs with:
 - Self-attestated metadata with OpenID4VCI Server Metadata
 - Self-attestated metadata with OpenID4VP Authorization request
 - Validated metadata with the Trust Statement in chapter Trust Protocol
@@ -106,18 +101,18 @@ This chapter maps to OpenID4VCI draft 13
 
 ### Credential Offer
 - The Grant Type `urn:ietf:params:oauth:grant-type:pre-authorized_code` **MUST** be supported as defined in Section 4.1.1 in [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html).
-- As a way to invoke the Wallet, the custom URL scheme `openid-credential-offer://` **MUST** be supported.
+- As a way to invoke the wallet, the custom URL scheme `openid-credential-offer://` **MUST** be supported.
 
-Both sending Credential Offer same-device and cross-device are supported.
+Both sending credential offer same-device and cross-device are supported.
 
 ### Credential Issuer Metadata
 - `credential_issuer` **MAY** be defined
 - `display` **MAY** contain the following objects
-    - `name` **MAY** be the self-attested name of the Issuer
-    - `logo` **MAY** contain the self-attested logo of the Issuer.
+    - `name` **MAY** be the self-attested name of the issuer
+    - `logo` **MAY** contain the self-attested logo of the issuer.
         - `uri` **MUST** be a DATA URL with mime-type `image/png` or `image/jpg`
         - `alt_text` **MAY** be a text that describes the logo
-    - `locale` **MAY** be the locale of the self-attested Issuer metadata
+    - `locale` **MAY** be the locale of the self-attested issuer metadata
 - `credential_configurations_supported` **MUST** contain
     - `format` **MUST** be `vc+sd-jwt`
     - `cryptographic_binding_methods_supported` **MUST** be `jwk`
@@ -157,7 +152,7 @@ The JWT body **MUST** contain following values:
 
 ##### Credential Error Response
 
-If the Wallet was sending a signed nonce on their proof, the following value **MUST** be added:
+If the wallet was sending a signed nonce on their proof, the following value **MUST** be added:
 - `c_nonce` **MUST** be defined
 
 ### Token Endpoint
@@ -234,37 +229,37 @@ The following JWT Claims **MUST** be supported content
 | sub    | **MAY**    |
 | cnf    | **MAY**    |
 
-- The Issuer **MUST NOT** make any of the JWT Claims in the table above to be selectively disclosable, so that they are always present in the SD-JWT-VC presented by the Wallet.
-- It is at the discretion of the Issuer whether to use `exp`, `iat` claims and/or a `status` claim to express the validity period of an SD-JWT-VC. The Wallet and the Verifier **MUST** support those mechanisms.
+- The Issuer **MUST NOT** make any of the JWT Claims in the table above to be selectively disclosable, so that they are always present in the SD-JWT-VC presented by the wallet.
+- It is at the discretion of the issuer whether to use `exp`, `iat` claims and/or a `status` claim to express the validity period of an SD-JWT-VC. The wallet and the verifier **MUST** support those mechanisms.
 - The `vct` claim **MUST** be defined and is treated as an unresolvable string.
-- The `iss` claim **MUST** be a DID. The `iss` value is used to obtain Issuer's signing key as defined in Section [Issuer identification and key resolution](#sd-jwt-did-resolution).
-- The `sub` claim **MAY** be used, if there is a requirement to provide the Subject's identifier assigned and maintained by the Issuer.
-- When The Issuer decides to use device binding, the `cnf` claim [RFC7800] **MUST** conform to the definition given in [Device Binding Chapter](#device-binding).
+- The `iss` claim **MUST** be a DID. The `iss` value is used to obtain Issuer's signing key as defined in section [Issuer identification and key resolution](#sd-jwt-did-resolution).
+- The `sub` claim **MAY** be used, if there is a requirement to provide the subject's identifier assigned and maintained by the issuer.
+- When the issuer decides to use device binding, the `cnf` claim [RFC7800] **MUST** conform to the definition given in [Device Binding Chapter](#device-binding).
 
 <a id="sd-jwt-did-resolution"></a>
 
 #### Issuer Identification and Key Resolution to validate an Issued Credential
-- The key used to validate the Issuer's signature on the SD-JWT VC **MUST** be obtained by resolving the DID with key reference from the JOSE header `kid` parameter.
+- The key used to validate the issuer's signature on the SD-JWT VC **MUST** be obtained by resolving the DID with key reference from the JOSE header `kid` parameter.
 
 <a id="device-binding"></a>
 
 ##### Cryptographic Device Binding between Wallet and Verifier
 
-- For Cryptographic Device Binding, a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-12.html#name-key-binding-jwt), **MUST** be present when presenting an SD-JWT VC.
+- For cryptographic device binding, a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-12.html#name-key-binding-jwt), **MUST** be present when presenting an SD-JWT VC.
 
-**WARNING** Issuers can issue low assurance VCs without Device Binding but they can become vulnerable to replay attacks. 
+**WARNING** Issuers can issue low assurance VCs without device binding but they can become vulnerable to replay attacks. 
 {: .notice--warning}
 
 #### OpenID4VC Credential Format Profile
 This section specifies how SD-JWT VCs as defined in [I-D.ietf-oauth-sd-jwt-vc](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) are used in conjunction with the OpenID4VC specifications.
 
 ##### Format Identifier
-The Credential format identifier is `vc+sd-jwt`. This format identifier is used in issuance and presentation requests.
+The credential format identifier is `vc+sd-jwt`. This format identifier is used in issuance and presentation requests.
 
 <a id="sd-jwt-cred-def"></a>
 
 ##### Credential Issuer Metadata
-The following additional Credential Issuer metadata are defined for this Credential format to be used in addition to those defined in Section 10.2 of [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-issuer-metadata).
+The following additional credential issuer metadata are defined for this credential format to be used in addition to those defined in Section 10.2 of [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-issuer-metadata).
 
 - `credential_configuations_supported` **MUST** contain
     - `vct` **MUST** be defined.
@@ -276,7 +271,7 @@ The following additional Credential Issuer metadata are defined for this Credent
         - `order` **MAY** be an array with the credential claim in the order of display
 
 ## Credential Status
-An Issuer **MAY** at their discretion add a status entry to their verifiable credential.
+An issuer **MAY** at their discretion add a status entry to their verifiable credential.
 
 The credential status specification to use depends on the credential format as follow:
 
@@ -285,16 +280,16 @@ The credential status specification to use depends on the credential format as f
 | SD-JWT VC         | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) <br/> JSON format only    |
 
 ## Trust Protocol
-- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://github.com/swiyu-admin-ch/community/blob/main/specifications/trust-protocol/trust-protocol.md).
+- Wallets and verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://swiyu-admin-ch.github.io/specifications/trust-protocol/).
 - Trust Statements **MUST** be defined as follows:
     - `kid` from the JOSE header **MUST** be an absolute `did:tdw` with a key reference.
     - `iss` and `sub` from the JWT body **MUST** be a `did:tdw`.
 - The Trust Statement `TrustStatementMetadataV1` **MUST** be supported.
 
-This chapter maps to Trust Protocol based on VCs V0.1
+This chapter maps to [Trust Protocol based on VCs V0.1](https://swiyu-admin-ch.github.io/specifications/trust-protocol/)
 
 ## Crypto Suites
-Issuers, Wallets and Verifiers **MUST** support P-256 (secp256r1) as a key type with `ES256` JWT algorithm for signing and signature validation whenever this profiles requires to do so.
+Issuers, wallets and verifiers **MUST** support P-256 (secp256r1) as a key type with `ES256` JWT algorithm for signing and signature validation whenever this profiles requires to do so.
 
 SHA256 **MUST** be supported by all the entities as the hash algorithm to generate and validate digests.
 
@@ -302,7 +297,7 @@ SHA256 **MUST** be supported by all the entities as the hash algorithm to genera
 {: .notice--info}
 
 ## Privacy Considerations
-In the current profile,  sections SD-JWT VC, Credential Status and Device binding contain no protection against user correlation.
+In the current profile,  sections SD-JWT VC, credential status and device binding contain no protection against user correlation.
 Measures to address this challenge are envisioned for a later release, for example, with solutions like batch issuance.
 
 
@@ -311,7 +306,7 @@ Measures to address this challenge are envisioned for a later release, for examp
 - [**DID:TDW/DID:WEBVH**](https://identity.foundation/trustdidweb/)
 - [**OpenID4VCI**](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 - [**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
-- [**Trust Protocol based on VCs**](https://github.com/swiyu-admin-ch/community/blob/main/specifications/trust-protocol/trust-protocol.md)
+- [**Trust Protocol based on VCs**](https://swiyu-admin-ch.github.io/specifications/trust-protocol/)
 - [**SD-JWT**](https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/)
 - [**SD-JWT VC**](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/)
 - [**Token Status List**](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/)
