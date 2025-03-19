@@ -107,6 +107,7 @@ For certain use cases and services, additional restrictions may apply. For insta
 
 A credential lifecycle refers to the series of stages that a digital credential undergoes, from its initial definition all the way to its invalidation or replacement. It typically starts with defining the credential’s structure (schema), personalizing it for an individual holder, continued by issuing it and securely binding it to that holder. Once issued, the holder receives control over the credential and can freely handle its presentation. The lifecycle also includes the stages of suspension or revocation of a credential if it’s compromised or no longer valid. It allows for renewal of the credential to ensure continued accuracy and trustworthiness. 
 
+
 <table>
     <thead>
         <tr>
@@ -147,11 +148,11 @@ A credential lifecycle refers to the series of stages that a digital credential 
             <td>Expiration</td>
             <td>Marks a credential whose validity has been expired (not preventing further use but signalling that it may no longer be trusted).</td>
         </tr>
-       <tr>
+        <tr>
             <td>Revocation</td>
             <td>Marks a credential as invalid or no longer trusted, not preventing further use, but signalling a noteworthy deviation from the expected state of the credential to the verifier.</td>
         </tr>
-       <tr>
+        <tr>
             <td>Suspension</td>
             <td>Signals a temporary disablement (without full revocation) of a credential, with the option for reactivation (e.g., for cases like suspension). This is not preventing further use but signalling a state to the verifier.</td>
         </tr>
@@ -160,11 +161,12 @@ A credential lifecycle refers to the series of stages that a digital credential 
             <td>Re-issuance (update)</td>
             <td>Issuance of a new credential (with update of credential attributes).</td>
         </tr>
-      <tr>
+        <tr>
             <td>Re-issuance (refresh)</td>
             <td>Issuance of a new credential (without update of credential attributes).</td>
         </tr>
     </tbody>
+</table>
 
 # Trust
 
