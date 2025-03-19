@@ -91,7 +91,7 @@ The swiyu Base Registry is a public registry hosted by the FOITT. It holds ident
 
 #### swiyu Trust Registry
 
-The swiyu Trust Registry is a public registry hosted by FOITT. It holds trust statements that verify identifiers and provide a mapping to the real-world name of their subjects. The swiyu Trust Registry will only refer to identifiers that are published in the swiyu Base Registry. In addition, it can hold trust statements that certify legitimate issuers and verifiers for specific [credential schemas](https://swiyu-admin-ch.github.io/specifications/interoperability-profile/#credential-formats). These trust statements are additionally issued in the form of a VC to their holders. The entries of identity trust statements are managed by the FOJ, who verifies the linkage between actor and identifier. The FOJ will also manage issuer and verifier trust statements for entities fulfilling regulated functions. In consequence, any entity aiming to be certified with a trust statement must publish their identifier in the swiyu Base Registry. For integration with other components, the [source code of the swiyu Trust Registry]((https://swiyu-admin-ch.github.io/open-source-components/#swiyu-trust-registry)) is openly available . 
+The swiyu Trust Registry is a public registry hosted by FOITT. It holds trust statements that verify identifiers and provide a mapping to the real-world name of their subjects. The swiyu Trust Registry will only refer to identifiers that are published in the swiyu Base Registry. In addition, it can hold trust statements that certify legitimate issuers and verifiers for specific [credential schemas](https://swiyu-admin-ch.github.io/specifications/interoperability-profile/#credential-formats). These trust statements are additionally issued in the form of a VC to their holders. The entries of identity trust statements are managed by the FOJ, who verifies the linkage between actor and identifier. The FOJ will also manage issuer and verifier trust statements for entities fulfilling regulated functions. In consequence, any entity aiming to be certified with a trust statement must publish their identifier in the swiyu Base Registry. For integration with other components, the [source code of the swiyu Trust Registry]((https://swiyu-admin-ch.github.io/open-source-components/#swiyu-trust-registry) is openly available . 
 
 #### DID Toolbox & Resolver
 
@@ -110,16 +110,16 @@ A credential lifecycle refers to the series of stages that a digital credential 
 | Lifecycle Stage | Important Actions/States | Description |
 | --------- | ---------- | ---------- |
 | Pre-Issuance |	Schema Definition	| Defining the structure and attributes of a credential (e.g., name, age), to enable consistent issuance and verification. |
-| ^ |	Credential Design |	Defining the user facing design elements that can enable improved recognition, relation and overall user experience. |
+|^             |	Credential Design |	Defining the user facing design elements that can enable improved recognition, relation and overall user experience. |
 | Issuance & Valid |	Data Entry	| Customizing the credential data by entering the (holder-specific) attribute information that are intended to be associated with that credential. |
-| ^ |	Issuance |	Providing the credential to the holder wallet using secure protocols and cryptography to enable in-wallet storage after successful authentication of the holder. |
-| ^ | 	Device binding |	Binding the credential cryptographically to the holder’s device during the issuing process. |
-| ^ | Presentation |	Sharing information encoded in the credential with a verifying entity. |  
+|^                 |	Issuance |	Providing the credential to the holder wallet using secure protocols and cryptography to enable in-wallet storage after successful authentication of the holder. |
+|^                 |	Device binding |	Binding the credential cryptographically to the holder’s device during the issuing process. |
+|^                 | Presentation |	Sharing information encoded in the credential with a verifying entity. |  
 | Invalid	 | Expiration |	Marks a credential whose validity has been expired (not preventing further use but signalling that it may no longer be trusted). |
-| ^| Revocation |	Marks a credential as invalid or no longer trusted, not preventing further use, but signalling a noteworthy deviation from the expected state of the credential to the verifier. |
-| ^ | Suspension |	Signals a temporary disablement (without full revocation) of a credential, with the option for reactivation (e.g., for cases like suspension). This is not preventing further use but signalling a state to the verifier. |
+|^         | Revocation |	Marks a credential as invalid or no longer trusted, not preventing further use, but signalling a noteworthy deviation from the expected state of the credential to the verifier. |
+|^         | Suspension |	Signals a temporary disablement (without full revocation) of a credential, with the option for reactivation (e.g., for cases like suspension). This is not preventing further use but signalling a state to the verifier. |
 | Renewal |	Re-issuance (update) |	Issuance of a new credential (with update of credential attributes). |
-| ^ | Re-issuance (re-fresh) |	Issuance of a new credential (without update of credential attributes).  |
+|^        | Re-issuance (re-fresh) |	Issuance of a new credential (without update of credential attributes).  |
 
 
 # Trust
