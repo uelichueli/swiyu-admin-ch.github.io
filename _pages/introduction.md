@@ -107,20 +107,64 @@ For certain use cases and services, additional restrictions may apply. For insta
 
 A credential lifecycle refers to the series of stages that a digital credential undergoes, from its initial definition all the way to its invalidation or replacement. It typically starts with defining the credential’s structure (schema), personalizing it for an individual holder, continued by issuing it and securely binding it to that holder. Once issued, the holder receives control over the credential and can freely handle its presentation. The lifecycle also includes the stages of suspension or revocation of a credential if it’s compromised or no longer valid. It allows for renewal of the credential to ensure continued accuracy and trustworthiness. 
 
-| Lifecycle Stage | Important Actions/States | Description |
-| --------- | ---------- | ---------- |
-| Pre-Issuance |	Schema Definition	| Defining the structure and attributes of a credential (e.g., name, age), to enable consistent issuance and verification. |
-|^             |	Credential Design |	Defining the user facing design elements that can enable improved recognition, relation and overall user experience. |
-| Issuance & Valid |	Data Entry	| Customizing the credential data by entering the (holder-specific) attribute information that are intended to be associated with that credential. |
-|^                 |	Issuance |	Providing the credential to the holder wallet using secure protocols and cryptography to enable in-wallet storage after successful authentication of the holder. |
-|^                 |	Device binding |	Binding the credential cryptographically to the holder’s device during the issuing process. |
-|^                 | Presentation |	Sharing information encoded in the credential with a verifying entity. |  
-| Invalid	 | Expiration |	Marks a credential whose validity has been expired (not preventing further use but signalling that it may no longer be trusted). |
-|^         | Revocation |	Marks a credential as invalid or no longer trusted, not preventing further use, but signalling a noteworthy deviation from the expected state of the credential to the verifier. |
-|^         | Suspension |	Signals a temporary disablement (without full revocation) of a credential, with the option for reactivation (e.g., for cases like suspension). This is not preventing further use but signalling a state to the verifier. |
-| Renewal |	Re-issuance (update) |	Issuance of a new credential (with update of credential attributes). |
-|^        | Re-issuance (re-fresh) |	Issuance of a new credential (without update of credential attributes).  |
-
+<table>
+    <thead>
+        <tr>
+            <th>Lifecycle Stage</th>
+            <th>Important Actions/States</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=2>Pre-Issuance</td>
+            <td>Schema Definition</td>
+            <td>Defining the structure and attributes of a credential (e.g., name, age), to enable consistent issuance and verification.</td>
+        </tr>
+        <tr>
+            <td>Credential Design</td>
+            <td>Defining the user facing design elements that can enable improved recognition, relation and overall user experience.</td>
+        </tr>
+        <tr>
+            <td rowspan=4>Issuance & Valid</td>
+            <td>Data Entry</td>
+            <td>Customizing the credential data by entering the (holder-specific) attribute information that are intended to be associated with that credential.</td>
+        </tr>
+        <tr>
+            <td>Issuance</td>
+            <td>Providing the credential to the holder wallet using secure protocols and cryptography to enable in-wallet storage after successful authentication of the holder.</td>
+        </tr>
+        <tr>
+            <td>Device binding </td>
+            <td>Binding the credential cryptographically to the holder’s device during the issuing process.</td>
+        </tr>
+        <tr>
+            <td>Presentation </td>
+            <td>Sharing information encoded in the credential with a verifying entity.</td>
+        </tr>
+        <tr>
+            <td rowspan=3>Invalid</td>
+            <td>Expiration</td>
+            <td>Marks a credential whose validity has been expired (not preventing further use but signalling that it may no longer be trusted).</td>
+        </tr>
+       <tr>
+            <td>Revocation</td>
+            <td>Marks a credential as invalid or no longer trusted, not preventing further use, but signalling a noteworthy deviation from the expected state of the credential to the verifier.</td>
+        </tr>
+       <tr>
+            <td>Suspension</td>
+            <td>Signals a temporary disablement (without full revocation) of a credential, with the option for reactivation (e.g., for cases like suspension). This is not preventing further use but signalling a state to the verifier.</td>
+        </tr>
+        <tr>
+            <td rowspan=2>Renewal</td>
+            <td>Re-issuance (update)</td>
+            <td>Issuance of a new credential (with update of credential attributes).</td>
+        </tr>
+      <tr>
+            <td>Re-issuance (refresh)</td>
+            <td>Issuance of a new credential (without update of credential attributes).</td>
+        </tr>
+    </tbody>
 
 # Trust
 
