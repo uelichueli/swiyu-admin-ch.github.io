@@ -20,26 +20,26 @@ The cookbooks are currently only for internal testing and not yet intended for t
 
 ## Introduction
 
-This manual describes how to define the visual presentation of a verifiable credential (VC) displayed in the swiyu app, the digital wallet of the Swiss Confederation.
+This manual describes how to define the visual presentation of issuer, verifier and a verifiable credential (VC) displayed in the swiyu app, the digital wallet of the Swiss Confederation.
 
-Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service. This guide provides all necessary information to prepare from the start the appropriate graphic assets and determine the suitable settings.
+Its goal is to enable issuers in creating clean, professional looking credentials that effectively represent their organisation or service and to enable the visualization of issuer and verifier with logo and name. This guide provides all necessary information to prepare from the start the appropriate graphic assets and determine the suitable settings.
 
-The instruction is based on the OID metadata (OpenID4VCI Credential Issuer Metadata), which are defined in the [swiss profile](https://swiyu-admin-ch.github.io/swiss-profile/).
+The instruction is based on the OID metadata, which are defined in the [Swiss Profile](https://swiyu-admin-ch.github.io/specifications/interoperability-profile/).
 
 ## Purpose and Overview 
 
-In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer can define the following:
+In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. At the moment [^1] an issuer/verifier can define the following:
 
 [^1]: the OCA layer allowing more options will be deployed at a later date in 2025
 
-- the issuer name and logo
-- the background color
-- the logo / icon of the credential
-- the name
-- the displayed complementary info (description)
-- attributes
+- the verfier's or issuer's name and logo
+- the background color of the credential
+- the logo/icon of the credential
+- the name of the credential
+- the displayed complementary info of the credential
+- attributes of the credential
 
-All these visible or readible features are set and configured by the issuer in the metadata of its credential. 
+All these visible or readible features are set and configured by the issuer/verifier in his metadata. 
 
 Below is an example of how various credentials are displayed in different situations in the swiyu app.
 
@@ -92,8 +92,8 @@ verifier_client_metadata.json: |
         "client_name#de-CH": "Referänz-Demo-Verifizier",
         "client_name#de": "Referenz-Demo-Verifizierer (Fallback DE)",
         "client_name": "REF Demo Verifier (Base)",
-        "logo_uri": "www.example.com/logo.png",
-        "logo_uri#fr": "www.example.com/logo_fr.png"
+        "logo_uri": "data:image/png;base64,<...base64code....>",
+        "logo_uri#fr": "data:image/png;base64,<...base64code....>"
       }
 ```
 
@@ -184,6 +184,8 @@ The VC supports multilingual settings. This means the logo can be defined per la
 
 The issuer's logo is part of the OID-Metadata and will be used for the credential offer screen and in the detailview of the credential.
 
+[![issuer logo](../../assets/images/vc_issuer_logo.png)](../../assets/images/vc_issuer_logo.png)
+
 ```
 "name": "Issuer title",
 "logo": {
@@ -194,6 +196,8 @@ The issuer's logo is part of the OID-Metadata and will be used for the credentia
 ### Verifier Logo
 
 The verifier's logo will be use in the presentation request screen.
+
+[![verifier logo](../../assets/images/vc_verifier_name_logo.png)](../../assets/images/vc_verifier_name_logo.png)
 
 The logo is part of the O£ID4VP request:
 
@@ -207,8 +211,8 @@ verifier_client_metadata.json: |
         "client_name#de-CH": "Referänz-Demo-Verifizier",
         "client_name#de": "Referenz-Demo-Verifizierer (Fallback DE)",
         "client_name": "REF Demo Verifier (Base)",
-        "logo_uri": "www.example.com/logo.png",
-        "logo_uri#fr": "www.example.com/logo_fr.png"
+        "logo_uri": "data:image/png;base64,<...base64code....>",
+        "logo_uri#fr": "data:image/png;base64,<...base64code....>"
       }
 ```
 
