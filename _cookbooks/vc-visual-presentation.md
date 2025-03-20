@@ -1,8 +1,8 @@
 ---
-title: Designing the Visual Presentation of a Credential
+title: Designing the visualization for Issuer, Verifier and Credential
 toc: true
 toc_sticky: true
-excerpt: Learn how to define the visual layout of a credential as an issuer
+excerpt: Learn how to define the visual layout for issuer, verifier and credentials
 header:
   teaser: ../assets/images/cookbook_verifiablecredential.jpg
 ---
