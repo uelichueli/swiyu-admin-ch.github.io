@@ -70,6 +70,19 @@ Subscribe with your business partner to both _swiyu Core Business Service_ APIs.
 
 Select an API and press **Subscribe.** You will be prompted to create a new application or select an existing one.
 
+[![access tokens and customer key](../../assets/images/access_token.png)](../../assets/images/access_token.png)
+
+{% capture application-hint %}
+
+<p> ⚙️ We suggest creating seperate applications and authentication key sets for each service you are running. E.g.: one for your issuer service and another for any verification service.</p>
+
+{% endcapture %}
+
+<div class="notice--warning">
+  <h4 class="no_toc">Note:</h4>
+  {{ application-hint | markdownify }}
+</div>
+
 [![create or select an application](../../assets/images/create_select_application.png)](../../assets/images/create_select_application.png)
 
 [![create application](../../assets/images/create_application.png)](../../assets/images/create_application.png)
@@ -77,14 +90,15 @@ Select an API and press **Subscribe.** You will be prompted to create a new appl
 {% capture notice-text %}
 
 <p> ⚙️ The output of the application creation will be referenced as: <br>
-SWIYU_STATUS_REGISTRY_CUSTOMER_KEY <br> 
-SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET <br> 
-SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN <br> 
-SWIYU_STATUS_REGISTRY_ACCESS_TOKEN <br>
 SWIYU_IDENTIFIER_REGISTRY_CUSTOMER_KEY <br> 
 SWIYU_IDENTIFIER_REGISTRY_CUSTOMER_SECRET <br> 
 SWIYU_IDENTIFIER_REGISTRY_BOOTSTRAP_REFRESH_TOKEN <br> 
 SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN <br>
+<hr>
+SWIYU_STATUS_REGISTRY_CUSTOMER_KEY <br> 
+SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET <br> 
+SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN <br> 
+SWIYU_STATUS_REGISTRY_ACCESS_TOKEN <br>
 </p>
 Safely store your keys, secrets and tokens - this is the only time they are shown to you. It is possible to create new ones if necessary.  
 The ACCESS_TOKEN expires after 24 hours and can be refreshed using the REFRESH_TOKEN. The REFRESH_TOKEN is valid for 168 hours. You can always create new tokens if you lose them or both expire.
@@ -131,12 +145,14 @@ curl \
 ```
 
 **API Response 201**
-<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl"<br>}</pre>
+<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"identifier_registry_url": "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085"<br>}</pre>
 
+<div class="notice--warning">
+  The $IDENTIFIER_REGISTRY_URL is used in the next step when creating the DID log.
 
-The identifier_registry_url is used in the next step when creating the DID log.
+  The id is required when uploading your DID log and will be futher refeferenced as $IDENTIFIER_REGISTRY_ID
+</div>
 
-The id is required when uploading your DID log.
 
 ## create a DID (or create the DID log you need to continue)
 
@@ -173,14 +189,14 @@ To run the DID Toolbox using the Quickstart option, use the following command st
 
 ```
 # Parameter
-java -jar didtoolbox.jar create --identifier-registry-url <identifier_registry_url>
+java -jar didtoolbox.jar create --identifier-registry-url $IDENTIFIER_REGISTRY_URL
  
 # Example
-java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085/did.jsonl
+java -jar didtoolbox.jar create --identifier-registry-url https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/18fa7c77-9dd1-4e20-a147-fb1bec146085
 ```
 
 *   create: Command to create a new DID
-*   <identifier_registry_url>: URL received as a result of DID space creation from step "Create DID space"
+*   $IDENTIFIER_REGISTRY_URL: URL received as a result of DID space creation from step "Create DID space"
 
 For advanced usage or detailed parameter descriptions, please refer to the [DID Toolbox repository](https://github.com/swiyu-admin-ch/didtoolbox-java#advanced-usage).
 
@@ -200,9 +216,6 @@ For advanced usage or detailed parameter descriptions, please refer to the [DID 
 *   DID Log Generation: A DID log line is generated and output to the standard console (stdout). You can redirect this output to a file if necessary. **This is the output you need to continue with the step "Upload DID log".**
 
 #### DID Log Content
-
-⚙️ The DID generated in this step will be referenced as ISSUER_DID or VERIFIER_DID
-
 The generated DID log content should look similar as shown below. After creation, it consists of a single, albeit lengthy, line.
 
 **DID log Sample**
@@ -237,8 +250,60 @@ curl \
   -H "Authorization: Bearer $SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN" \
   -H "Content-Type: application/jsonl+json" \
   -d '$YOUR_GENERATED_DIDLOG' \
-  -X PUT "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries/$ID_FROM_PREVIOUS_STEP"
+  -X PUT "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries/$IDENTIFIER_REGISTRY_ID"
 ```
+
+**API Response 200**
+<pre>OK</pre>
+
+
+### Get the DID log to confirm
+
+```bash
+curl \
+  -H "Authorization: Bearer $SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN" \
+  -H "Content-Type: application/jsonl+json" \
+  -X GET "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries/$IDENTIFIER_REGISTRY_ID"
+```
+
+**API Response 200**
+<pre>
+  {
+  "totalElements": 0,
+  "totalPages": 0,
+  "size": 0,
+  "content": [
+    {
+      "id": "$IDENTIFIER_REGISTRY_ID",
+      "createdAt": "2025-01-31T09:35:16.809924Z",
+      "updatedAt": "2025-01-31T09:35:16.809924Z"
+    }
+  ],
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": true,
+    "unsorted": true
+  },
+  "first": true,
+  "last": true,
+  "numberOfElements": 0,
+  "pageable": {
+    "offset": 0,
+    "sort": {
+      "empty": true,
+      "sorted": true,
+      "unsorted": true
+    },
+    "paged": true,
+    "pageNumber": 0,
+    "pageSize": 0,
+    "unpaged": true
+  },
+  "empty": true
+}
+</pre>
+
 
 Add the DID log you created earlier as string body (not JSON).
 
@@ -256,13 +321,23 @@ curl -X POST "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/statu
   -H "Authorization: Bearer $SWIYU_STATUS_REGISTRY_ACCESS_TOKEN" \
   -d ""
 ```
+**API Response 200**
+<pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"statusRegistryUrl": "https://status-registry.admin.ch/api/v1/statuslist/18fa7c77-9dd1-4e20-a147-fb1bec146085.jwt"<br>}</pre>
+<div class="notice--warning">
+  The id is required when updating your status list and will be futher refeferenced as $STATUS_REGISTRY_ID
+</div>
+
+
 **Update status list**
 ```bash
-curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/$SWIYU_PARTNER_ID/status-list-entries/{statusRegistryEntryId}" \
+curl -X PUT "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/status/business-entities/$SWIYU_PARTNER_ID/status-list-entries/$STATUS_REGISTRY_ID" \
   -H "Content-Type: application/statuslist+jwt" \
   -H "Authorization: Bearer $SWIYU_STATUS_REGISTRY_ACCESS_TOKEN" \
   -d "Status list content according to https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-02.html#name-status-list-request"
 ```
+**API Response 200**
+<pre>OK</pre>
+
 
 > **&#9432;** The maximum file size of the status list is currently 250kB. (Subject to evaluation and might change after public beta). <br>
 > This means one status list can hold 125.000 entries for revocation & suspension or 250.000 entries for revocation only.
