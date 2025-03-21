@@ -10,8 +10,8 @@ excerpt: >
 feature_row:
   - image_path: /assets/images/docs_trustinfrastructure.jpg
     #title: ""
-    excerpt: "Initial implementation of the swiyu Public Beta Trust Infrastructure"
-    url: "/initial-technology/"
+    excerpt: "Introduction to the roles, components, and governance of the swiyu Public Beta Trust Infrastructure"
+    url: "/introduction/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/docs_technologystack.jpg
@@ -46,7 +46,9 @@ feature_row:
     btn_label: "Learn more"
 ---
 
-This website refers to the swiyu Public Beta Trust Infrastructure. The listed specifications and documentation may still change before the go-live. Public Beta will allow ecosystem participants to integrate and experiment with their business cases, including using a Beta ID credential. All services are provided on a best-effort basis. 
+This website refers to the swiyu Public Beta Trust Infrastructure. The listed specifications and documentation may still change before the go-live. 
+
+Public Beta will allow ecosystem participants to integrate and experiment with their business cases, including using a Beta ID credential. Please note, that all services are provided on a best-effort basis. 
 
 
 {% include feature_row %}
