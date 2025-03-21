@@ -1,15 +1,17 @@
 # Header navigation - main links
 main:
-  - title: "Initial Implementation"
-    url: /initial-technology/
-  - title: "Interoperability Profile"
-    url: /swiss-profile/
+  - title: "Introduction"
+    url: /introduction/
+  - title: "Technology Stack"
+    url: /technology-stack/
   - title: "Open Source Components"
     url: /open-source-components/
   - title: "Cookbooks"
     url: /cookbooks/
   - title: "Specifications"
     url: /specifications/
+  - title: "Roadmap"
+    url: /roadmap
 
 cookbooks_sidebarmenu:
   - title: "Cookbooks"
