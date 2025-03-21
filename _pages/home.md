@@ -46,4 +46,7 @@ feature_row:
     btn_label: "Learn more"
 ---
 
+This website refers to the swiyu Public Beta Trust Infrastructure. The listed specifications and documentation may still change before the go-live. Public Beta will allow ecosystem participants to integrate and experiment with their business cases, including using a Beta ID credential. All services are provided on a best-effort basis. 
+
+
 {% include feature_row %}
