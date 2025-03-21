@@ -80,7 +80,7 @@ A sample compose file for an entire setup of both components and a database can 
 </div>
 Please be aware that the the issuer-agent-oid4vci needs to be accessible (configured in EXTERNAL_URL) so that a wallet can communicate with them.
 
-At the moment the provided images can be used with arm based processors, but they are not optimized for this. For futher information, please consult the [Development instructions section](#development-instructions).
+The provided images can be used with arm based processors, but they are not optimized. For further information, please consult the [Development instructions section](#development-instructions).
 
 The latest images are available here:
 

@@ -58,17 +58,17 @@ The placeholder `${CLIENT_ID}` in your metadata file will be replaced on the fly
 
 ### Verifier Agent OID4VP
 
-| Name                    | Description                                                                                                                                                                 | Example                                                                                                                                                     |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EXTERNAL_URL            | publicly available URL of this service                                                                                                                                      |                                                                                                                                                             |
-| VERIFIER_DID            | DID you got during the [onboarding](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue) | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124        |
-| DID_VERIFICATION_METHOD | DID+Verification method                                                                                                                                                     | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#key-01 |
-| VERIFIER_NAME           | Human readable name of your verifier                                                                                                                                        |
-| SIGNING_KEY             | EC private key                                                                                                                                                              |
+| Name                    | Description                                                                                                                                                                                                                  | Example                                                                                                                                                     |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EXTERNAL_URL            | publicly available URL of this service                                                                                                                                                                                       |                                                                                                                                                             |
+| VERIFIER_DID            | DID you got during the [onboarding](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)                                                  | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124        |
+| DID_VERIFICATION_METHOD | VERIFIER_DID + Verification, which can be taken from the [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue) method | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#key-01 |
+| VERIFIER_NAME           | Human readable name of your verifier                                                                                                                                                                                         |
+| SIGNING_KEY             | EC Private key, which can be taken from [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)                         |
 
-Please be aware that the verifier-agent-oid4vci need to be publicly accessible over a domain configured in `EXTERNAL_URL` so that a wallet can communicate with them.
+Please be aware that the verifier-agent-oid4vci need to be accessible (configured in EXTERNAL_URL) so that a wallet can communicate with it.
 
-At the moment the provided images cannot be used with arm based processors. For futher information, please consult the [Development instructions section](#deployment-instructions).
+The provided images can be used with arm based processors, but they are not optimized. For further information, please consult the [Development instructions section](#development-instructions).
 
 The latest images are available here:
 
@@ -125,12 +125,12 @@ curl -X POST $VERIFIER_AGENT_MANAGEMENT_URL/api/v1/verifications \
                         },
                         {
                             "path": [
-                                "$.last_name"
+                                "$.lastName"
                             ]
                         },
                         {
                             "path": [
-                                "$.birth_date"
+                                "$.birthDate"
                             ]
                         }
                     ]
@@ -158,7 +158,7 @@ Instructions for the development of the swiyu Generic Verifier can be found in t
 
 ## Create Images for ARM based processors
 
-In order to get the sample compose running on an arm based env you first have to check out the [issuer-agent-management](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management) and [issuer-agent-oid4vci](https://github.com/swiyu-admin-ch/eidch-issuer-agent-oid4vci) repositories.
+In order to optimize the image for arm based systems, you first have to check out the [verifier-agent-management](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management) and [verifier-agent-oid4vp](https://github.com/swiyu-admin-ch/eidch-verifier-agent-oid4vp) repositories.
 
 To create an image you to run the following command in both repositories to create local images of the services:
 
