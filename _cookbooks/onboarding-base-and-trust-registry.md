@@ -425,3 +425,8 @@ To Join an already existing business partner, press the _Redeem invitation code_
 # Use/Integrate the swiyu Trust Infrastructure
 
 One way to interact with the swiyu ecosystem is to host either a swiyu Generic Issuer and/or a swiyu Generic Verifier or bring your own implementation. Instructions on how to setup the components can be found in the [swiyu Generic Issuer cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-issuer/) and the [swiyu Generic Verifier cookbook](https://swiyu-admin-ch.github.io/cookbooks/onboarding-generic-verifier/).
+
+# Optional: Design the visualization for Issuer, Verifier and Credential
+
+In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. If you like to implement your visual identity, please follow the steps in the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/).
+
