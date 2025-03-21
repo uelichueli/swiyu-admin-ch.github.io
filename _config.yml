@@ -102,8 +102,6 @@ footer:
       url: https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io
     - label: "Changelog"
       url: /changelog/
-    - label: "Roadmap"
-      url: /roadmap/
     - label: "Community"
       icon: "fab fa-fw fa-github"
       url: https://github.com/swiyu-admin-ch/community
