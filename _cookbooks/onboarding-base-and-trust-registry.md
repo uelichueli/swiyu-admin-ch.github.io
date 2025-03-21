@@ -319,9 +319,13 @@ did:tdw:Qmd9bwsodZ1GAz4h8D7Vy6qRio78voXifDrnXokSTsMVQK:identifier-reg.trust-infr
 
 Use the Identifier API to upload your DID log. Make sure to properly escape the double quotes in the DID log e.g. by using single quotes. Using the sample DID log from above:
 
+Add the DID log you created earlier as string body (not JSON).
+
 ```
 '["1-QmRdMTkEvFsfkFv8eJp9nUWnecXF3EzDQJhuetHMTVMFdg","2025-03-21T07:38:51Z",{"method": ..."proofValue":"z4yxZfm1nG6AerU5Mg3yrrvqn2mmMRjMJC4999BunnS3hg9SVjicugw8ZWEJYsQkarypDNRAqAjo48bH42ekyMa1c"}]]'
 ```
+
+Make sure the content-type is set to "application/jsonl+json"
 
 ```bash
 curl \
@@ -338,54 +342,14 @@ curl \
 ### Get the DID log to confirm
 
 ```bash
-curl \
-  -H "Authorization: Bearer $SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN" \
-  -H "Content-Type: application/jsonl+json" \
-  -X GET "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries/$IDENTIFIER_REGISTRY_ID"
+curl "https://identifier-reg.trust-infra.swiyu-int.admin.ch/api/v1/did/$IDENTIFIER_REGISTRY_ID/did.jsonl"
 ```
 
 **API Response 200**
 
-<pre>
-  {
-  "totalElements": 0,
-  "totalPages": 0,
-  "size": 0,
-  "content": [
-    {
-      "id": "$IDENTIFIER_REGISTRY_ID",
-      "createdAt": "2025-01-31T09:35:16.809924Z",
-      "updatedAt": "2025-01-31T09:35:16.809924Z"
-    }
-  ],
-  "number": 0,
-  "sort": {
-    "empty": true,
-    "sorted": true,
-    "unsorted": true
-  },
-  "first": true,
-  "last": true,
-  "numberOfElements": 0,
-  "pageable": {
-    "offset": 0,
-    "sort": {
-      "empty": true,
-      "sorted": true,
-      "unsorted": true
-    },
-    "paged": true,
-    "pageNumber": 0,
-    "pageSize": 0,
-    "unpaged": true
-  },
-  "empty": true
-}
-</pre>
-
-Add the DID log you created earlier as string body (not JSON).
-
-Make sure the content-type is set to "application/jsonl+json"
+```
+'["1-QmRdMTkEvFsfkFv8eJp9nUWnecXF3EzDQJhuetHMTVMFdg","2025-03-21T07:38:51Z",{"method": ..."proofValue":"z4yxZfm1nG6AerU5Mg3yrrvqn2mmMRjMJC4999BunnS3hg9SVjicugw8ZWEJYsQkarypDNRAqAjo48bH42ekyMa1c"}]]'
+```
 
 Now you are registered on the swiyu Base Registry and be able to configure your issuer and verifier component.
 
