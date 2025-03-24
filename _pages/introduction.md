@@ -61,7 +61,7 @@ The mechanisms of the base registry will be used to provide information about th
 
 The Confederation is developing various components to support issuers, holders and verifiers in their management and exchange of the e-ID and other credentials. The following provides a vision of the future swiyu ecosystem and the Trust Infrastructure. It details the components that are or will be developed by the Confederation, where these are hosted, how these interlink with one another and how third-party components can interact with the swiyu Trust Infrastructure.  
 
-[![introduction_components](../assets/images/introduction-components.png)](../assets/images/introduction-components.png)
+[![introduction_components](../assets/images/introduction-components.jpg)](../assets/images/introduction-components.jpg)
 
 ### Role-specific components provided by the Confederation
 
