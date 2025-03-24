@@ -36,7 +36,7 @@ The swiyu Generic Issuer Management Service is linked to the issuer oid4vci serv
 
 # Deployment instructions
 
-> Please make sure that you DID the following before starting the deployment:
+> Please make sure that you did the following before starting the deployment:
 >
 > - Registered yourself on the swiyu Trust Infrastructure portal
 > - Registered yourself on the api self service portal
@@ -47,7 +47,7 @@ The swiyu Generic Issuer Management Service is linked to the issuer oid4vci serv
 
 ## Set the environment variables
 
-A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file. You will need to configure a list of environment variables.
+A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml) file. You will need to configure a list of environment variables in the `.env` file.
 
 ### Issuer Agent Management
 
@@ -55,7 +55,8 @@ A sample compose file for an entire setup of both components and a database can 
 | Name | Description | Example
 | --- | --- |---
 |SPRING_APPLICATION_NAME|Name of your application|
-|ISSUER_ID|The DID you received in the [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)| did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124 |
+|ISSUER_ID|The DID you created in the [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)| did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124 |
+| EXTERNAL_URL | URL of the issuer-agent-oid4vci service | |
 |DID_STATUS_LIST_VERIFICATION_METHOD|ISSUER_ID + Verification Method, which can be taken from the [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)|did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#assert-key-01|
 |STATUS_LIST_KEY|EC Private key can be taken from [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue) and must match the used DID status verification method|
 |SWIYU_PARTNER_ID|[swiyu Trust Infrastructure business partner ID](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#business-partner-registration)|d33fab52-1657-4240-9189-97c33b949739|
@@ -63,8 +64,8 @@ A sample compose file for an entire setup of both components and a database can 
 |SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET|[Status Registry API Secret](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
 |SWIYU_STATUS_REGISTRY_ACCESS_TOKEN|[Status Registry API ACCESS Token](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
 |SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN|[Status Registry API Refresh Token](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
-|SWIYU_STATUS_REGISTRY_TOKEN_URL|[OAuth Refresh URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#authenticate-with-oauth2)|https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW|
-|SWIYU_STATUS_REGISTRY_API_URL|[Status Registry Base URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#base-urls)|status-reg-api.trust-infra.swiyu-int.admin.ch|
+|SWIYU_STATUS_REGISTRY_TOKEN_URL|[OAuth Refresh URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#authenticate-with-oauth2)|https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW/protocol/openid-connect|
+|SWIYU_STATUS_REGISTRY_API_URL|[Status Registry Base URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#base-urls)|https://status-reg-api.trust-infra.swiyu-int.admin.ch|
 
 ### Issuer Agent OID4VCI
 
@@ -78,7 +79,7 @@ A sample compose file for an entire setup of both components and a database can 
 <div class="notice--warning">
   ⚙️ The generated pem .didtoolbox/assert-key-01 fille will be referenced as "assert-key-01"
 </div>
-Please be aware that the the issuer-agent-oid4vci needs to be accessible (configured in EXTERNAL_URL) so that a wallet can communicate with them.
+Please be aware that the the issuer-agent-oid4vci needs to be accessible (configured in EXTERNAL_URL) so that a wallet can communicate with it.
 
 The provided images can be used with arm based processors, but they are not optimized. For further information, please consult the [Development instructions section](#development-instructions).
 
@@ -90,14 +91,14 @@ The latest images are available here:
 ## Create a verifiable credential schema
 
 In order to support your use case you need to adapt the so-called issuer_metadata (see [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-issuer-agent-management/blob/main/sample.compose.yml#L85)).
-Those metadata define the appearance of the credential in the wallet and what kind of credential formats are supported.
+Those metadata define the appearance of the credential in the wallet and defines what kind of credential formats are supported.
 For further information consult the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/).
 
 ## Initialize the status list
 
 Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are up and running you need to initialize the status list of your issuer so that you can issue credentials.
 
-**Request to create and initialize an status list slot**
+**Request to create and initialize a status list slot**
 
 The following request needs to be run on your issuer-agent-management instance.
 
@@ -141,7 +142,7 @@ This results in a response like:
 
 ## Issue credential
 
-You're now ready to issue credentials by using the issuer-agent-management API to create a credential offer for a holder. Here is an example of a request body for the offer creation:
+You are now ready to issue credentials by using the issuer-agent-management API to create a credential offer for a holder. Here is an example of a request body for the offer creation:
 
 ```bash
 curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/credentials \
@@ -157,15 +158,19 @@ curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/credentials \
     "birthDate": "01.01.2025"
   },
   "offer_validity_seconds": 86400,
-  "credential_valid_until": "2010-01-01T19:23:24Z",
-  "credential_valid_from": "2010-01-01T18:23:24Z",
+  "credential_valid_until": "2030-01-01T19:23:24Z",
+  "credential_valid_from": "2025-01-01T18:23:24Z",
   "status_lists": [
     "statusRegistryUrl"
   ]
 }'
 ```
 
-To check the result create a qr code from the resulting offer_deeplink, which then can be scanned with the swiyu wallet.
+<div class="notice--warning">
+  ⚙️ Please store the id of the response as the value is required in the "Update Status" call referenced as "$CREDENTIAL_ID".
+</div>
+
+To check the result, create a qr code from the resulting offer_deeplink, which then can be scanned with the swiyu wallet.
 
 ## Update status
 
