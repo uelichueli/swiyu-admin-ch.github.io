@@ -45,10 +45,9 @@ The verification management service is linked to the verification validator serv
 
 ## Set the environment variables
 
-A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml) file. You will need to adapt the
+A sample compose file for an entire setup of both components and a database can be found in [sample.compose.yml](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml) file. You will need to configure a list of environment variables in the `.env` file and adapt the
 [verifier metadata](https://github.com/swiyu-admin-ch/eidch-verifier-agent-management/blob/main/sample.compose.yml#L35) to your use case.
-Those information will be provided to the holder on a dedicated endpoint (`/api/v1/openid-client-metadata.json`) serving as metadata information of your verifier.
-The placeholder `${CLIENT_ID}` in your metadata file will be replaced on the fly by the value set for `VERIFIER_DID`.
+The metadata information will be provided to the holder on a dedicated endpoint (`/api/v1/openid-client-metadata.json`) serving as metadata information of your verifier.
 
 ### Verifier Agent Management
 
@@ -61,9 +60,9 @@ The placeholder `${CLIENT_ID}` in your metadata file will be replaced on the fly
 | Name                    | Description                                                                                                                                                                                                                  | Example                                                                                                                                                     |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EXTERNAL_URL            | publicly available URL of this service                                                                                                                                                                                       |                                                                                                                                                             |
-| VERIFIER_DID            | DID you got during the [onboarding](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)                                                  | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124        |
+| VERIFIER_DID            | DID you created during the [onboarding](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)                                              | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124        |
 | DID_VERIFICATION_METHOD | VERIFIER_DID + Verification, which can be taken from the [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue) method | did:tdw:QmejrSkusQgeM6FfA23L6NPoLy3N8aaiV6X5Ysvb47WSj8:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:ff8eb859-6996-4e51-a976-be1ca584c124#key-01 |
-| VERIFIER_NAME           | Human readable name of your verifier                                                                                                                                                                                         |
+| VERIFIER_NAME           | Human readable name of your verifier, which will be displayed to the user in the swiyu wallet                                                                                                                                |
 | SIGNING_KEY             | EC Private key, which can be taken from [onboarding process](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#create-a-did-or-create-the-did-log-you-need-to-continue)                         |
 
 Please be aware that the verifier-agent-oid4vci need to be accessible (configured in EXTERNAL_URL) so that a wallet can communicate with it.
@@ -83,8 +82,12 @@ The latest images are available here:
 
 Once the components are deployed you can create your first verification request. For this you first need to define a presentation
 definition. Based on that definition you can then create a verification request for a holder as shown in the example below.
-In this case we are asking for a credential called "my-test-vc" which should have the attributes
-first_name, last_name, and birth_date. The following request can be performed by using the swagger endpoint on $VERIFIER_AGENT_MANAGEMENT_URL**/swagger-ui/index.html**
+In this case, we are asking for a credential called "my-test-vc" which should have the attributes
+firstName, lastName and birthDate. The following request can be performed by using the swagger endpoint on $VERIFIER_AGENT_MANAGEMENT_URL**/swagger-ui/index.html**.
+
+<div class="notice--warning">
+  Please replace or set values, like presentation.id, input_descriptors[i].id and optionally accepted_issuer_dids, to get a valid request.
+</div>
 
 **Request**
 
@@ -141,15 +144,27 @@ curl -X POST $VERIFIER_AGENT_MANAGEMENT_URL/api/v1/verifications \
 }'
 ```
 
+<div class="notice--warning">
+  ⚙️ Please store the id of the response as the value is required in the "Get the verification result" call referenced as "$VERIFICATION_ID".
+</div>
+
 **Response**
 
-The response contains a verification_url which points to the verification request just created. This link needs to be provided to the holder in order to submit a response to the verification request. To use the link create a qr code from the verification_url and scan it with the swiyu app.
+The response contains a verification_url which points to the verification request just created. This link needs to be provided to the swiyu wallet in order to submit a response to the verifier-agent-oid4vp. To use the link, create a qr code from the verification_url and scan it with the swiyu app.
 
 ```json
 {
   ...
   "verification_url": "$VERIFIER_AGENT_OID4VCI_URL/request-object/fc884edd-7667-49e3-b961-04a98e7b5600"
 }
+```
+
+## Get the verification result
+
+**Request**
+
+```bash
+curl $VERIFIER_AGENT_MANAGEMENT_URL/api/v1/verifications/$VERIFICATION_ID
 ```
 
 # Development instructions
