@@ -9,7 +9,7 @@ Multiple technical architectures, standards and approaches were considered in th
 
 Initially the Confederation will focus on a single technology stack to reduce complexity and ensure maximum technical interoperability within Switzerland. The technology decision that has been published on December 6th 2024 defines the current technology stack for the swiyu Trust Infrastructure. Its specifications are introduced below.
 
-[![technology-stack](../assets/images/technology-stack.png)](../assets/images/technology-stack.png)
+[![technology-stack](../assets/images/technology-stack_protocols.jpg)](../assets/images/technology-stack_protocols.jpg)
 
 | Aspect |	Selected Technology & References to the version currently in use |
 |-------|---------------|
