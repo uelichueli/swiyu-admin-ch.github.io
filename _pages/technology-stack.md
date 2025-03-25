@@ -11,27 +11,27 @@ Initially the Confederation will focus on a single technology stack to reduce co
 
 [![technology-stack](../assets/images/technology-stack_protocols.jpg)](../assets/images/technology-stack_protocols.jpg)
 
-| Aspect |	Selected Technology & References to the version currently in use |
+| Aspect |	Selected Technology & References for the Public Beta version currently in use |
 |-------|---------------|
 | Identifiers |	[W3C Decentralized Identifiers v1.0](https://www.w3.org/TR/did-core/) <br> [did:tdw/did:webvh v0.3](https://identity.foundation/didwebvh/v0.3/) (as DID Method) |
 | Status Mechanisms |	[Token Status List draft 3](https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-03.html) |
 | Trust Protocol |	[Swiss Trust Protocol version 0.1 (based on VCs)](https://swiyu-admin-ch.github.io/specifications/trust-protocol/) |
 | Communication Protocol |	[OID4VCI – draft 13 (for credential issuance)](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) <br> [OID4VP – draft 20 (for credential verification)](https://openid.net/specs/openid-4-verifiable-presentations-1_0-20.html) |
-| Payload Encryption	| [JWE[^1] (as proposed by the communication protocol)](https://www.rfc-editor.org/rfc/rfc7516.html) |
+| Payload Encryption	| [JWE[^1](as proposed by the communication protocol)](https://www.rfc-editor.org/rfc/rfc7516.html) |
 | VC-Format & Signature-Scheme |	[SD-JWT VC – draft 4](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/04/) <br> [SD-JWT draft 10](https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/10/) <br> [ECDSA P-256](https://csrc.nist.gov/pubs/fips/186-5/final) |
-| Device Binding Scheme	| Hardware-based device binding (depending on capabilities provided by [Android](https://source.android.com/docs/security/features/keystore) or [Apple](https://developer.apple.com/documentation/cryptokit/secureenclave) mobile devices) <br> Software-based device binding implemented by and wallets |
+| Device Binding Scheme	| **Hardware-based** device binding (depending on capabilities provided by [Android](https://source.android.com/docs/security/features/keystore) or [Apple](https://developer.apple.com/documentation/cryptokit/secureenclave) mobile devices) <br> **Software-based**[^1] device binding implemented by and wallets |
 | VC appearance	 | [Overlays Capture Architecture](https://swiyu-admin-ch.github.io/specifications/oca/) (for visualization of VCs)
 
 [^1]: Use of this technology is planned, and specification/implementation is in progress
 
 {% capture notice-text %}
 
-Upgrades to recent versions are planned before the Go-Live for most of the selected specifications.
+Upgrades to recent versions are planned for the productive environment for most of the selected specifications.
 
 {% endcapture %}
 
 <div class="notice--info">
-  <h3 class="no_toc">Note:</h3>
+  <h4 class="no_toc">Note:</h4>
   {{ notice-text | markdownify }}
 </div>
 
