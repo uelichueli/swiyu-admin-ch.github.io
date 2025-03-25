@@ -430,3 +430,6 @@ One way to interact with the swiyu ecosystem is to host either a swiyu Generic I
 
 In the swiyu wallet app, verifiable credentials (VC) are visually represented as cards to allow users to easily recognise and utilise them. If you like to implement your visual identity, please follow the steps in the [VC visual presentation cookbook](https://swiyu-admin-ch.github.io/cookbooks/vc-visual-presentation/).
 
+# Your Feedback?
+
+We would be pleased if you spend about 3 additional minutes and give us feedback on the swiyu Public Beta Trust Infrastructure and your onboarding process! With Public Beta, we want to give ecosystem stakeholders the opportunity to gain initial experience and build their own use cases on the trust infrastructure of the future e-ID. Your [feedback](https://findmind.ch/c/feedback_publicbeta_infr_en) will help us to further develop and improve the touchpoints, and we greatly appreciate your support.
