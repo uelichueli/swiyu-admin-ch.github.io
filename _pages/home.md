@@ -46,9 +46,9 @@ feature_row:
     btn_label: "Learn more"
 ---
 
-This website refers to the swiyu Public Beta Trust Infrastructure. The listed specifications and documentation may still change before the go-live. 
+This website refers to the swiyu Public Beta Trust Infrastructure. The listed specifications and documentation are subject to change.
 
-Public Beta will allow ecosystem participants to integrate and experiment with their business cases, including using a Beta ID credential. Please note, that all services are provided on a best-effort basis. 
+The Public Beta enables ecosystem participants to integrate and test their business cases, including the use of a Beta ID credential, and to gain a deeper understanding of the system’s mode of operation. Please be advised that the current system and its operations are provided on a best-effort basis and will continue to evolve over time. The security of the system and its overall maturity remain under development.
 
 
 {% include feature_row %}
