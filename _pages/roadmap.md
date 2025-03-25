@@ -1,11 +1,106 @@
 ---
-title: "Swiss e-ID and trust infrastructure: Roadmap (work in progress)"
+title: "Roadmap for the swiyu Public Beta Trust Infrastructure"
 permalink: /roadmap/
 toc: true
 toc_sticky: true
 ---
 
-## Introduction
+## Current stage and Gaps of Public Beta
+
+The Public Beta environment aims to function as a basis for experimentation and integration efforts conducted by the ecosystem participants from both the public and the private sector. It provides the same technology that will be used by the productive environment in 2026, but with, as of now, reduced maturity and scope. At the moment operation and support of the Public Beta Trust Infrastructure are run on a best effort basis. It is planned to gruadually develop public beta into an integration environment that is run in parallel and equivalent to the productive infrastructure from Go-Live in 2026 onwards.  
+
+As regards the e-ID, the Public Beta Trust Infrastructure will mimic this credential type through a Beta-ID. Beta-IDs contain the same set of attributes as the e-ID defined in Art. 15 of the BGEID (Bundesgesetz über den elektronischen Identitätsnachweis und andere elektronische Nachweise). However, Beta-ID's technical features are restricted and the legal requirements defined in Section 3 of the BGEID do not apply. 
+
+The following briefly outlines the current discrepancies between Public Beta and the targeted productive Turst Infrastructure of 2026 for each component. 
+
+### Swiyu Base Registry 
+
+Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
+
+- The base registry cannot be audited yet. 
+
+Other security and privacy related aspects that will be addressed include: 
+
+- The read APIs of the base registry do not support caching yet.
+- The request and verification of a proof-of-possession before data (e.g., DIDs or a status list) can be updated/deleted from the base registry has not been implemented yet. 
+
+### Swiyu Trust Registry 
+
+Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
+
+- The tooling and process for verifying trusted identity information are not yet implemented at the FOJ.
+- The automated verification of identifier proof-of-posessions as part of the trust registry onboarding is not yet implemented.
+- The capabilities for anchoring VC schema and respective issuer/verifier trust statements are not yet provided (Note: These will only be available for actors fulfilling regulated functions).
+- The base registry cannot be audited yet.
+- The list and process to register non-compliant actors are not available yet.
+- There is no support of multiple DIDs in a single trust statement (if this feature will be provided in the future is not yet decided). 
+
+Other security and privacy related aspects that will be addressed include: 
+
+- The read APIs of the trust registry do not support caching yet.
+- The capability to download trust statements for direct (client-to-client) presentation of trust statements by issuers and verifiers (to avoid "phone home") is not yet implemented. 
+
+### Issuing (Generic Issuer & BCS) 
+
+Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
+
+- Key attestations to ensure hardware binding are not yet validated. 
+
+Other security and privacy related aspects that will be addressed include: 
+
+- Payload encryption during issuance is not yet implemented.
+- The features for software-based device binding are not yet implemented.
+- The capability for direct (client-to-client) presentation of issuer trust statements is not yet implemented.
+- A dedicated extension for managing keys through a HSM is not yet available. 
+ 
+
+Other aspects to improve the user experience that will be addressed include: 
+
+- The [OCA specification](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet implemented 
+
+### Swiyu Wallet 
+
+Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
+
+- The presentation of credentials offline is not yet possible
+- There is no backup (import/export) function available yet. (Note: this feature will only be available for credentials that are not hardware-bound).
+- Non-compliant actors cannot be reported yet. 
+
+Other security and privacy related aspects that will be addressed include: 
+
+- Trust statements presented by the issuer/verifier cannot be processed.
+- The capability for verifying the check-app attestation is not yet provided.
+- The features for software-based device binding are not yet implemented.
+- Payload encryption during issuance and verification flows is not yet implemented.
+- There is no capability for holders to view their activities in an activity/transaction log as well as to give or deny their consent for such logging. 
+
+Other aspects to improve the user experience that will be addressed include: 
+
+- The OCA specificaton for improved credential processing and visualization is not yet implemented.
+- A combined presentation of multiple credentials is not yet possible.
+- The visualization of trust statements is not yet finalized (e.g., concerning unknown actor, not in base registry, or issuer/verifier trust statements). 
+
+### Swiyu Check App 
+
+Security and privacy related aspects that will be addressed include: 
+
+- Payload encryption during verification flow is not yet implemented. 
+
+Aspects to improve the user experience that will be addressed include: 
+
+- The combined verification of multiple credentials is not yet possible. 
+
+### Swiyu Generic Verifier 
+
+Security and privacy related aspects that will be addressed include: 
+
+- Payload encryption during verification flow is not yet implemented. 
+
+Aspects to improve the user experience that will be addressed include: 
+
+- The combined verification of multiple credentials is not yet possible. 
+
+## Roadmap
 
 An initial selection which technology will be utilized for the issuance of the e-ID and underlying trust infrastructure has been made. A more detailed explanation regarding this choice can be found here: [Initial Technology](https://swiyu-admin-ch.github.io/initial-technology/).
 
