@@ -217,8 +217,7 @@ collections:
       - interoperability-profile.md
       - trust-protocol.md
       - oca.md
-      - wallet-backup-container.md
-      
+           
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
