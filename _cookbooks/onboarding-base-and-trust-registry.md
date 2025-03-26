@@ -9,12 +9,12 @@ header:
 
 {% capture notice-text %}
 
-The cookbooks are currently only for internal testing and not yet intended for the public. Some links are therefore not yet accessible. We ask for your patience.
+Please be advised that the current system and its operations are provided on a best-effort basis and will continue to evolve over time. The security of the system and its overall maturity remain under development.
 
 {% endcapture %}
 
 <div class="notice--danger">
-  <h4 class="no_toc">Only for internal testing!</h4>
+  <h4 class="no_toc">Public Beta</h4>
   {{ notice-text | markdownify }}
 </div>
 
