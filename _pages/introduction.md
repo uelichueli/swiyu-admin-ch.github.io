@@ -17,7 +17,7 @@ Holders are at the centre of the ecosystem. They receive credentials from an iss
 
 The wallet can best be described as a secure, digital application (e.g., installed on a mobile device) that stores and manages digital credentials issued to individuals. This wallet is the primary interface through which individual holders (e.g. citizens and residents) interact with other participants. 
 
-The wallet securely holds digital credentials, such as the e-ID credential. It also provides information about the [status of credentials](https://swiyu-admin-ch.github.io/introduction/#credential-lifecycle) (e.g., whether the credential is valid or had been revoked) and will allow holders to view their personal usage history of the wallet. In interactions with verifiers, it provides holders control over their data disclosure, by letting them decide which credentials or content thereof to share. Using techniques for user authentication and [device binding](https://swiyu-admin-ch.github.io/technology-stack/#credential-storage-and-device-binding), the wallet ensures that only the user can access and share the stored credentials.    
+The wallet securely holds digital credentials, such as the e-ID credential. It also provides information about the [status of credentials](https://swiyu-admin-ch.github.io/technology-stack/#credential-revocation--token-status-list) (e.g., whether the credential is valid or had been revoked) and will allow holders to view their personal usage history of the wallet. In interactions with verifiers, it provides holders control over their data disclosure, by letting them decide which credentials or content thereof to share. Using techniques for user authentication and [device binding](https://swiyu-admin-ch.github.io/technology-stack/#credential-storage-and-device-binding), the wallet ensures that only the user can access and share the stored credentials.    
 
 In essence, the wallet is a crucial element in the swiyu Trust Infrastructure, as it enables user autonomy and decentralization. By design, credentials are stored in a decentral manner solely on a user’s device, reducing risks of mass data breaches and preventing tracking of usage by a centralised body. The Confederation provides users with a wallet (swiyu) which allows them to request, hold and present credentials in an easy and privacy preserving manner.  
 
@@ -79,7 +79,7 @@ The swiyu Generic Issuer is a reference implementation that bundles core functio
 
 #### swiyu Check
 
-The swiyu Check App is the official mobile verifier application that will be provided by the FOITT. The App can be used to verify Swiss e-IDs in a face-to-face situation. The App can be used for verifying credentials that are stored in the swiyu wallet as well as  third-party wallets that are interoperable with the swiyu Trust Infrastructure. In the future, the Check App may also be able to verify credentials other than the e-ID. 
+The swiyu Check app is the official mobile verifier application that will be provided by the FOITT. The app can be used to verify Swiss e-IDs in a face-to-face situation. The app can be used for verifying credentials that are stored in the swiyu wallet as well as  third-party wallets that are interoperable with the swiyu Trust Infrastructure. In the future, swiyu Check may also be able to verify credentials other than the e-ID. 
 
 #### swiyu Generic Verifier
 

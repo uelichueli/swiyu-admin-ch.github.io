@@ -17,7 +17,7 @@ Initially the Confederation will focus on a single technology stack to reduce co
 | Status Mechanisms |	[Token Status List draft 3](https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-03.html) |
 | Trust Protocol |	[Swiss Trust Protocol version 0.1 (based on VCs)](https://swiyu-admin-ch.github.io/specifications/trust-protocol/) |
 | Communication Protocol |	[OID4VCI – draft 13 (for credential issuance)](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) <br> [OID4VP – draft 20 (for credential verification)](https://openid.net/specs/openid-4-verifiable-presentations-1_0-20.html) |
-| Payload Encryption	| [JWE (as proposed by the communication protocol)](https://www.rfc-editor.org/rfc/rfc7516.html)[^1] |
+| Payload Encryption	| [JWE](https://www.rfc-editor.org/rfc/rfc7516.html)[^1] (as proposed by the communication protocol) |
 | VC-Format & Signature-Scheme |	[SD-JWT VC – draft 4](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/04/) <br> [SD-JWT draft 10](https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/10/) <br> [ECDSA P-256](https://csrc.nist.gov/pubs/fips/186-5/final) |
 | Device Binding Scheme	| **Hardware-based** device binding (depending on capabilities provided by [Android](https://source.android.com/docs/security/features/keystore) or [Apple](https://developer.apple.com/documentation/cryptokit/secureenclave) mobile devices) <br> **Software-based**[^1] device binding implemented by and wallets |
 | VC appearance	 | [Overlays Capture Architecture](https://swiyu-admin-ch.github.io/specifications/oca/) (for visualization of VCs)[^1]
@@ -26,7 +26,7 @@ Initially the Confederation will focus on a single technology stack to reduce co
 
 {% capture notice-text %}
 
-Upgrades to recent versions are planned for the productive environment for most of the selected specifications.
+Upgrades to newer versions are planned for the go-live of the productive environment.
 
 {% endcapture %}
 
@@ -62,7 +62,7 @@ The swiyu Trust Infrastructure provides the means to register, update and host a
 
 Verifiable Credentials (VC) are cryptographically signed objects that encode identity statements about the respective data subject (typically the holder). They are issued by an issuer to a holder who controls the VC and can derive so-called verifiable presentations (VP) to demonstrate identity statements to a verifier. The contained cryptographic signatures ensure VCs are tamper-proof and their integrity and authenticity can be verified, without requiring direct communication between a verifier and the issuer. These properties enhance privacy and reduce attack surfaces for malicious actors. 
 
-The swiyu Trust Infrastructure relies on verifiable credentials according to [IETF SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) currently in combination with the ECDSA (Elliptic Curve Digital Signature Algorithm) signature scheme]. SD-JWT VC is a context-independent standard for verifiable credentials. It is a modular format that can be used to issue various credential types, such as proof of residence or educational certifications. 
+The swiyu Trust Infrastructure relies on verifiable credentials according to [IETF SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/04/) currently in combination with the ECDSA (Elliptic Curve Digital Signature Algorithm) signature scheme]. SD-JWT VC is a context-independent standard for verifiable credentials. It is a modular format that can be used to issue various credential types, such as proof of residence or educational certifications. 
 
 Technically, in SD-JWT VCs, each identity statement is encoded as a hash of the raw identity statement combined with a random nonce. All hashes and the credential metadata are signed with a cryptographic proof. The cryptographic proof ensures the disclosed data’s authenticity and integrity. This specific encoding also allows holders to selectively disclose claims from a credential while keeping others private yet ensuring the verifiability of data integrity and authenticity. Technically, each identity statement can then be proven by providing the verifier with the cryptographic material required for calculating the hash, the raw identity statement as well as its statement-specific nonce.
 
@@ -120,7 +120,7 @@ Using SD-JWT VCs within the trust protocol allows the e-ID program to customize 
 
 Credential rendering and resulting visualization are important elements to ensure usability of digital credentials, especially for end-users. However, applied specifications such as SD-JWT VC and OID4VCI do not provide sufficient metadata and a scalable and flexible manner for extensive visualization of VCs, such as: detailed specification of attributes and their values, multilingual presentation, or display of additional information. To improve visualization of credentials, issuers within the swiyu Trust Infrastructure may rely on Overlay Capture Architecture (OCA).
 
-The e-ID program is [preparing to adopt OCA](https://swiyu-admin-ch.github.io/specifications/oca/) developed by the Human Colossus foundation, as it provides an extensive specification for harmonizing data representations. The specification allows to address various representation aspects that are relevant to the visualization of VCs for individual use cases, such as:
+The e-ID program is preparing to adopt [OCA](https://swiyu-admin-ch.github.io/specifications/oca/) developed by the Human Colossus foundation, as it provides an extensive specification for harmonizing data representations. The specification allows to address various representation aspects that are relevant to the visualization of VCs for individual use cases, such as:
 
 - Flagging of sensitive attributes
 - Displaying attribute names and values in multiple languages
