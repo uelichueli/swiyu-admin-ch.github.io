@@ -18,7 +18,7 @@ The cookbooks are currently only for internal testing and not yet intended for t
   {{ notice-text | markdownify }}
 </div>
 
-This software is a web server implementing the technical standards as specified in the [Swiss E-ID & Trust Infrastructure Initial Implementation](https://swiyu-admin-ch.github.io/initial-technology/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
+This software is a web server implementing the technical standards as specified in the ["Swiss Profile"](https://swiyu-admin-ch.github.io/specifications/interoperability-profile/). Together with the other generic components provided, this software forms a collection of APIs allowing issuance and verification of verifiable credentials without the need of reimplementing the standards.
 
 [![ecosystem components](../../assets/images/components.png)](../../assets/images/components.png)
 

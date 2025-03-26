@@ -43,7 +43,7 @@ The registry is the entity that provides information about the identity of issue
 
 The Base Registry serves as a publicly available registry of technical identifiers that represent entities using the infrastructure as issuers or verifiers. This can for example be legal entities, government agencies, or individuals. It provides cryptographic methods to register, update and verify identifiers, in the form of [decentralized identifiers (DIDs)](https://swiyu-admin-ch.github.io/technology-stack/#issuer-and-verifier-identification-method--didwebvh) possessed by these entities.  
 
-Every DID has cryptographic key material associated with it that is used to establish secure connections, sign credentials or verify that a credential originates from a registered issuer and was not altered after issuance. The key material is retrieved via the corresponding DID of the issuer or verifier that is registered on the Base Registry and resolves to a [DID Document](Link) (also stored on the Base Registry). Hence, the Base Registry only contains DIDs together with the associated DID Documents and no information on whether a DID is used to represent an issuer or a verifier. In the case of the swiyu Trust Infrastructure, the Base Registry is operated centrally by the Swiss Confederation. Integrity of the data provided on the registry is assured by relying on publishing data signed at the source of creation. 
+Every DID has cryptographic key material associated with it that is used to establish secure connections, sign credentials or verify that a credential originates from a registered issuer and was not altered after issuance. The key material is retrieved via the corresponding DID of the issuer or verifier that is registered on the Base Registry and resolves to a DID Document (also stored on the Base Registry). Hence, the Base Registry only contains DIDs together with the associated DID Documents and no information on whether a DID is used to represent an issuer or a verifier. In the case of the swiyu Trust Infrastructure, the Base Registry is operated centrally by the Swiss Confederation. Integrity of the data provided on the registry is assured by relying on publishing data signed at the source of creation. 
 
 In addition, the Base Registry enables issuers to maintain life-cycle information of verifiable credentials that states if a credential is valid or has been revoked or suspended. By doing this it supports secure and reliable verification of electronic credentials and provides information on their validity status in a privacy-preserving manner. The design ensures that any status information cannot reveal details about the respective credential’s holder or content. 
 
@@ -67,7 +67,7 @@ The Confederation is developing various components to support issuers, holders a
 
 #### swiyu
 
-Swiyu is the mobile wallet app provided by the Confederation. Swiyu allows users to securely receive and manage their e-ID and other digital credentials as well as share these with a verifier via the web or in-person. In addition, the wallet retrieves and displays trust information (from the swiyu Base and Trust Registry). The swiyu wallet is developed by the FOITT as an [Open Source component](https://swiyu-admin-ch.github.io/open-source-components/#swiyu-android--ios-app). In the future, the Confederation might extend the wallet with a [Backup Service](https://swiyu-admin-ch.github.io/specifications/wallet-backup-container/) allowing holders to store backups on a state-provided infrastructure. 
+Swiyu is the mobile wallet app provided by the Confederation. Swiyu allows users to securely receive and manage their e-ID and other digital credentials as well as share these with a verifier via the web or in-person. In addition, the wallet retrieves and displays trust information (from the swiyu Base and Trust Registry). The swiyu wallet is developed by the FOITT as an [Open Source component](https://swiyu-admin-ch.github.io/open-source-components/#swiyu-android--ios-app). In the future, the Confederation might extend the wallet with a Backup Service allowing holders to store backups on a state-provided infrastructure. 
  
 #### e-ID Issuing Component
 
@@ -95,7 +95,7 @@ The swiyu Trust Registry is a public registry hosted by FOITT. It holds trust st
 
 #### DID Toolbox & Resolver
 
-Besides these role-specific components, FOITT is also developing complementary tooling for managing DIDs that can be of help for multiple roles. The currently provided and supported general Open Source tooling covers a [DID Toolbox and a DID resolver](https://swiyu-admin-ch.github.io/open-source-components/#did-toolbox). 
+Besides these role-specific components, FOITT is also developing complementary tooling for managing DIDs that can be of help for multiple roles. The currently provided and supported general Open Source tooling covers a [DID Toolbox and a DID resolver](https://swiyu-admin-ch.github.io/open-source-components/#did-toolbox-and-did-resolver). 
 
 ### Third-party Components
 

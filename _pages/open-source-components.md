@@ -68,8 +68,8 @@ Users will be able to download the swiyu Public Beta Wallet, request Beta-ID cre
 
 The source code is available for iOS and Android:
 
-- [iOS Wallet App](https://github.com/e-id-admin/eidch-ios-wallet)
-- [Android Wallet App](https://github.com/e-id-admin/eidch-android-wallet)
+- [iOS Wallet App](https://github.com/swiyu-admin-ch/eidch-ios-wallet)
+- [Android Wallet App](https://github.com/swiyu-admin-ch/eidch-android-wallet)
 
 ### DID Toolbox and DID Resolver
 
@@ -80,6 +80,6 @@ We developed different helpers to create and resolve DIDs. Creating DIDs involve
 
 ## How to use the swiyu Public Beta Trust Infrastructure
 
-The onboarding process for the swiyu Base- and Trust Registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section. Advanced users will find more technical details in the different repositories. We integrate various technologies in the Swiss Trust Infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/swiss-profile/).
+The onboarding process for the swiyu Base- and Trust Registry and other use cases are documented in the [Cookbook](https://swiyu-admin-ch.github.io/cookbooks/) section. Advanced users will find more technical details in the different repositories. We integrate various technologies in the Swiss Trust Infrastructure. You can view the supported specifications and the integrated versions in the ["Interoperability Profile"](https://swiyu-admin-ch.github.io/specifications/interoperability-profile/).
 
 
