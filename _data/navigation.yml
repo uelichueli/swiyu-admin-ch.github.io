@@ -38,7 +38,5 @@ specifications_sidebarmenu:
         url: /specifications/trust-protocol/
       - title: "Overlays Capture Architecture"
         url: /specifications/oca/
-      - title: "Wallet Backup Container"
-        url: /specifications/wallet-backup-container/
       
 
