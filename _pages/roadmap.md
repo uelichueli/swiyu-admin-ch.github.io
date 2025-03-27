@@ -38,13 +38,16 @@ Missing features required by the BGEID that will be addressed until the launch o
 Other security and privacy related aspects that will be addressed include: 
 
 - The read APIs of the trust registry do not support caching yet.
-- The capability to download trust statements for direct (client-to-client) presentation of trust statements by issuers and verifiers (to avoid "phone home") is not yet implemented. 
+- The capability to present trust statements directly during presentation (client-to-client)  by issuers and verifiers (to avoid unnecessary calls to the trust registry) needs to be evaluated and is not yet implemented.
+ 
 
 ### Issuing (Generic Issuer & BCS) 
 
 Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
 
-- Key attestations to ensure hardware binding are not yet validated. 
+- Key attestations to ensure hardware binding are not yet implemented or validated by the issuing components.
+
+
 
 Other security and privacy related aspects that will be addressed include: 
 
@@ -62,7 +65,6 @@ Other aspects to improve the user experience that will be addressed include:
 
 Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
 
-- The presentation of credentials offline is not yet possible
 - There is no backup (import/export) function available yet. (Note: this feature will only be available for credentials that are not hardware-bound).
 - Non-compliant actors cannot be reported yet. 
 
@@ -79,6 +81,8 @@ Other aspects to improve the user experience that will be addressed include:
 - The [OCA specificaton](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet implemented.
 - A combined presentation of multiple credentials is not yet possible.
 - The visualization of trust statements is not yet finalized (e.g., concerning unknown actor, not in base registry, or issuer/verifier trust statements). 
+- The presentation of credentials offline is not yet possible
+
 
 ### Swiyu Check App 
 
