@@ -11,7 +11,7 @@ The Public Beta environment aims to function as a basis for experimentation and 
 
 As regards the e-ID, the Public Beta Trust Infrastructure will mimic this credential type through a Beta-ID. Beta-IDs contain the same set of attributes as the e-ID defined in Art. 15 of the BGEID (Bundesgesetz über den elektronischen Identitätsnachweis und andere elektronische Nachweise). However, Beta-ID's technical features are restricted and the legal requirements defined in Section 3 of the BGEID do not apply. 
 
-The following briefly outlines the current discrepancies between Public Beta and the targeted productive Turst Infrastructure of 2026 for each component. 
+The following briefly outlines the current discrepancies between Public Beta and the targeted productive Trust Infrastructure of 2026 for each component. 
 
 ### Swiyu Base Registry 
 
