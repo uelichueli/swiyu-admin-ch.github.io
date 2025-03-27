@@ -81,7 +81,7 @@ Other aspects to improve the user experience that will be addressed include:
 - The [OCA specificaton](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet implemented.
 - A combined presentation of multiple credentials is not yet possible.
 - The visualization of trust statements is not yet finalized (e.g., concerning unknown actor, not in base registry, or issuer/verifier trust statements). 
-- The presentation of credentials offline is not yet possible
+- The presentation of credentials offline is not yet possible.
 
 
 ### Swiyu Check App 
