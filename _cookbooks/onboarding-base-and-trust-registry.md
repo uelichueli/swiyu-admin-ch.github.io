@@ -398,7 +398,7 @@ During the mail registration you should provide us the following information
 | Attribute                     | Required | Description                                                                                                                                       |
 | ----------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Email contact                 | Yes      | Email address of the technical contact for the onboarding                                                                                         |
-| DID of the beta Base Registry | Yes      | Decentralized identifier created during the beta Base Regsitry onboarding                                                                         |
+| DID of the beta Base Registry | Yes      | Decentralized identifier created during the beta Base Regsitry onboarding. E.g.: did:tdw:3AbbA3bA3AbbbbbbAAAAAAb3bb33Ab33AAb3AAAA3AAbAAAAAbbbbbbAAAA3AbAbbbbbbbAAAAbAAAAAbbb3A3bAbbAbb:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:AAAAAAAA-BBBB-1111-2222-000000000000                                                                        |
 | Organisation name             | Yes      | Name of your organization in at least the preferred language. Additional values can be provided in english, german, french, italian and rumantsch |
 | Preferred language            | Yes      | english, german, french, italian or rumantsch                                                                                                     |
 
