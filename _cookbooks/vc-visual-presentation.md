@@ -199,7 +199,7 @@ The verifier's logo will be use in the presentation request screen.
 
 [![verifier logo](../../assets/images/vc_verifier_name_logo.png)](../../assets/images/vc_verifier_name_logo.png)
 
-The logo is part of the O£ID4VP request:
+The logo is part of the OID4VP request:
 
 ```
 verifier_client_metadata.json: |
