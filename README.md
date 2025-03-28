@@ -13,10 +13,11 @@ The structure of the documentation website covers the following topics:
 - Open Source components: Overview and links to the code repositories
 - Cookbooks for onboarding the different stakeholders
 - Specifications of the "Swiss Profile", Trust Protocol, and other standards
+- Roadmap with the current stage and gaps of Public Beta
 
 ## Public Beta
 
-All documentation is related to the Public Beta environment. As soon as we'll have different versions e.g. for Public Beta and the Pre-release environment, the versions will be marked. Please note that operation and support of the Public Beta environment are run on a best effort basis.
+All documentation is related to the Public Beta environment and is not complete. The content reflects the current state of implementation and will evolve in the future to fullfil the requirements of the swiyu Trust Infrastructure. As soon as we'll have different versions e.g. for Public Beta and the Pre-release environment, the versions will be marked. Please note that operation and support of the Public Beta environment are run on a best effort basis.
 
 ## Basic repository structure 
 
