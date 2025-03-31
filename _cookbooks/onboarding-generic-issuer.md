@@ -196,7 +196,7 @@ In order to optimize the image for arm based systems, you first have to check ou
 To create an image you to run the following command in both repositories to create local images of the services:
 
 ```bash
-./mvnw spring-boot:build image
+./mvnw install:install-file -Dfile=lib/primusX-java11-2.4.4.jar -DgroupId=com.securosys.primus -DartifactId=jce -Dversion=2.4.4 -Dpackaging=jar spring-boot:build-image
 ```
 
 # Your Feedback?
