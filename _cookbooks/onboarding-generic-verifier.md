@@ -178,7 +178,7 @@ In order to optimize the image for arm based systems, you first have to check ou
 To create an image you to run the following command in both repositories to create local images of the services:
 
 ```bash
-./mvnw spring-boot:build image
+./mvnw spring-boot:build-image
 ```
 
 # Your Feedback?
