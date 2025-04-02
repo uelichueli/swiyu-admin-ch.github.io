@@ -19,7 +19,7 @@ Initially the Confederation will focus on a single technology stack to reduce co
 | Communication Protocol |	[OID4VCI – draft 13 (for credential issuance)](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) <br> [OID4VP – draft 20 (for credential verification)](https://openid.net/specs/openid-4-verifiable-presentations-1_0-20.html) |
 | Payload Encryption	| [JWE](https://www.rfc-editor.org/rfc/rfc7516.html)[^1] (as proposed by the communication protocol) |
 | VC-Format & Signature-Scheme |	[SD-JWT VC – draft 4](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/04/) <br> [SD-JWT draft 10](https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/10/) <br> [ECDSA P-256](https://csrc.nist.gov/pubs/fips/186-5/final) |
-| Device Binding Scheme	| **Hardware-based** device binding (depending on capabilities provided by [Android](https://source.android.com/docs/security/features/keystore) or [Apple](https://developer.apple.com/documentation/cryptokit/secureenclave) mobile devices) <br> **Software-based**[^1] device binding implemented by and wallets |
+| Device Binding Scheme	| **Hardware-based** device binding (depending on capabilities provided by [Android](https://source.android.com/docs/security/features/keystore) or [Apple](https://developer.apple.com/documentation/cryptokit/secureenclave) mobile devices) <br> **Software-based**[^1] device binding implemented by wallets |
 | VC appearance	 | [Overlays Capture Architecture](https://swiyu-admin-ch.github.io/specifications/oca/) (for visualization of VCs)[^1]
 
 [^1]: Use of this technology is planned, and specification/implementation is in progress
