@@ -122,7 +122,7 @@ If you want to create a new access token without manual UI interaction you can u
 ### Base URLs
 
 <div class="notice--warning">
-  ⚙️ The status authoring URL will be referenced as SWIYU_STATUS_REGISTRY_API_URL, the key manager as KEY_MANAGER.
+  ⚙️ The status authoring URL will be referenced as SWIYU_STATUS_REGISTRY_API_URL, the identifier authoring URL as SWIYU_IDENTIFIER_REGISTRY_URL and the key manager as KEY_MANAGER.
 </div>
 
 Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
@@ -144,7 +144,7 @@ In order to onboard on the swiyu Base Registry you will first need to reserve so
 ```bash
 curl \
   -H "Authorization: Bearer $SWIYU_IDENTIFIER_REGISTRY_ACCESS_TOKEN" \
-  -X POST "https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries"
+  -X POST "$SWIYU_IDENTIFIER_REGISTRY_URL/api/v1/identifier/business-entities/$SWIYU_PARTNER_ID/identifier-entries"
 ```
 
 **API Response 201**
@@ -154,7 +154,7 @@ curl \
 <div class="notice--warning">
   The value of IDENTIFIER_REGISTRY_URL is used in the next step when creating the DID log.
 
-The id is required when uploading your DID log and will be futher refeferenced as IDENTIFIER_REGISTRY_ID
+The id is required when uploading your DID log and will be futher referenced as IDENTIFIER_REGISTRY_ID
 
 </div>
 
@@ -191,7 +191,7 @@ The Quickstart option is designed for users who want to rapidly set up one or mu
 #### Command Syntax
 
 <div class="notice--warning">
-  ⚙️ The generated pem .didtoolbox/assert-key-01 fille will be referenced as "assert-key-01"
+  ⚙️ The generated pem .didtoolbox/assert-key-01 file will be referenced as "assert-key-01"
 </div>
 
 To run the DID Toolbox using the Quickstart option, use the following command structure:
@@ -370,7 +370,7 @@ curl -X POST "https://status-reg-api.trust-infra.swiyu-int.admin.ch/api/v1/statu
 
 <pre>{<br/>&emsp;"id": "18fa7c77-9dd1-4e20-a147-fb1bec146085",<br />&emsp;"statusRegistryUrl": "https://status-registry.admin.ch/api/v1/statuslist/18fa7c77-9dd1-4e20-a147-fb1bec146085.jwt"<br>}</pre>
 <div class="notice--warning">
-  The id is required when updating your status list and will be futher refeferenced as STATUS_REGISTRY_ID
+  The id is required when updating your status list and will be futher referenced as STATUS_REGISTRY_ID
 </div>
 
 **Update status list**
@@ -404,7 +404,7 @@ During the mail registration you should provide us the following information
 
 [![onboarding-mail](../../assets/images/Cookbook_mail_trustregister.png)](../../assets/images/Cookbook_mail_trustregister.png)
 
-## User management
+# 5. User management
 
 ### Invite members to your business partner
 
@@ -419,6 +419,8 @@ Generate as many invitation codes as you need and make sure to add the appropria
 ### Join an existing business partner
 
 To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
+
+> **&#9432;** Be aware it might take a few minutes until the just joined business partner is visible in the UI.
 
 [![redeem invitation code](../../assets/images/redeem_code.png)](../../assets/images/redeem_code.png)
 
