@@ -76,6 +76,7 @@ Select an API and press **Subscribe.** You will be prompted to create a new appl
 {% capture application-hint %}
 
 <p> ⚙️ We suggest creating separate applications and authentication key sets for each service you are running. E.g.: one for your issuer service and another for any verification service.</p>
+<p> ⚙️ When subscribing with an existing application that already has tokens assigned to it you will need to refresh them in order to work with the newly subscribed API.</p>
 
 {% endcapture %}
 
