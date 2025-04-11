@@ -62,7 +62,7 @@ A sample compose file for an entire setup of both components and a database can 
 |SWIYU_STATUS_REGISTRY_CUSTOMER_SECRET|[Status Registry API Secret](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
 |SWIYU_STATUS_REGISTRY_ACCESS_TOKEN|[Status Registry API ACCESS Token](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
 |SWIYU_STATUS_REGISTRY_BOOTSTRAP_REFRESH_TOKEN|[Status Registry API Refresh Token](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#get-api-keys-to-access-swiyu-apis)|
-|SWIYU_STATUS_REGISTRY_TOKEN_URL|[OAuth Refresh URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#authenticate-with-oauth2)|https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW/protocol/openid-connect|
+|SWIYU_STATUS_REGISTRY_TOKEN_URL|[OAuth Refresh URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#authenticate-with-oauth2)|https://keymanager-prd.api.admin.ch/keycloak/realms/APIGW/protocol/openid-connect/token|
 |SWIYU_STATUS_REGISTRY_API_URL|[Status Registry Base URL](https://swiyu-admin-ch.github.io/cookbooks/onboarding-base-and-trust-registry/#base-urls)|https://status-reg-api.trust-infra.swiyu-int.admin.ch|
 
 ### Issuer Agent OID4VCI
