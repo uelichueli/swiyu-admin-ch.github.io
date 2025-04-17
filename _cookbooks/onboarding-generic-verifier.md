@@ -83,7 +83,7 @@ The latest images are available here:
 Once the components are deployed you can create your first verification request. For this you first need to define a presentation
 definition. Based on that definition you can then create a verification request for a holder as shown in the example below.
 In this case, we are asking for a credential called "my-test-vc" which should have the attributes
-firstName, lastName and birthDate. The following request can be performed by using the swagger endpoint on $VERIFIER_AGENT_MANAGEMENT_URL**/swagger-ui/index.html**.
+firstName, lastName and birthDate. The following request can be performed by using the [swagger endpoint](http://localhost:8082/swagger-ui/index.html) for the sample environment.
 
 <div class="notice--warning">
   Please replace or set values, like presentation.id, input_descriptors[i].id and optionally accepted_issuer_dids, to get a valid request.
@@ -92,7 +92,7 @@ firstName, lastName and birthDate. The following request can be performed by usi
 **Request**
 
 ```bash
-curl -X POST $VERIFIER_AGENT_MANAGEMENT_URL/api/v1/verifications \
+curl -X POST http://localhost:8082/api/v1/verifications \
   -H "accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
@@ -163,8 +163,12 @@ The response contains a verification_url which points to the verification reques
 
 **Request**
 
+<div class="notice--warning">
+  ⚙️ This is an example for the sample environment. Please replace the $VERIFICATION_ID with the actual id of the verification.
+</div>
+
 ```bash
-curl $VERIFIER_AGENT_MANAGEMENT_URL/api/v1/verifications/$VERIFICATION_ID
+curl http://localhost:8082/api/v1/verifications/$VERIFICATION_ID
 ```
 
 # Development instructions
@@ -184,4 +188,3 @@ To create an image you to run the following command in both repositories to crea
 # Your Feedback?
 
 We would be pleased if you spend about 3 additional minutes and give us feedback on the swiyu Public Beta Trust Infrastructure and your onboarding process! With Public Beta, we want to give ecosystem stakeholders the opportunity to gain initial experience and build their own use cases on the trust infrastructure of the future e-ID. Your [feedback](https://findmind.ch/c/feedback_publicbeta_infr_en) will help us to further develop and improve the touchpoints, and we greatly appreciate your support.
-

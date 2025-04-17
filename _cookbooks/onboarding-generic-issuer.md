@@ -98,14 +98,14 @@ Once the issuer-agent-management, issuer-agent-oid4vci and postgres instance are
 
 **Request to create and initialize a status list slot**
 
-The following request needs to be run on your issuer-agent-management instance.
+The following request needs to be run on your issuer-agent-management instance (example for the sample environment):
 
 <div class="notice--warning">
   The maximum file size of the status list is currently 200kB. (Subject to evaluation and might change after public beta).
 </div>
 
 ```bash
-curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/status-list \
+curl -X POST http://localhost:8080/api/v1/status-list \
   -H "accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
@@ -140,10 +140,14 @@ This results in a response like:
 
 ## Issue credential
 
-You are now ready to issue credentials by using the issuer-agent-management API to create a credential offer for a holder. Here is an example of a request body for the offer creation:
+You are now ready to issue credentials by using the issuer-agent-management API to create a credential offer for a holder. Here is an example of a request body for the offer creation (in the sample environment):
+
+<div class="notice--warning">
+  ⚙️ Please update the statusRegistryUrl with your newly created statusRegistryUrl from the response above.
+</div>
 
 ```bash
-curl -X POST $ISSUER_AGENT_MANAGEMENT_URL/api/v1/credentials \
+curl -X POST http://localhost:8080/api/v1/credentials \
   -H "accept: */*" \
   -H "Content-Type: application/json" \
   -d '{
@@ -175,14 +179,12 @@ To check the result, create a qr code from the resulting offer_deeplink, which t
 A credential can have one of the following status: `OFFERED`, `CANCELLED`, `IN_PROGRESS`, `ISSUED`, `SUSPENDED`, `REVOKED`, `EXPIRED`.
 Using the Issuer Management service the status can be updated
 
+<div class="notice--warning">
+  ⚙️ Please update the credentialID below with the correct id received from the issue credential call.
+</div>
+
 ```bash
-curl -X PATCH $ISSUER_AGENT_MANAGEMENT_URL/api/v1/credentials/{credentialID}/status \
-  -H "accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "credentialID": $CREDENTIAL_ID
-    "credentialStatus": "ISSUED"
-  }'
+curl -X PATCH http://localhost:8080/api/v1/credentials/{credentialID}/status?credentialStatus=ISSUED
 ```
 
 # Development instructions
