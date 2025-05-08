@@ -412,7 +412,7 @@ During the mail registration you should provide us the following information
 
 # 5. User management
 
-### Invite members to your business partner
+## Invite members to your business partner
 
 Go to [e-portal](https://eportal.admin.ch/) and click on _manage users:_
 
@@ -422,7 +422,7 @@ Generate as many invitation codes as you need and make sure to add the appropria
 
 [![generate invitation codes](../../assets/images/create_codes.png)](../../assets/images/create_codes.png)
 
-### Join an existing business partner
+## Join an existing business partner
 
 To Join an already existing business partner, press the _Redeem invitation code_ button on the top right.
 
