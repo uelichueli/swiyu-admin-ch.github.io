@@ -26,7 +26,7 @@ The process consists of four steps. Technical knowledge is required for the thir
 
 # 1. Sign-in or up to ePortal
 
-Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registration?agovAq=100&source=idp) or CH-Login accounts in order to register to the Trust and Base regisrty
+Login or sign up into ePortal via [AGOV](https://www.me.agov.admin.ch/registration?agovAq=100&source=idp) or CH-Login accounts in order to register to the Trust and Base registry
 
 [All services · ePortal](https://eportal.admin.ch/start)
 
@@ -319,7 +319,7 @@ did:tdw:Qmd9bwsodZ1GAz4h8D7Vy6qRio78voXifDrnXokSTsMVQK:identifier-reg.trust-infr
 
 - Output Directory: The .didtoolbox directory is automatically created in the current working directory. Ensure you have the necessary permissions to create and write to this directory.
 - Security: Keep your private keys secure. Do not share them or expose them in unsecured environments.
-- Using Existing DIDs: While the Quickstart option generates new DIDs and key material, the DID Toolbox also supports updating existing DIDs. Please refer to the to the [DID Toolbox repository](https://github.com/swiyu-admin-ch/didtoolbox-java#advanced-usage).
+- Using Existing DIDs: While the Quickstart option generates new DIDs and key material, the DID Toolbox also supports updating existing DIDs. Please refer to the [DID Toolbox repository](https://github.com/swiyu-admin-ch/didtoolbox-java#advanced-usage).
 
 ### Upload DID log
 
