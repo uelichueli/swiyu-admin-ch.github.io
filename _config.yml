@@ -41,7 +41,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : true #, false (default)
+  hide                   : false
 search                   : true #, false (default)
 search_full_content      : true #, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -100,8 +100,8 @@ footer:
     - label: "Feedback and Contributions"
       icon: "fab fa-fw fa-github"
       url: https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io
-    - label: "Changelog"
-      url: /changelog/
+    - label: "Release Announcements"
+      url: /release-announcements/
     - label: "Community"
       icon: "fab fa-fw fa-github"
       url: https://github.com/swiyu-admin-ch/community
