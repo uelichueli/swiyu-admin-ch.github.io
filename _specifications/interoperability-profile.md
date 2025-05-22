@@ -54,7 +54,7 @@ The following table defines which specification must be supported by an actor (i
 | DID:TDW/DID:WEBVH | **MUST** | **MUST** | **MUST** |
 | SD-JWT VC profile | **MUST** | **MUST** | **MUST** |
 | Status List       | **MUST** | **MUST** | **MUST** |
-| Trust Protocol    | **MAY**  | **MUST** | **MUST** |
+| Trust Protocol    | **MAY**  | **MUST** | **MAY** |
 
 ## Issuer & Verifier Identification
 Issuers and verifiers use [DID:TDW](https://identity.foundation/trustdidweb/) version 0.3 as identifiers.
@@ -280,11 +280,12 @@ The credential status specification to use depends on the credential format as f
 | SD-JWT VC         | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) <br/> JSON format only    |
 
 ## Trust Protocol
-- Wallets and verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://swiyu-admin-ch.github.io/specifications/trust-protocol/).
+- Wallets **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://swiyu-admin-ch.github.io/specifications/trust-protocol/).
 - Trust Statements **MUST** be defined as follows:
     - `kid` from the JOSE header **MUST** be an absolute `did:tdw` with a key reference.
     - `iss` and `sub` from the JWT body **MUST** be a `did:tdw`.
 - The Trust Statement `TrustStatementMetadataV1` **MUST** be supported.
+- Issuers and verifiers **MAY** support the Trust Protocol for their own needs.
 
 This chapter maps to [Trust Protocol based on VCs V0.1](https://swiyu-admin-ch.github.io/specifications/trust-protocol/)
 
