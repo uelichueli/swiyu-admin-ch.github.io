@@ -7,7 +7,7 @@ toc_sticky: true
 
 ## Current stage and Gaps of Public Beta
 
-The Public Beta environment aims to function as a basis for experimentation and integration efforts conducted by the ecosystem participants from both the public and the private sector. It provides the same technology that will be used by the productive environment in 2026, but with, as of now, reduced maturity and scope. At the moment operation and support of the Public Beta Trust Infrastructure are run on a best effort basis. It is planned to gruadually develop public beta into an integration environment that is run in parallel and equivalent to the productive infrastructure from Go-Live in 2026 onwards.  
+The Public Beta environment aims to function as a basis for experimentation and integration efforts conducted by the ecosystem participants from both the public and the private sector. It provides the same technology that will be used by the productive environment in 2026, but with, as of now, reduced maturity and scope. At the moment operation and support of the Public Beta Trust Infrastructure are run on a best effort basis. It is planned to gruadually develop public beta into an integration environment that is run in parallel and equivalent to the productive infrastructure from Go-live in 2026 onwards.  
 
 As regards the e-ID, the Public Beta Trust Infrastructure will mimic this credential type through a Beta-ID. Beta-IDs contain the same set of attributes as the e-ID defined in Art. 15 of the BGEID (Bundesgesetz über den elektronischen Identitätsnachweis und andere elektronische Nachweise). However, Beta-ID's technical features are restricted and the legal requirements defined in Section 3 of the BGEID do not apply. 
 
@@ -108,12 +108,12 @@ Aspects to improve the user experience that will be addressed include:
 
 The following table provides a reference that indicates which standards are currently employed within the swiyu Public Beta Trust Infrastructure. While the Confederation aims to provide a degree of assurance and stability for integrators even at this early stage, evolution seems inevitable. Consequently, set of selected standards will be updated or extended if perspectives within the implementing organizations change. Changes will be considered, especially if they benefit privacy-protection for users, increase the security and stability of the overall system, or if standards converge to serve the purpose of fostering interoperability. 
 
-We invite interested parties to [“watch” the repository](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io) to receive automatic updates in case this document undergoes changes. We currently differentiate between support for [Public Beta](https://www.eid.admin.ch/en/public-beta-e) and the initial go live support.
+We invite interested parties to [“watch” the repository](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io) to receive automatic updates in case this document undergoes changes. We currently differentiate between support for [Public Beta](https://www.eid.admin.ch/en/public-beta-e) and the initial Go-live support.
 
 
 ### Initial Supported Technical Standards
 
-| Aspect      | Current Hypothesis   | Public Beta Support   | Initial Go Live Support |  
+| Aspect      | Current Hypothesis   | Public Beta Support   | Initial Go-live Support |  
 | ----------- | ----------- |----------- |----------- |
 | **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to [W3C](https://www.w3.org/TR/did-core/) <br> DID Method: **[did:tdw/did:webvh](https://identity.foundation/trustdidweb/)**     | **SELECTED** <br> Hosted on central base registry provided by Confederation | **CANDIDATE** Final decision for productive system pending |
 | **Status Mechanisms**       | [Statuslist](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) | **SELECTED** | **HIGH** |
@@ -131,9 +131,9 @@ We invite interested parties to [“watch” the repository](https://github.com/
 - **HIGH** = Current hypothesis for implementation, <br>
 - **SELECTED** = Chosen for system
 
-The versions of the referenced specifications may change. In particular, the e-ID program is planning to upgrade most of the implemented specifications to newer and more mature versions until the Go Live.
+The versions of the referenced specifications may change. In particular, the e-ID program is planning to upgrade most of the implemented specifications to newer and more mature versions until the Go-live.
 
-### Additional open points:
+### Additional open points
 
 The delivery of all open points noted here is currently undated.
 
