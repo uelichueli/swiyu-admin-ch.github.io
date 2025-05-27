@@ -14,6 +14,7 @@ The structure of the documentation website covers the following topics:
 - Cookbooks for onboarding the different stakeholders
 - Specifications of the "Swiss Profile", Trust Protocol, and other standards
 - Roadmap with the current stage and gaps of Public Beta
+- Footer with links to release announcements and our community repository
 
 ## Public Beta
 
@@ -26,14 +27,16 @@ The structure of the repository is different from the website.
 - **_cookbooks**: The cookbooks are a collection of markdown files you'll find in this folder.
 - **_data**: In this folder you'll find the basic navigation as well as all translations for the user interface
 - **_pages**: Most of the webpages are markdown files in the _pages folder.
-- **_posts**: All Changelog posts are markdown files in the _posts folder.
+- **_posts**: All posts for the release announcements are markdown files in the _posts folder.
 - **_specifications**: Specific specifications and implementations for the swiyu Public Beta Trust Infrastructure
 - **assets**: All relevant assets for the website, e.g. images for the general appearance and cookbooks, are placed in sub-folders
 
 
 ## Contributions and feedback
 
-Contributions related to the documentation website are welcome via GitHub issues and pull requests. Before opening an issue or pull request, please check whether a ticket already exists that describes your intention. If you have general questions about the technical aspects, please start a [discussion](https://github.com/orgs/swiyu-admin-ch/discussions).
+Contributions related to the documentation website are welcome via GitHub issues and pull requests. Before opening an issue or pull request, please check whether a ticket already exists that describes your intention. Our [status board](https://github.com/orgs/swiyu-admin-ch/projects/2) provides you with an overview of the status of your enquiry.
+
+If you have general questions about the technical aspects, please start a [discussion](https://github.com/orgs/swiyu-admin-ch/discussions).
 
 ## Kudos
 
