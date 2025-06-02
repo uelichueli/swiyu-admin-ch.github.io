@@ -135,7 +135,7 @@ Use the [Swagger Editor](https://editor.swagger.io/) for convenience.
 
 | Environment       | Identifier Authoring                                                                                            | Status Authoring                                                                                        | Key Manager                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| swiyu Public Beta | [identifier-reg-api.trust-infra.swiyu-int.admin.ch](https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/) | [status-reg-api.trust-infra.swiyu-int.admin.ch](https://status-reg-api.trust-infra.swiyu-int.admin.ch/) | [keymanager-prd.api.admin.ch](https://keymanager-prd.api.admin.ch) |
+| swiyu Public Beta | [https://identifier-reg-api.trust-infra.swiyu-int.admin.ch](https://identifier-reg-api.trust-infra.swiyu-int.admin.ch/) | [https://status-reg-api.trust-infra.swiyu-int.admin.ch](https://status-reg-api.trust-infra.swiyu-int.admin.ch/) | [https://keymanager-prd.api.admin.ch](https://keymanager-prd.api.admin.ch) |
 
 In the next step you will need your business partner ID. You can find it in the **swiyu Trust Infrastructure** dashboard.
 
