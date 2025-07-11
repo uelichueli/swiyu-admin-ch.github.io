@@ -108,8 +108,7 @@ Aspects to improve the user experience that will be addressed include:
 
 The following table provides a reference that indicates which standards are currently employed within the swiyu Public Beta Trust Infrastructure. While the Confederation aims to provide a degree of assurance and stability for integrators even at this early stage, evolution seems inevitable. Consequently, set of selected standards will be updated or extended if perspectives within the implementing organizations change. Changes will be considered, especially if they benefit privacy-protection for users, increase the security and stability of the overall system, or if standards converge to serve the purpose of fostering interoperability. 
 
-We invite interested parties to [“watch” the repository](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io) to receive automatic updates in case this document undergoes changes. We currently differentiate between support for [Public Beta](https://www.eid.admin.ch/en/public-beta-e) and the initial Go-live support.
-
+A high-level overview of the further development of the swiyu Public Beta Trust Infrastructure is provided on [GitHub](https://github.com/orgs/swiyu-admin-ch/projects/1/views/7). We invite interested parties to subscribe via [GitHub discussions](https://github.com/orgs/swiyu-admin-ch/discussions/11) or [RSS feed](https://swiyu-admin-ch.github.io/release-announcements/) to our release announcements to be informed about upcoming changes. We currently differentiate between support for [Public Beta](https://www.eid.admin.ch/en/public-beta-e) and the initial Go-live support.
 
 ### Initial Supported Technical Standards
 
