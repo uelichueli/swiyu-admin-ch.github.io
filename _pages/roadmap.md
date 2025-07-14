@@ -7,7 +7,7 @@ toc_sticky: true
 
 ## Current stage and Gaps of Public Beta
 
-The Public Beta environment aims to function as a basis for experimentation and integration efforts conducted by the ecosystem participants from both the public and the private sector. It provides the same technology that will be used by the productive environment in 2026, but with, as of now, reduced maturity and scope. At the moment operation and support of the Public Beta Trust Infrastructure are run on a best effort basis. It is planned to gruadually develop public beta into an integration environment that is run in parallel and equivalent to the productive infrastructure from Go-live in 2026 onwards.  
+The Public Beta environment aims to function as a basis for experimentation and integration efforts conducted by the ecosystem participants from both the public and the private sector. It provides the same technology that will be used by the productive environment in 2026, but with, as of now, reduced maturity and scope. At the moment operation and support of the Public Beta Trust Infrastructure are run on a best effort basis. It is planned to gruadually develop Public Beta into an integration environment that is run in parallel and equivalent to the productive infrastructure from Go-live in 2026 onwards.  
 
 As regards the e-ID, the Public Beta Trust Infrastructure will mimic this credential type through a Beta-ID. Beta-IDs contain the same set of attributes as the e-ID defined in Art. 15 of the BGEID (Bundesgesetz über den elektronischen Identitätsnachweis und andere elektronische Nachweise). However, Beta-ID's technical features are restricted and the legal requirements defined in Section 3 of the BGEID do not apply. 
 
@@ -21,88 +21,88 @@ Missing features required by the BGEID that will be addressed until the launch o
 
 Other security and privacy related aspects that will be addressed include: 
 
-- The read APIs of the base registry do not support caching yet.
-- The request and verification of a proof-of-possession before data (e.g., DIDs or a status list) can be updated/deleted from the base registry has not been implemented yet. 
+- The read APIs of the base registry do not [support caching](https://github.com/swiyu-admin-ch/eidch-registry-base-data/issues/1) yet.
+- The request and verification of a [proof-of-possession](https://github.com/swiyu-admin-ch/didtoolbox-java/issues/12) before data (e.g., DIDs or a status list) can be updated/deleted from the base registry has not been implemented yet. 
 
 ### Swiyu Trust Registry 
 
 Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
 
-- The tooling and process for verifying trusted identity information are not yet implemented at the FOJ.
-- The automated verification of identifier proof-of-posessions as part of the trust registry onboarding is not yet implemented.
-- The capabilities for anchoring VC schema and respective issuer/verifier trust statements are not yet provided (Note: These will only be available for actors fulfilling regulated functions).
+- [The tooling and process](https://github.com/swiyu-admin-ch/eidch-registry-trust-data/issues/1) for verifying trusted identity information are not yet implemented at the FOJ.
+- The automated verification of identifier [proof-of-possessions](https://github.com/swiyu-admin-ch/didtoolbox-java/issues/12) as part of the trust registry onboarding is not yet implemented.
+- The capabilities for anchoring [VC schema](https://github.com/swiyu-admin-ch/eidch-registry-trust-authoring/issues/1) and respective [issuer/verifier trust statements](https://github.com/swiyu-admin-ch/eidch-android-wallet/issues/21) are not yet provided (Note: These will only be available for actors fulfilling regulated functions).
 - The base registry cannot be audited yet.
-- The list and process to register non-compliant actors are not available yet.
+- The list and process to register [non-compliant actors](https://github.com/swiyu-admin-ch/eidch-registry-trust-data/issues/2) are not available yet.
 - There is no support of multiple DIDs in a single trust statement (if this feature will be provided in the future is not yet decided). 
 
 Other security and privacy related aspects that will be addressed include: 
 
-- The read APIs of the trust registry do not support caching yet.
-- The capability to present trust statements directly during presentation (client-to-client)  by issuers and verifiers (to avoid unnecessary calls to the trust registry) needs to be evaluated and is not yet implemented.
+- The read APIs of the trust registry do not [support caching](https://github.com/swiyu-admin-ch/eidch-registry-base-data/issues/1) yet.
+- The capability to present trust statements directly during presentation (client-to-client) by issuers and verifiers (to avoid unnecessary calls to the trust registry) needs to be [evaluated](https://github.com/swiyu-admin-ch/swiyu-admin-ch.github.io/issues/12) and is not yet implemented.
  
 
 ### Issuing (Generic Issuer & BCS) 
 
 Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
 
-- Key attestations to ensure hardware binding are not yet implemented or validated by the issuing components.
-
-
+- [Key attestations](https://github.com/swiyu-admin-ch/swiyu-issuer/issues/6) to ensure hardware binding are not yet implemented or validated by the issuing components.
 
 Other security and privacy related aspects that will be addressed include: 
 
-- Payload encryption during issuance is not yet implemented.
-- The features for software-based device binding are not yet implemented.
-- The capability for direct (client-to-client) presentation of issuer trust statements is not yet implemented.
+- [Payload encryption](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/1) during issuance is not yet implemented.
+- The features for [software-based device binding](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/20) are not yet implemented.
+- The capability for direct [(client-to-client) presentation of issuer trust statements](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/17) is not yet implemented.
 - A dedicated extension for managing keys through a HSM is not yet available. 
  
 
 Other aspects to improve the user experience that will be addressed include: 
 
-- The [OCA specification](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet implemented 
+- The [OCA specification](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet [implemented](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/13) 
 
 ### Swiyu Wallet 
 
 Missing features required by the BGEID that will be addressed until the launch of the e-ID are: 
 
-- There is no backup (import/export) function available yet. (Note: this feature will only be available for credentials that are not hardware-bound).
+- There is no [backup](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/16) (import/export) function available yet. (Note: this feature will only be available for credentials that are not hardware-bound).
 - Non-compliant actors cannot be reported yet. 
 
 Other security and privacy related aspects that will be addressed include: 
 
-- Trust statements presented by the issuer/verifier cannot be processed.
+- [Trust statements](https://github.com/swiyu-admin-ch/eidch-android-wallet/issues/21) presented by the issuer/verifier cannot be processed.
 - The capability for verifying the check-app attestation is not yet provided.
-- The features for software-based device binding are not yet implemented.
-- Payload encryption during issuance and verification flows is not yet implemented.
-- There is no capability for holders to view their activities in an activity/transaction log as well as to give or deny their consent for such logging. 
+- The features for [software-based device binding](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/20) are not yet implemented.
+- [Payload encryption during issuance and verification](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/1) flows is not yet implemented.
+- There is no capability for holders to view their activities in an [activity/transaction log](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/15) as well as to give or deny their consent for such logging. 
 
 Other aspects to improve the user experience that will be addressed include: 
 
-- The [OCA specificaton](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet implemented.
-- A combined presentation of multiple credentials is not yet possible.
-- The visualization of trust statements is not yet finalized (e.g., concerning unknown actor, not in base registry, or issuer/verifier trust statements). 
+- The [OCA specificaton](https://swiyu-admin-ch.github.io/specifications/oca/) for improved credential processing and visualization is not yet [implemented](https://github.com/swiyu-admin-ch/eidch-ios-wallet/issues/13).
+- A [combined presentation of multiple credentials](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/2) is not yet possible.
+- The visualization of trust statements is not yet finalized (e.g., concerning unknown actor, not in base registry, or [issuer/verifier trust statements](https://github.com/swiyu-admin-ch/eidch-android-wallet/issues/21)). 
 - The presentation of credentials offline is not yet possible.
 
 
 ### Swiyu Check App 
 
+The swiyu [Check App for verifying the e-ID](https://github.com/swiyu-admin-ch/.github/issues/1) has not yet been implemented.
+
 Security and privacy related aspects that will be addressed include: 
 
-- Payload encryption during verification flow is not yet implemented. 
+- [Payload encryption](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/1) during verification flow is not yet implemented. 
 
 Aspects to improve the user experience that will be addressed include: 
 
-- The combined verification of multiple credentials is not yet possible. 
+- The [combined verification of multiple credentials](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/2) is not yet possible. 
 
 ### Swiyu Generic Verifier 
 
 Security and privacy related aspects that will be addressed include: 
 
-- Payload encryption during verification flow is not yet implemented. 
+- [Payload encryption](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/1) during verification flow is not yet implemented. 
 
 Aspects to improve the user experience that will be addressed include: 
 
-- The combined verification of multiple credentials is not yet possible. 
+- The [combined verification of multiple credentials](https://github.com/swiyu-admin-ch/swiyu-verifier/issues/2) is not yet possible. 
 
 ## Roadmap
 
@@ -139,4 +139,4 @@ The delivery of all open points noted here is currently undated.
 - The implementation of [privacy-preserving hardware device binding](https://swiyu-admin-ch.github.io/technology-stack/#credential-storage-and-device-binding)
 - The implementation of [batch-issuance](https://swiyu-admin-ch.github.io/specifications/interoperability-profile/#privacy-considerations)
 
-A more detailed roadmap for the swiyu Trust Infrastructure will follow.
+A more detailed view on the topics that are currently roadmap for the swiyu Trust Infrastructure will follow.
