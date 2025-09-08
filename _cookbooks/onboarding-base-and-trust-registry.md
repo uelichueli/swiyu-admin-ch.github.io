@@ -188,7 +188,7 @@ Before using the DID Toolbox, ensure your system meets the following requirement
 
 ### Downloading the DID Toolbox
 
-The current release can be downloaded from the [repository](https://github.com/swiyu-admin-ch/didtoolbox-java/releases)
+The latest release can be downloaded from the [repository](https://github.com/swiyu-admin-ch/didtoolbox-java/releases/latest)
 
 ### Quickstart – Create Your First DID
 
