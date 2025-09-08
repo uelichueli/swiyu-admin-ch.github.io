@@ -166,7 +166,7 @@ The id is required when uploading your DID log and will be futher referenced as 
 
 ## Create a DID (or create the DID log you need to continue)
 
-To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java/releases), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
+To actively participate in the swiyu ecosystem as an issuer or verifier, you must create at least one DID and upload the resulting DID log content to the base registry. New DIDs can be created using the [DID Toolbox](https://github.com/swiyu-admin-ch/didtoolbox-java/releases/latest), since it involves a set of steps that are error prone or need some time to get familiar with and one might end up with invalid DIDs.
 
 We recommend creating separate DIDs for each role (e.g., separate DIDs for issuers and verifiers).
 
