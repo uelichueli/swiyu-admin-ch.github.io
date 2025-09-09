@@ -298,8 +298,8 @@ SHA256 **MUST** be supported by all the entities as the hash algorithm to genera
 {: .notice--info}
 
 ## Privacy Considerations
-In the current profile,  sections SD-JWT VC, credential status and device binding contain no protection against user correlation.
-Measures to address this challenge are envisioned for a later release, for example, with solutions like [batch-issuance](https://github.com/swiyu-admin-ch/swiyu-issuer/issues/5).
+In the current profile, sections SD-JWT VC, credential status and device binding contain no protection against user correlation.
+To adress this in a future release, [batch-issuance](https://github.com/swiyu-admin-ch/swiyu-issuer/issues/5) will be implemented.
 
 
 ## References
